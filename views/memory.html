@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memory</title>
+  <link rel="stylesheet" type="text/css" href="css/quizymemorygame.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  </script>
+</head>
+<body class="dutch-memory">
+  <h1> Dutch Memory </h1>
+  <h2> Animals </h2>
+  <div id="my-memorygame" class="quizy-memorygame">
+    <ul>
+      <li class="match1">
+        Horse
+      </li>
+      <li class="match2">
+        Cat
+      </li>
+      <li class="match3">
+        Dog
+      </li>
+      <li class="match4">
+        Cow
+      </li>
+      <li class="match5">
+        Mouse
+      </li>
+<!--       <li class="match6">
+        Goat
+      </li>
+      <li class="match7">
+        Sheep
+      </li>
+      <li class="match8">
+        Bird
+      </li>
+      <li class="match9">
+        Chicken
+      </li>
+      <li class="match10">
+        Rabbit
+      </li> -->
+      <li class="match1">
+        <img src="images/horse.jpg">
+      </li>
+      <li class="match2">
+        <img src="images/cat.jpg">
+      </li>
+      <li class="match3">
+        <img src="images/dog.jpg">
+      </li>
+      <li class="match4">
+        <img src="images/cow.jpg">
+      </li>
+      <li class="match5">
+        <img src="images/mouse.jpg">
+      </li>
+      <!-- <li class="match6">
+        <img src="images/goat.jpg">
+      </li>
+      <li class="match7">
+        <img src="images/sheep.jpg">
+      </li>
+      <li class="match8">
+        <img src="images/bird.jpg">
+      </li>
+      <li class="match9">
+        <img src="images/chicken.jpg">
+      </li>
+      <li class="match10">
+        <img src="images/rabbit.jpg">
+      </li> -->
+    </ul>
+  </div>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery-ui.min.js" /></script>
+  <script src="js/jquery.flip.min.js" /></script>
+  <script src="js/jquery.quizymemorygame.js" /></script>
+  <script>
+    $('#my-memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:40, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true});
+  </script>
+</body>
+</html>
