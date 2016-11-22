@@ -51,7 +51,7 @@ h5 {
 #createButton {
 	background-color: white;
 	color: #1EA4A4;
-	font-size: 20px;
+	font-size: 30px;
 }
 
 .section1 {
@@ -59,7 +59,6 @@ h5 {
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	text-align: center;
 }
 
 .section2 {
@@ -67,7 +66,6 @@ h5 {
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	text-align: center;
 }
 
 .section3 {
@@ -75,7 +73,6 @@ h5 {
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	text-align: center;
 }
 
 main {
