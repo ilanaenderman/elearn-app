@@ -52,6 +52,7 @@ h5 {
 	background-color: white;
 	color: #1EA4A4;
 	font-size: 20px;
+	width: 25%;
 }
 
 .section1 {
@@ -91,11 +92,29 @@ main {
 	padding: 30px;
 }
 
-#createProfile {
-	padding: 30px;
-}
-
 .language{
 	width: 300px;
 	height: 300px;
+}
+#modal1.modal {
+	width: 600px;
+}
+
+#modal2.modal {
+	width: 600px;
+}
+
+.modal-content {
+	width: 550px;
+}
+
+form {
+	padding-left: 60px;
+	padding-bottom: 20px;
+}
+
+.modaltext {
+	color: #1EA4A4;
+	padding-left: 60px;
+	padding-top: 30px;
 }
