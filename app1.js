@@ -33,6 +33,11 @@ app.get('/', (request, response) => {
 	response.render('login')
 })
 
+//Route Profile page
+app.get('/profile', (request, response) => {
+	response.render('profile')
+})
+
 
 //listen port 8000
 app.listen(8000, () => {

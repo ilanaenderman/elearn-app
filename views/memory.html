@@ -2,11 +2,18 @@
 <html>
 <head>
   <title>Memory</title>
-  <link rel="stylesheet" type="text/css" href="css/quizymemorygame.css">
-  <link rel="stylesheet" type="text/css" href="css/memory.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/quizymemorygame.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/custom.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/memory.css">
   </script>
 </head>
 <body class="dutch-memory">
+  <nav>
+    <div class="nav-wrapper">
+      <a id="logo" class="brand-logo">eLearning</a> 
+    </div>
+  </nav>
   <h1> Dutch Memory </h1>
   <h2> Animals </h2>
   <div id="my-memorygame" class="quizy-memorygame">
@@ -42,41 +49,42 @@
         Konijn
       </li> -->
       <li class="match1">
-        <img src="images/horse.jpg">
+        <img src="../static/images/horse.jpg">
       </li>
       <li class="match2">
-        <img src="images/cat.jpg">
+        <img src="../static/images/cat.jpg">
       </li>
       <li class="match3">
-        <img src="images/dog.jpg">
+        <img src="../static/images/dog.jpg">
       </li>
 <!--      <li class="match4">
-        <img src="images/cow.jpg">
+        <img src="../static/images/cow.jpg">
       </li>
       <li class="match5">
-        <img src="images/mouse.jpg">
+        <img src="../static/images/mouse.jpg">
       </li>
       <li class="match6">
-        <img src="images/goat.jpg">
+        <img src="../static/images/goat.jpg">
       </li>
       <li class="match7">
-        <img src="images/sheep.jpg">
+        <img src="../static/images/sheep.jpg">
       </li>
       <li class="match8">
-        <img src="images/bird.jpg">
+        <img src="../static/images/bird.jpg">
       </li>
       <li class="match9">
-        <img src="images/chicken.jpg">
+        <img src="../static/images/chicken.jpg">
       </li>
       <li class="match10">
-        <img src="images/rabbit.jpg">
+        <img src="../static/images/rabbit.jpg">
       </li> -->
    </ul>
   </div>
-  <script src="js/jquery-3.1.1.min.js"></script>
-  <script src="js/jquery-ui.min.js" /></script>
-  <script src="js/jquery.flip.min.js" /></script>
-  <script src="js/jquery.quizymemorygame.js" /></script>
+  <script src="../static/js/jquery-3.1.1.min.js"></script>
+  <script src="../static/js/jquery-ui.min.js" /></script>
+  <script src="../static/js/jquery.flip.min.js" /></script>
+  <script src="../static/js/jquery.quizymemorygame.js" /></script>
+  <script src="../static/js/materialize.min.js"></script>
   <script>
     $('#my-memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:40, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true});
   </script>

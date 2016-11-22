@@ -1,0 +1,58 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+#sidebar {
+    position: fixed;
+    top: 64px;
+    left: 0px;
+    bottom: 0px;
+    width: 600px;
+    overflow: hidden;
+}
+#sidebar img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+#parent {
+    margin-left: 600px;
+    border-left: 1px solid black;
+}
+#profile {
+    text-align: center;
+}
+#games {
+    width: 100%;
+}
+.games h4 {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#firstlang {
+    float: left;
+    width: 400px;
+}
+#seclang {
+    float:right;
+    width: 400px;
+}
+#thirdlang {
+    float: left;
+    width: 400px;
+}
+#fourthlang {
+    float: right;
+    width: 400px;
+}
+
+.gamepic {
+    width: 400px;
+    height: auto;
+}

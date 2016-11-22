@@ -1,0 +1,32 @@
+html
+	head
+		script(src='/js/jquery-3.1.1.min.js')
+		script(src='/js/materialize.min.js')
+		script(src='/js/custom.js')
+
+		link(href='/css/custom.css' type="text/css" rel="stylesheet")
+		link(href='/css/materialize.min.css' type="text/css" rel="stylesheet")
+	body
+		nav
+			div.nav-wrapper
+				a#logo.brand-logo eLearning 
+				ul.right.hide-on-med-and-down
+					li
+						a(href='#!') Home
+					li
+						a.waves-effect.waves-light.btn(href='#modal1') Create profile
+		div#modal1.modal
+			div.modal-content
+				h4 Modal Header
+				p A bunch of text
+			div.modal-footer
+				a(href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat") Agrees
+							
+
+		main
+			div.container
+				div.row
+					div.col.l8.offset-l2
+						h2 eLearning App
+		
+

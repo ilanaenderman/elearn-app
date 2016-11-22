@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #F6FEFE;
+}
+
+.nav-wrapper {
+	background-color: #1EA4A4;
+	height: 100px;
+}
+
+.right.hide-on-med-and-down {
+	padding-right: 40px;
+}
+
+h2 {
+	text-align: center;
+}
+
+#logo {
+  padding-left: 40px;
+  font-size: 40px
+}
+#logo.brand-logo {
+	color: white;
+}
+
+#topcard {
+  margin-top: -80px;
+}
+
+.waves-effect.waves-light.btn-large {
+	background-color: #007E7E;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#logo {
+  color: #F8D480;
+
+}
