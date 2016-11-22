@@ -18,6 +18,8 @@ html
 		div#modal1.modal
 			div.modal-content
 				h4 Create profile
+				br
+				h2#error-message= message
 				form(action='/' method='post')
 					input#fullName(type="text" name='fullName' placeholder='Enter full name' required)
 					input#userName(type='text' name='userName' placeholder='Enter user name' required)
@@ -25,14 +27,21 @@ html
 					input#password(type='password' name='password' placeholder='Enter password' required)
 					input#conPassword(type="password" name='conPassword' placeholder='Confirm password' required)
 					input(type='submit' class='btn btn-default' value='Register' id='submit')
-			div.modal-footer
 							
 
 		main
 			div.container
 				div.row
-					div.col.l8.offset-l2
-						h2 eLearning App
-						h2#error-message= message
+					div.col.l10.offset-l1
+						h2 Welcome to the eLearning App
+						div.col.l4
+							img.language(src='/images/flag_dutch.png')
+						div.col.l4
+							img.language(src='/images/flag_spain.png')
+						div.col.l4
+							img.language(src='/images/flag_france.png')
+
+
+						
 		
 

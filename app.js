@@ -49,35 +49,35 @@ app.post('/', (request, response) => {
 	let fCharUser= userName.substr(0,1)
 
 	if( fullName.length === 0) {
-		response.redirect('/register?message=' + encodeURIComponent("Please fill out your full name."))
+		response.redirect('/?message=' + encodeURIComponent("Please fill out your full name."))
 		return
 	}
 	if( userName.length === 0) {
-		response.redirect('/register?message=' + encodeURIComponent("Please fill out your user name."))
+		response.redirect('/?message=' + encodeURIComponent("Please fill out your user name."))
 		return
 	}
 	if( !firstChar.match(/[a-zA-Z ]/)) {
-		response.redirect('/register?message=' + encodeURIComponent("First letter must be alphabetic."))
+		response.redirect('/?message=' + encodeURIComponent("First letter must be alphabetic."))
 		return
 	}
 	if( !fCharUser.match(/[a-zA-Z ]/)) {
-		response.redirect('/register?message=' + encodeURIComponent("First letter must be alphabetic."))
+		response.redirect('/?message=' + encodeURIComponent("First letter must be alphabetic."))
 		return
 	}
 	if( email.length === 0) {
-		response.redirect('/register?message=' + encodeURIComponent("Please fill out your email address."))
+		response.redirect('/?message=' + encodeURIComponent("Please fill out your email address."))
 		return
 	}
 	if( !email.match(/@/)){
-		response.redirect('/register?message=' + encodeURIComponent("Please fill in a valid email address."))
+		response.redirect('/?message=' + encodeURIComponent("Please fill in a valid email address."))
 		return
 	}
 	if( password.length < 8 ){
-		response.redirect('/register?message=' + encodeURIComponent("Password is too short."))
+		response.redirect('/?message=' + encodeURIComponent("Password is too short."))
 		return
 	}
 	if( pwConfirm !==  password) {
-		response.redirect('/register?message=' + encodeURIComponent("Not the same password."))
+		response.redirect('/?message=' + encodeURIComponent("Not the same password."))
 		return
 	}
 
@@ -100,7 +100,7 @@ app.post('/', (request, response) => {
 				})
 				response.redirect('/?message=' + encodeURIComponent("Succesfully registered."))
 			} else {
-				response.redirect('/register?message=' + encodeURIComponent("User name or email already in use."))
+				response.redirect('/?message=' + encodeURIComponent("User name or email already in use."))
 			}
 		})
 	})
