@@ -115,6 +115,9 @@ main {
 .modal-content {
 	width: 550px;
 }
+#error-message {
+	padding-left: 60px;
+}
 
 form {
 	padding-left: 60px;
