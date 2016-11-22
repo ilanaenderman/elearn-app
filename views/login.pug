@@ -15,7 +15,7 @@ html
 						a#loginButton.waves-effect.waves-light.btn-large(href='#modal1') Login
 		div#modal1.modal
 			div.modal-content
-				h4 Login on profile
+				h3.modaltext Login on profile
 				br
 				h2#error-message= message
 				form(action='/' method='post')
@@ -30,7 +30,7 @@ html
 					div.col.l10.offset-l1
 						div.section1 
 							h1 Welcome to the eLearning App
-							h5 Fun while learning new languages
+							h5 Let childeren learn Dutch, Spanish or French while having fun
 						div.section2
 							div.col.l4
 								img.language.circle(src='/images/flag_dutch.png')
@@ -43,7 +43,7 @@ html
 
 		div#modal2.modal
 			div.modal-content
-				h4 Create profile
+				h3.modaltext Create profile
 				br
 				h2#error-message= message
 				form(action='/' method='post')
@@ -52,7 +52,7 @@ html
 					input#email(type="text" name='email' placeholder='Enter email' required)
 					input#password(type='password' name='password' placeholder='Enter password' required)
 					input#conPassword(type="password" name='conPassword' placeholder='Confirm password' required)
-					input(type='submit' class='btn btn-default' value='Register' id='submit')
+					input(type='submit' class='btn btn-default' value='Submit' id='submit')
 
 
 						
