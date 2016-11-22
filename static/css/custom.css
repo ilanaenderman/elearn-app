@@ -30,9 +30,17 @@ h2 {
   margin-top: -80px;
 }
 
+#error-message {
+	color: red;
+	font-size: 15px;
+	font-style: italic;
+	text-align: left;
+}
+
 .waves-effect.waves-light.btn-large {
 	background-color: #007E7E;
 }
+
 
 main {
   flex: 1 0 auto;
@@ -41,4 +49,13 @@ main {
 #logo {
   color: #F8D480;
 
+}
+
+.col.l4 {
+	padding: 30px;
+}
+
+.language{
+	width: 300px;
+	height: auto;
 }
