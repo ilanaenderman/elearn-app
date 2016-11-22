@@ -3,6 +3,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: #1EA4A4;
+  font-family: "Comic Sans MS";
 }
 
 .nav-wrapper {
@@ -10,7 +11,7 @@ body {
 }
 
 .right.hide-on-med-and-down {
-	padding-right: 200px;
+	padding-right: 150px;
 }
 
 h1 {
@@ -18,15 +19,17 @@ h1 {
 	color: white;
 }
 
-h5 {
+h4 {
 	text-align: center;
 	color: white;
+
 }
 
 #logo {
-  padding-left: 200px;
-  font-size: 40px
+  padding-left: 150px;
+  font-size: 40px;
 }
+
 #logo.brand-logo {
 	color: white;
 }
@@ -53,6 +56,11 @@ h5 {
 	color: #1EA4A4;
 	font-size: 20px;
 	width: 25%;
+}
+
+.btn.btn-default.btn-large {
+	background-color: #1EA4A4;
+	color: white;
 }
 
 .section1 {
@@ -111,10 +119,31 @@ main {
 form {
 	padding-left: 60px;
 	padding-bottom: 20px;
+	font-size: 20px;
 }
 
 .modaltext {
 	color: #1EA4A4;
 	padding-left: 60px;
 	padding-top: 30px;
+}
+
+#fullName {
+	font-size: 20px;
+}
+
+#userName {
+	font-size: 20px;
+}
+
+#email{
+	font-size: 20px;
+}
+
+#password{
+	font-size: 20px;
+}
+
+#conPassword {
+	font-size: 20px;
 }

@@ -12,16 +12,16 @@ html
 				a#logo.brand-logo eLearning 
 				ul.right.hide-on-med-and-down
 					li
-						a#loginButton.waves-effect.waves-light.btn-large(href='#modal1') Login
+						a#loginButton.waves-effect.waves-light.btn-large.z-depth-0(href='#modal1') Login
 		div#modal1.modal
 			div.modal-content
-				h3.modaltext Login on profile
+				h2.modaltext Login on profile
 				br
 				h2#error-message= message
 				form(action='/' method='post')
 					input#email(type="text" name='email' placeholder='Enter email' required)
 					input#password(type='password' name='password' placeholder='Enter password' required)
-					input(type='submit' class='btn btn-default' value='login' id='submit')
+					input(type='submit' class='btn btn-default btn-large' value='login' id='submit')
 							
 
 		main
@@ -30,7 +30,7 @@ html
 					div.col.l10.offset-l1
 						div.section1 
 							h1 Welcome to the eLearning App
-							h5 Let childeren learn Dutch, Spanish or French while having fun
+							h4 Let childeren learn Dutch, Spanish or French while having fun
 						div.section2
 							div.col.l4
 								img.language.circle(src='/images/flag_dutch.png')
@@ -39,11 +39,11 @@ html
 							div.col.l4
 								img.language.circle(src='/images/flag_france.png')
 				div.section3
-					a#createButton.waves-effect.waves-light.btn-large(href='#modal2') Create Profile
+					a#createButton.waves-effect.waves-light.btn-large.z-depth-0(href='#modal2') Create new profile
 
 		div#modal2.modal
 			div.modal-content
-				h3.modaltext Create profile
+				h2.modaltext Create profile
 				br
 				h2#error-message= message
 				form(action='/' method='post')
@@ -52,7 +52,7 @@ html
 					input#email(type="text" name='email' placeholder='Enter email' required)
 					input#password(type='password' name='password' placeholder='Enter password' required)
 					input#conPassword(type="password" name='conPassword' placeholder='Confirm password' required)
-					input(type='submit' class='btn btn-default' value='Submit' id='submit')
+					input(type='submit' class='btn btn-default btn-large' value='Submit' id='submit')
 
 
 						
