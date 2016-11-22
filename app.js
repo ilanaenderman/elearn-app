@@ -103,6 +103,33 @@ app.post('/', (request, response) => {
 				response.redirect('/?message=' + encodeURIComponent("User name or email already in use."))
 			}
 		})
+	}).then( user => {
+		if(email.length === 0) {
+			response.redirect('/?message=' + encodeURIComponent("Please fill out your email."))
+			return;
+		}
+
+		if(password.length === 0) {
+			response.redirect('/?message=' + encodeURIComponent("Please fill out your password."))
+			return;
+		}
+
+		User.findOne({
+			where: {
+				email: request.body.email
+			}
+		}).then( (user) => {
+			var hash = user.password 
+			bcrypt.compare(request.body.password, hash, (err, res) => {
+				if (user !== null && res == true) {
+					request.session.user = user
+					response.redirect('/profile')
+				} 
+				else {
+					response.redirect('/?message=' + encodeURIComponent("Invalid email or password."))
+				}
+			})
+		})
 	})
 })
 
