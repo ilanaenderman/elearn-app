@@ -32,8 +32,19 @@
   text-align:center;
 }
 
-.quizy-mg-item .quizy-mg-item-top{
-  background:url('../images/quizy-mg-item-top.png');
+.dutch-memory .quizy-mg-item .quizy-mg-item-top {
+  background:url('../images/questionmark_dutch.png');
+  border: 1px solid black;
+}
+
+.spanish-memory .quizy-mg-item .quizy-mg-item-top {
+  background:url('../images/questionmark_spain.jpg');
+  border: 1px solid black;
+}
+
+.french-memory .quizy-mg-item .quizy-mg-item-top {
+  background:url('../images/flag_france.jpeg');
+  border: 1px solid black;
 }
 
 /* styles for the popup notifications */
