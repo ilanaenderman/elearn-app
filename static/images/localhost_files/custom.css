@@ -3,7 +3,6 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: #1EA4A4;
-  font-family: "Comic Sans MS";
 }
 
 .nav-wrapper {
@@ -11,7 +10,7 @@ body {
 }
 
 .right.hide-on-med-and-down {
-	padding-right: 150px;
+	padding-right: 200px;
 }
 
 h1 {
@@ -19,17 +18,15 @@ h1 {
 	color: white;
 }
 
-h4 {
+h5 {
 	text-align: center;
 	color: white;
-
 }
 
 #logo {
-  padding-left: 150px;
-  font-size: 40px;
+  padding-left: 200px;
+  font-size: 40px
 }
-
 #logo.brand-logo {
 	color: white;
 }
@@ -54,13 +51,7 @@ h4 {
 #createButton {
 	background-color: white;
 	color: #1EA4A4;
-	font-size: 20px;
-	width: 25%;
-}
-
-.btn.btn-default.btn-large {
-	background-color: #1EA4A4;
-	color: white;
+	font-size: 30px;
 }
 
 .section1 {
@@ -68,7 +59,6 @@ h4 {
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	text-align: center;
 }
 
 .section2 {
@@ -76,7 +66,6 @@ h4 {
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	text-align: center;
 }
 
 .section3 {
@@ -84,7 +73,6 @@ h4 {
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	text-align: center;
 }
 
 main {
@@ -100,53 +88,11 @@ main {
 	padding: 30px;
 }
 
+#createProfile {
+	padding: 30px;
+}
+
 .language{
 	width: 300px;
 	height: 300px;
-}
-#modal1.modal {
-	width: 600px;
-}
-
-#modal2.modal {
-	width: 600px;
-}
-
-.modal-content {
-	width: 550px;
-}
-#error-message {
-	padding-left: 60px;
-}
-
-form {
-	padding-left: 60px;
-	padding-bottom: 20px;
-	font-size: 20px;
-}
-
-.modaltext {
-	color: #1EA4A4;
-	padding-left: 60px;
-	padding-top: 30px;
-}
-
-#fullName {
-	font-size: 20px;
-}
-
-#userName {
-	font-size: 20px;
-}
-
-#email{
-	font-size: 20px;
-}
-
-#password{
-	font-size: 20px;
-}
-
-#conPassword {
-	font-size: 20px;
 }
