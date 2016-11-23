@@ -52,6 +52,32 @@ app.get('/memory-family-nl', (request, response) => {
 	response.render('memory3')
 })
 
+//Route Memory Games ES
+app.get('/memory-food-es', (request, response) => {
+	response.render('memoryspain')
+})
+
+app.get('/memory-animal-es', (request, response) => {
+	response.render('memoryspain2')
+})
+
+app.get('/memory-family-es', (request, response) => {
+	response.render('memoryspain3')
+})
+
+//Route Memory Games FR
+app.get('/memory-food-fr', (request, response) => {
+	response.render('memoryfrench')
+})
+
+app.get('/memory-animal-fr', (request, response) => {
+	response.render('memoryfrench2')
+})
+
+app.get('/memory-family-fr', (request, response) => {
+	response.render('memoryfrench3')
+})
+
 //listen port 8000
 app.listen(8000, () => {
 	console.log('Server is running')
