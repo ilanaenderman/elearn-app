@@ -29,20 +29,20 @@ $(document).ready(function(){
   })
 
 //Ajax create profile
-$(document).ready( function () {
-	$("#provider-json").keyup( () => {
-		if( timer() ){
+// $(document).ready( function () {
+// 	$("#provider-json").keyup( () => {
+// 		if( timer() ){
 
-		var letter = { 
-			input: $("#provider-json").val()
-		}
-		$.post("/searchAutocomplete", letter, (response) => {
-				$('#result').html("")
-				for( var i = 0; i < response.data.length; i++) {
-					$("#result").append(response.data[i].firstName + " " + response.data[i].lastName + ": " + response.data[i].email + "<br>")
-				}
-			})
-		}
-	} else {console.log("false")}
-	})
-})
+// 		var letter = { 
+// 			input: $("#provider-json").val()
+// 		}
+// 		$.post("/searchAutocomplete", letter, (response) => {
+// 				$('#result').html("")
+// 				for( var i = 0; i < response.data.length; i++) {
+// 					$("#result").append(response.data[i].firstName + " " + response.data[i].lastName + ": " + response.data[i].email + "<br>")
+// 				}
+// 			})
+// 		}
+// 	} else {console.log("false")}
+// 	})
+// })

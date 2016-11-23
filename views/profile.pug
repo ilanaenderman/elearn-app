@@ -1,11 +1,11 @@
 html
 	head
-		link(href='/css/custom.css' type="text/css" rel="stylesheet")
 		link(href='/css/materialize.min.css' type="text/css" rel="stylesheet")
 		link(href='/css/profile.css' type="text/css" rel="stylesheet")
 		script(src='/js/jquery-3.1.1.min.js')
 		script(src='/js/materialize.min.js')
 		script(src='/js/custom.js')
+		//- script(src='/js/profile.js')
 	body
 		nav
 			div.nav-wrapper
@@ -21,7 +21,6 @@ html
 			div#main-content
 				div.container#games
 					div.row
-						//- div.col.l10.offset-l1
 						br
 						h2 Progress
 						img.gamepic(src="images/memory-example.png")
@@ -31,11 +30,11 @@ html
 									h4 Dutch
 									h5 Memory Game
 									div.col.s12.offset-l0
-										a(href="/memory" value="food-nl")
+										a(href="/memory-food-nl" name="food-nl" id="food-nl")
 											img.buttons(src="images/food-btn-bw.png")
-										a(href="/memory" name="animal-nl") &nbsp;
+										a(href="/memory-animal-nl" name="animal-nl" id="animal-nl") &nbsp;
 											img.buttons(src="images/animal-btn-bw.png")
-										a(href="#") &nbsp;
+										a(href="/memory-family-nl") &nbsp;
 											img.buttons(src="images/family-btn-bw.png")
 								div#seclang
 									h4 Spanish
@@ -57,13 +56,3 @@ html
 											img.buttons(src="images/animal-btn-bw.png")
 										a(href="#") &nbsp;
 											img.buttons(src="images/family-btn-bw.png")
-								//- div#fourthlang
-								//- 	h4 Chinese
-								//- 	h5 Memory Game
-								//- 	div.col.s8.offset-l0
-								//- 		a(href="#")
-								//- 			img.buttons(src="images/food-btn-bw.png")
-								//- 		a(href="#") &nbsp;
-								//- 			img.buttons(src="images/animal-btn-bw.png")
-								//- 		a(href="#") &nbsp;
-								//- 			img.buttons(src="images/family-btn-bw.png")

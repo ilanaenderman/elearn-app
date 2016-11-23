@@ -1,0 +1,82 @@
+$langWidth: 400px;
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden; 
+    font-family: "Comic Sans MS";
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}
+
+.nav-wrapper {
+    background-color: #1EA4A4;
+    #logo {
+        padding-left: 150px;
+        font-size: 40px;
+        color: white;
+    }
+}
+
+//Body Content
+#parent {
+    margin-left: 600px;
+    //Profile bar
+    #sidebar {
+        position: fixed;
+        top: 64px;
+        left: 0px;
+        bottom: 0px;
+        width: 600px;
+        border-right: 1px solid black;
+        overflow: hidden;
+        img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+        }
+        #profile {
+            text-align: center;
+        }
+    }
+    //Progress content
+    #games {
+        width: 100%;
+        .gamepic {
+            display: block;
+            width: 700px;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .games {
+            text-align: center;
+            h4 {
+                margin-top: 40px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .buttons {
+                width: 50px;
+                height: 50px;
+            }
+            #firstlang {
+                float: left;
+                width: $langWidth;
+            }
+            #seclang {
+                float: left;
+                width: $langWidth;
+            }
+            #thirdlang {
+                float: left;
+                width: $langWidth;
+            }
+        }
+    }
+}
