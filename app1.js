@@ -38,6 +38,18 @@ app.get('/profile', (request, response) => {
 	response.render('profile')
 })
 
+//Route Memory Game
+app.get('/memory', (request, response) => {
+	console.log(request.body)
+	if(request.body.name == "food-nl") {
+		response.render('memory1')
+	} else if(request.body.name == "animal-nl") {
+		response.render('memory2')
+	} else {
+		response.render('memory3')
+	}
+})
+
 
 //listen port 8000
 app.listen(8000, () => {
