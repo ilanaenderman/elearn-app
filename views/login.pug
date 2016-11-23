@@ -17,7 +17,6 @@ html
 			div.modal-content
 				h2.modaltext Login on profile
 				br
-				h2#error-message= message
 				form(action='/' method='post')
 					input#email(type="text" name='email' placeholder='Enter email' required)
 					input#password(type='password' name='password' placeholder='Enter password' required)
@@ -30,7 +29,7 @@ html
 					div.col.l10.offset-l1
 						div.section1 
 							h1 Welcome to the eLearning App
-							h4 Let childeren learn Dutch, Spanish or French while having fun
+							h4 Let children learn Dutch, Spanish or French while having fun
 						div.section2
 							div.col.l4
 								img.language.circle(src='/images/flag_dutch.png')
@@ -52,7 +51,7 @@ html
 					input#email(type="text" name='email' placeholder='Enter email' required)
 					input#password(type='password' name='password' placeholder='Enter password' required)
 					input#conPassword(type="password" name='conPassword' placeholder='Confirm password' required)
-					input(type='submit' class='btn btn-default btn-large' value='Submit' id='submit')
+					input#submitProfile(type='submit' class='btn btn-default btn-large' value='Submit')
 
 
 						
