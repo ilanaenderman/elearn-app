@@ -6,6 +6,7 @@ const session 		= require('express-session')
 const pug			= require('pug')
 const pg 			= require('pg')
 const bcrypt		= require('bcrypt-node')
+const sass 			= require('node-sass')
 
 const app			= express()
 
@@ -38,18 +39,18 @@ app.get('/profile', (request, response) => {
 	response.render('profile')
 })
 
-//Route Memory Game
-app.get('/memory', (request, response) => {
-	console.log(request.body)
-	if(request.body.name == "food-nl") {
-		response.render('memory1')
-	} else if(request.body.name == "animal-nl") {
-		response.render('memory2')
-	} else {
-		response.render('memory3')
-	}
+//Route Memory Games NL
+app.get('/memory-food-nl', (request, response) => {
+	response.render('memory1')
 })
 
+app.get('/memory-animal-nl', (request, response) => {
+	response.render('memory2')
+})
+
+app.get('/memory-family-nl', (request, response) => {
+	response.render('memory3')
+})
 
 //listen port 8000
 app.listen(8000, () => {
