@@ -1,10 +1,8 @@
 $(document).ready(function() {
-	$("#food-nl").click(function() {
-		var memory = {
-			input: $("#food-nl").val()
-		}
-		$.get('/food-nl', memory, function(response) {
-			response.render('memory1')
-		})
-	})
+	$("#animal-nl").removeAttr('href')
+	//If food-nl = finished 
+	//$("#animal-nl").attr("href", location)
+	$("#family-nl").removeAttr('href')
+	//If animal-nl = finished
+	//$("#family-nl").attr("href", location)
 })
