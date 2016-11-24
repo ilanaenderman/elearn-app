@@ -6,8 +6,11 @@ const session 		= require('express-session')
 const pug			= require('pug')
 const pg 			= require('pg')
 const bcrypt		= require('bcrypt-node')
+const sass			= require('node-sass')
 
 const app			= express()
+
+
 
 app.set( 'view engine', 'pug')
 app.set( 'views', __dirname + '/views' )
@@ -39,7 +42,8 @@ app.get('/', (request, response) => {
 	response.render('login', {message: request.query.message})
 })
 
-app.post('/', (request, response) => {
+app.post('/createdProfile', (request, response) => {
+	console.log(request.body)
 	let fullName = request.body.fullName
 	let userName = request.body.userName
 	let email 	 = request.body.email
@@ -105,35 +109,42 @@ app.post('/', (request, response) => {
 		})
 	})
 })
-// 	}).then( user => {
-// 		if(email.length === 0) {
-// 			response.redirect('/?message=' + encodeURIComponent("Please fill out your email."))
-// 			return;
-// 		}
 
-// 		if(password.length === 0) {
-// 			response.redirect('/?message=' + encodeURIComponent("Please fill out your password."))
-// 			return;
-// 		}
 
-// 		User.findOne({
-// 			where: {
-// 				email: request.body.email
-// 			}
-// 		}).then( (user) => {
-// 			var hash = user.password 
-// 			bcrypt.compare(request.body.password, hash, (err, res) => {
-// 				if (user !== null && res == true) {
-// 					request.session.user = user
-// 					response.redirect('/profile')
-// 				} 
-// 				else {
-// 					response.redirect('/?message=' + encodeURIComponent("Invalid email or password."))
-// 				}
-// 			})
-// 		})
-// 	})
-// })
+app.post('/', (request, response) => {	
+	if(request.body.email.length === 0) {
+		response.redirect('/?message=' + encodeURIComponent("Please fill out your email."))
+		return;
+	}
+
+	if(request.body.password.length === 0) {
+		response.redirect('/?message=' + encodeURIComponent("Please fill out your password."))
+		return;
+	}
+
+	User.findOne({
+		where: {
+			email: request.body.email
+		}
+	}).then( (user) => {
+		var hash = user.password 
+		bcrypt.compare(request.body.password, hash, (err, res) => {
+			if (user !== null && res == true) {
+				request.session.user = user
+				response.redirect('/profile')
+			} 
+			else {
+				response.redirect('/?message=' + encodeURIComponent("Invalid email or password."))
+			}
+		})
+	})
+})
+
+//Route Profile page
+app.get('/profile', (request, response) => {
+	response.render('profile')
+})
+
 
 // Sync
 //Create test User

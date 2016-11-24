@@ -1,0 +1,162 @@
+$mainColor: #1EA4A4;
+$inputSize: 20px;
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: $mainColor;
+  font-family: "Comic Sans MS";
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+//Navbar CSS
+.nav-wrapper {
+	background-color: $mainColor;
+	
+	#logo {
+  		padding-left: 150px;
+  		font-size: 40px;
+  		color: white;
+	}
+
+	.right.hide-on-med-and-down {
+		padding-right: 150px;
+
+		#loginButton {
+			background-color: white;
+			color: $mainColor;
+			font-size: 20px;
+		}
+	}
+}
+
+//Modal1 Login Css
+#modal1.modal {
+	width: 600px;
+}
+
+#modal2.modal {
+	width: 600px;
+
+	.modal-content {
+		width: 550px;
+
+		.modaltext {
+			color: $mainColor;
+			padding-left: 60px;
+			padding-top: 30px;
+		}
+
+		#error-message {
+			color: red;
+			font-size: 15px;
+			font-style: italic;
+			text-align: left;
+			padding-left: 60px;
+		}
+
+		form {
+			padding-left: 60px;
+			padding-bottom: 20px;
+			font-size: 20px;
+
+			#fullName {
+				font-size: $inputSize;
+			}
+
+			#userName {
+				font-size: $inputSize;
+			}
+
+			#email{
+				font-size: $inputSize;
+			}
+
+			#password{
+				font-size: $inputSize;
+			}
+
+			#conPassword {
+				font-size: $inputSize;
+			}
+
+			.btn.btn-default.btn-large {
+				background-color: $mainColor;
+				color: white;
+			}
+		}
+	}
+}
+
+//sections in main
+
+.section1 {
+	padding-top: 100px;
+	padding-bottom: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center;
+
+	h1 {
+		text-align: center;
+		color: white;
+	}
+
+	h4 {
+		text-align: center;
+		color: white;
+
+	}
+}
+
+.section2 {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center;
+
+	.col.l4 {
+		padding: 30px;
+
+		.language{
+			width: 300px;
+			height: 300px;
+		}
+	}
+}
+
+.section3 {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center;
+
+	#createButton {
+		background-color: white;
+		color: $mainColor;
+		font-size: 20px;
+		width: 25%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #1EA4A4;
+  font-family: "Comic Sans MS"; }
+
+main {
+  flex: 1 0 auto; }
+
+.nav-wrapper {
+  background-color: #1EA4A4; }
+  .nav-wrapper #logo {
+    padding-left: 150px;
+    font-size: 40px;
+    color: white; }
+  .nav-wrapper .right.hide-on-med-and-down {
+    padding-right: 150px; }
+    .nav-wrapper .right.hide-on-med-and-down #loginButton {
+      background-color: white;
+      color: #1EA4A4;
+      font-size: 20px; }
+
+#modal1.modal {
+  width: 600px; }
+
+#modal2.modal {
+  width: 600px; }
+  #modal2.modal .modal-content {
+    width: 550px; }
+    #modal2.modal .modal-content .modaltext {
+      color: #1EA4A4;
+      padding-left: 60px;
+      padding-top: 30px; }
+    #modal2.modal .modal-content #error-message {
+      color: red;
+      font-size: 15px;
+      font-style: italic;
+      text-align: left;
+      padding-left: 60px; }
+    #modal2.modal .modal-content form {
+      padding-left: 60px;
+      padding-bottom: 20px;
+      font-size: 20px; }
+      #modal2.modal .modal-content form #fullName {
+        font-size: 20px; }
+      #modal2.modal .modal-content form #userName {
+        font-size: 20px; }
+      #modal2.modal .modal-content form #email {
+        font-size: 20px; }
+      #modal2.modal .modal-content form #password {
+        font-size: 20px; }
+      #modal2.modal .modal-content form #conPassword {
+        font-size: 20px; }
+      #modal2.modal .modal-content form .btn.btn-default.btn-large {
+        background-color: #1EA4A4;
+        color: white; }
+
+.section1 {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center; }
+  .section1 h1 {
+    text-align: center;
+    color: white; }
+  .section1 h4 {
+    text-align: center;
+    color: white; }
+
+.section2 {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center; }
+  .section2 .col.l4 {
+    padding: 30px; }
+    .section2 .col.l4 .language {
+      width: 300px;
+      height: 300px; }
+
+.section3 {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center; }
+  .section3 #createButton {
+    background-color: white;
+    color: #1EA4A4;
+    font-size: 20px;
+    width: 25%; }
