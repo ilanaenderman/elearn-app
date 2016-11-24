@@ -142,8 +142,59 @@ app.post('/', (request, response) => {
 
 //Route Profile page
 app.get('/profile', (request, response) => {
-	response.render('profile')
+	var user = request.session.user
+	response.render('profile', {user: user})
 })
+
+//Route Memory Games NL
+app.get('/memory-food-nl', (request, response) => {
+	response.render('memorydutch')
+})
+
+app.get('/memory-animal-nl', (request, response) => {
+	response.render('memorydutch2')
+})
+
+app.get('/memory-family-nl', (request, response) => {
+	response.render('memorydutch3')
+})
+
+//Route Memory Games ES
+app.get('/memory-food-es', (request, response) => {
+	response.render('memoryspain')
+})
+
+app.get('/memory-animal-es', (request, response) => {
+	response.render('memoryspain2')
+})
+
+app.get('/memory-family-es', (request, response) => {
+	response.render('memoryspain3')
+})
+
+//Route Memory Games FR
+app.get('/memory-food-fr', (request, response) => {
+	response.render('memoryfrench')
+})
+
+app.get('/memory-animal-fr', (request, response) => {
+	response.render('memoryfrench2')
+})
+
+app.get('/memory-family-fr', (request, response) => {
+	response.render('memoryfrench3')
+})
+
+// Log out 
+app.get('/logout',  (request, response)  =>{
+	request.session.destroy( (error) => {
+		if(error) {
+			throw error;
+		}
+		response.redirect('/?message=' + encodeURIComponent("Successfully logged out."));
+	})
+});
+
 
 
 // Sync

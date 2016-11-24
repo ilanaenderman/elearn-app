@@ -21,40 +21,41 @@ main {
       color: #1EA4A4;
       font-size: 20px; }
 
-#modal1.modal {
+.modal {
   width: 600px; }
-
-#modal2.modal {
-  width: 600px; }
-  #modal2.modal .modal-content {
+  .modal .modal-content {
     width: 550px; }
-    #modal2.modal .modal-content .modaltext {
+    .modal .modal-content .modaltext {
       color: #1EA4A4;
       padding-left: 60px;
       padding-top: 30px; }
-    #modal2.modal .modal-content #error-message {
+    .modal .modal-content #error-message {
       color: red;
       font-size: 15px;
       font-style: italic;
       text-align: left;
       padding-left: 60px; }
-    #modal2.modal .modal-content form {
+    .modal .modal-content form {
       padding-left: 60px;
       padding-bottom: 20px;
       font-size: 20px; }
-      #modal2.modal .modal-content form #fullName {
+      .modal .modal-content form #fullName {
         font-size: 20px; }
-      #modal2.modal .modal-content form #userName {
+      .modal .modal-content form #userName {
         font-size: 20px; }
-      #modal2.modal .modal-content form #email {
+      .modal .modal-content form #email {
         font-size: 20px; }
-      #modal2.modal .modal-content form #password {
+      .modal .modal-content form #password {
         font-size: 20px; }
-      #modal2.modal .modal-content form #conPassword {
+      .modal .modal-content form #conPassword {
         font-size: 20px; }
-      #modal2.modal .modal-content form .btn.btn-default.btn-large {
+      .modal .modal-content form .btn.btn-default.btn-large {
         background-color: #1EA4A4;
         color: white; }
+      .modal .modal-content form #email2 {
+        font-size: 20px; }
+      .modal .modal-content form #password2 {
+        font-size: 20px; }
 
 .section1 {
   padding-top: 100px;
