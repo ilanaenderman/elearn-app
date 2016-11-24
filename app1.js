@@ -41,15 +41,15 @@ app.get('/profile', (request, response) => {
 
 //Route Memory Games NL
 app.get('/memory-food-nl', (request, response) => {
-	response.render('memory1')
+	response.render('memorydutch')
 })
 
 app.get('/memory-animal-nl', (request, response) => {
-	response.render('memory2')
+	response.render('memorydutch2')
 })
 
 app.get('/memory-family-nl', (request, response) => {
-	response.render('memory3')
+	response.render('memorydutch3')
 })
 
 //Route Memory Games ES
