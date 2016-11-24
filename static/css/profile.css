@@ -13,6 +13,14 @@ h1, h2, h3, h4, h5 {
     padding-left: 150px;
     font-size: 40px;
     color: white; }
+  .nav-wrapper #userLogo {
+    font-size: 30px; }
+  .nav-wrapper .right.hide-on-med-and-down {
+    padding-right: 150px; }
+    .nav-wrapper .right.hide-on-med-and-down #loginButton {
+      background-color: white;
+      color: #1EA4A4;
+      font-size: 20px; }
 
 #parent {
   margin-left: 600px; }

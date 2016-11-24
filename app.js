@@ -248,6 +248,19 @@ app.get('/memory-family-fr', (request, response) => {
 	response.render('memoryfrench3')
 })
 
+// Log out 
+app.get('/logout',  (request, response)  =>{
+	request.session.destroy( (error) => {
+		if(error) {
+			throw error;
+		}
+		response.redirect('/?message=' + encodeURIComponent("Successfully logged out."));
+	})
+});
+
+
+
+
 // Sync
 //Create test User
 db.sync({force: true}).then( database => {
