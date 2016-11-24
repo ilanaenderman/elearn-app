@@ -1,0 +1,92 @@
+html
+	head
+		title Memory
+		link(rel="stylesheet" type="text/css" href="css/materialize.min.css")
+		link(rel="stylesheet" type="text/css" href="css/quizymemorygame.css")
+		link(rel="stylesheet" type="text/css" href="css/profile.css")
+		link(rel="stylesheet" type="text/css" href="css/memory.css")
+	body.french-memory
+		nav
+			div.nav-wrapper
+				a#logo.brand-logo eLearning
+		h2 French Memory
+		h3 Family
+		div#my-memorygame.quizy-memorygame
+			ul
+				li.match1
+					br
+					br
+					br
+					p.text-style1 Mère
+				li.match2
+					br
+					br
+					br
+					p.text-style1 Père
+				li.match3
+					br
+					br
+					br
+					p.text-style1 Bébé
+				li.match4
+					br
+					br
+					br
+					p.text-style1 Parents
+				li.match5
+					br
+					br
+					br
+					p.text-style1 Frère
+				li.match6
+					br
+					br
+					br
+					p.text-style1 Soeur
+				li.match7
+					br
+					br
+					br
+					p.text-style1 Grand-père
+				li.match8
+					br
+					br
+					br
+					p.text-style1 Grand-mère
+				li.match9
+					br
+					br
+					br
+					p.text-style1 Enfant
+				li.match10
+					br
+					br
+					br
+					p.text-style1 Famille
+				li.match1
+					img(src="images/mom.jpg")
+				li.match2
+					img(src="images/dad.jpg")
+				li.match3
+					img(src="images/baby.jpg")
+				li.match4
+					img(src="images/parent.jpg")
+				li.match5
+					img(src="images/brother.jpg")
+				li.match6
+					img(src="images/sister.jpg")
+				li.match7
+					img(src="images/grandpa.jpg")
+				li.match8
+					img(src="images/grandma.jpg")
+				li.match9
+					img(src="images/child.jpg")
+				li.match10
+					img(src="images/family.jpg")
+		script(src="js/jquery-3.1.1.min.js") 
+		script(src="js/jquery-ui.min.js")
+		script(src="js/jquery.flip.min.js")
+		script(src="js/jquery.quizymemorygame.js") 
+		script(src="js/materialize.min.js") 
+		script.
+			$('#my-memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:40, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true});

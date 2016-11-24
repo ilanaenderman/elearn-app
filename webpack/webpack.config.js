@@ -1,7 +1,7 @@
 module.exports = {
-	entry: 'app.js',
+	entry: './main.js',
 	output: {
-		filename: 'bundle.js'
+		filename: './bundle.js'
 	},
 	module: {
 		preLoaders: [
@@ -33,6 +33,14 @@ module.exports = {
 		    test: /\.(jpg|png|gif)$/,
 		    include: /images/,
 		    loader: 'url'
-		}],
+		},
+		{
+			test: /\.pug$/,
+			exclude: /node_modules/,
+			loader: 'pug'
+		}]
+	},
+	jshint: {
+		esversion: 6
 	}
 }

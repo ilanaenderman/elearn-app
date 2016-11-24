@@ -1,68 +1,61 @@
 body {
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-.buttons {
-    width: 50px;
-    height: 50px;
-}
-#sidebar {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Comic Sans MS"; }
+
+h1, h2, h3, h4, h5 {
+  text-align: center; }
+
+.nav-wrapper {
+  background-color: #1EA4A4; }
+  .nav-wrapper #logo {
+    padding-left: 150px;
+    font-size: 40px;
+    color: white; }
+
+#parent {
+  margin-left: 600px; }
+  #parent #sidebar {
     position: fixed;
     top: 64px;
     left: 0px;
     bottom: 0px;
     width: 600px;
     border-right: 1px solid black;
-    overflow: hidden;
-}
-#sidebar img {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-}
-#parent {
-    margin-left: 600px;
-}
-#profile {
-    text-align: center;
-}
-#games {
-    width: 100%;
-}
-.games {
-    text-align: center;
-}
-.games h4 {
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.gamepic {
-    display: block;
-    width: 700px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-#firstlang {
-    float: left;
-    width: 400px;
-}
-#seclang {
-    float: left;
-    width: 400px;
-}
-#thirdlang {
-    float: left;
-    width: 400px;
-}
-/*#fourthlang {
-    float: right;
-    width: 400px;
-}*/
-
-
+    overflow: hidden; }
+    #parent #sidebar img {
+      width: 200px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px; }
+    #parent #sidebar #profile {
+      text-align: center; }
+  #parent #games {
+    width: 100%; }
+    #parent #games .gamepic {
+      display: block;
+      width: 700px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto; }
+    #parent #games .games {
+      text-align: center; }
+      #parent #games .games h4 {
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto; }
+      #parent #games .games .buttons {
+        width: 50px;
+        height: 50px; }
+      #parent #games .games #firstlang {
+        float: left;
+        width: 400px; }
+      #parent #games .games #seclang {
+        float: left;
+        width: 400px; }
+      #parent #games .games #thirdlang {
+        float: left;
+        width: 400px; }

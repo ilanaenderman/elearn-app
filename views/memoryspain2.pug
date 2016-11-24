@@ -1,0 +1,92 @@
+html
+	head
+		title Memory
+		link(rel="stylesheet" type="text/css" href="css/materialize.min.css")
+		link(rel="stylesheet" type="text/css" href="css/quizymemorygame.css")
+		link(rel="stylesheet" type="text/css" href="css/profile.css")
+		link(rel="stylesheet" type="text/css" href="css/memory.css")
+	body.spanish-memory
+		nav
+			div.nav-wrapper
+				a#logo.brand-logo eLearning
+		h2 Spanish Memory
+		h3 Animals
+		div#my-memorygame.quizy-memorygame
+			ul
+				li.match1
+					br
+					br
+					br
+					p.text-style1 Caballo
+				li.match2
+					br
+					br
+					br
+					p.text-style1 Gato
+				li.match3
+					br
+					br
+					br
+					p.text-style1 Perro
+				li.match4
+					br
+					br
+					br
+					p.text-style1 Vaca
+				li.match5
+					br
+					br
+					br
+					p.text-style1 Ratón
+				li.match6
+					br
+					br
+					br
+					p.text-style1 Cabra
+				li.match7
+					br
+					br
+					br
+					p.text-style1 Oveja
+				li.match8
+					br
+					br
+					br
+					p.text-style1 Pájaro
+				li.match9
+					br
+					br
+					br
+					p.text-style1 Pollo
+				li.match10
+					br
+					br
+					br
+					p.text-style1 Conejo
+				li.match1
+					img(src="images/horse.jpg")
+				li.match2
+					img(src="images/cat.jpg")
+				li.match3
+					img(src="images/dog.jpg")
+				li.match4
+					img(src="images/cow.jpg")
+				li.match5
+					img(src="images/mouse.jpg")
+				li.match6
+					img(src="images/goat.jpg")
+				li.match7
+					img(src="images/sheep.jpg")
+				li.match8
+					img(src="images/bird.jpg")
+				li.match9
+					img(src="images/chicken.jpg")
+				li.match10
+					img(src="images/rabbit.jpg")
+		script(src="js/jquery-3.1.1.min.js") 
+		script(src="js/jquery-ui.min.js")
+		script(src="js/jquery.flip.min.js")
+		script(src="js/jquery.quizymemorygame.js") 
+		script(src="js/materialize.min.js") 
+		script.
+			$('#my-memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:40, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true});
