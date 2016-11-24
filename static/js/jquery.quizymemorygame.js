@@ -356,7 +356,7 @@ if(!Array.indexOf){
           }
           
           // Appends the close button
-          $('#quizy-game-summary').append('<form method="POST" action="">' + '<button type="submit" id="gs-closebut" value=id.id>'+
+          $('#quizy-game-summary').append('<form method="POST" action="">' + '<button type="submit" id="gs-closebut" value="">'+
                                           opts.closeButtonText+ '</button>' + '</form>');
           
           // adds a click event to the close button to be removed on click

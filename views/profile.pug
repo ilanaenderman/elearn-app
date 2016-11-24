@@ -25,33 +25,81 @@ html
 						img.gamepic(src="images/memory-example.png")
 						div.col.l12.offset-l0
 							div.games
-								div#firstlang
-									h4 Dutch
-									h5 Memory Game
-									div.col.s12.offset-l0
-										a(href="/memory-food-nl" name="food-nl" id="food-nl")
-											img.buttons(src="images/food-btn-bw.png")
-										a(href="/memory-animal-nl" name="animal-nl" id="animal-nl") &nbsp;
-											img.buttons(src="images/animal-btn-bw.png")
-										a(href="/memory-family-nl" name="family-nl" id="family-nl") &nbsp;
-											img.buttons(src="images/family-btn-bw.png")
-								div#seclang
-									h4 Spanish
-									h5 Memory Game
-									div.col.s12.offset-l0
-										a(href="/memory-food-es")
-											img.buttons(src="images/food-btn-bw.png")
-										a(href="/memory-animal-es") &nbsp;
-											img.buttons(src="images/animal-btn-bw.png")
-										a(href="/memory-family-es") &nbsp;
-											img.buttons(src="images/family-btn-bw.png")
-								div#thirdlang
-									h4 French
-									h5 Memory Game
-									div.col.s12.offset-l0
-										a(href="#")
-											img.buttons(src="images/food-btn-bw.png")
-										a(href="#") &nbsp;
-											img.buttons(src="images/animal-btn-bw.png")
-										a(href="#") &nbsp;
-											img.buttons(src="images/family-btn-bw.png")
+								-if(id.length == 0)
+									div#firstlang
+										h4 Dutch
+										h5 Memory Game
+										div.col.s12.offset-l0
+											a(href="/memory-food-nl" name="food-nl" id="food-nl")
+												img.buttons(src="images/food-btn-bw.png")
+											a(href="#" name="animal-nl" id="animal-nl") &nbsp;
+												img.buttons(src="images/animal-btn-bw.png")
+											a(href="#" name="family-nl" id="family-nl") &nbsp;
+												img.buttons(src="images/family-btn-bw.png")
+											
+									div#seclang
+										h4 Spanish
+										h5 Memory Game
+										div.col.s12.offset-l0
+											a(href="/memory-food-es" name="4" id="food-es")
+												img.buttons(src="images/food-btn-bw.png")
+											a(href="#" name="5" id="animal-es") &nbsp;
+												img.buttons(src="images/animal-btn-bw.png")
+											a(href="#" name="6" id="family-es") &nbsp;
+												img.buttons(src="images/family-btn-bw.png")
+									div#thirdlang
+										h4 French
+										h5 Memory Game
+										div.col.s12.offset-l0
+											a(href="/memory-food-fr" name="7" id="food-fr")
+												img.buttons(src="images/food-btn-bw.png")
+											a(href="#" name="8" id="animal-fr") &nbsp;
+												img.buttons(src="images/animal-btn-bw.png")
+											a(href="#" name="9" id="family-fr") &nbsp;
+												img.buttons(src="images/family-btn-bw.png")
+								- else
+									div#firstlang
+										h4 Dutch
+										h5 Memory Game
+										div.col.s12.offset-l0
+											//- else if(id.length == 1)
+											//- 	a(href="/memory-food-nl" name="food-nl" id="food-nl")
+											//- 		img.buttons(src="images/food-btn-color.png")
+											//- 	a(href="/memory-animal-nl" name="animal-nl" id="animal-nl") &nbsp;
+											//- 		img.buttons(src="images/animal-btn-bw.png")
+											//- 	a(href="#" name="family-nl" id="family-nl") &nbsp;
+											//- 		img.buttons(src="images/family-btn-bw.png")
+											//- else if(id.length == 2)
+											//- 	a(href="/memory-food-nl" name="food-nl" id="food-nl")
+											//- 		img.buttons(src="images/food-btn-color.png")
+											//- 	a(href="/memory-animal-nl" name="animal-nl" id="animal-nl") &nbsp;
+											//- 		img.buttons(src="images/animal-btn-color.png")
+											//- 	a(href="/memory-family-nl" name="family-nl" id="family-nl") &nbsp;
+											//- 		img.buttons(src="images/family-btn-bw.png")
+											//- else if(id.length == 3)
+											//- 	a(href="/memory-food-nl" name="food-nl" id="food-nl")
+											//- 		img.buttons(src="images/food-btn-color.png")
+											//- 	a(href="#" name="animal-nl" id="animal-nl") &nbsp;
+											//- 		img.buttons(src="images/animal-btn-color.png")
+											//- 	a(href="#" name="family-nl" id="family-nl") &nbsp;
+											//- 		img.buttons(src="images/family-btn-color.png")
+									div#seclang
+										h4 Spanish
+										h5 Memory Game
+										div.col.s12.offset-l0
+											a(href="/memory-food-es" name="4" id="food-es")
+												img.buttons(src="images/food-btn-bw.png")
+											a(href="#" name="5" id="animal-es") &nbsp;
+												img.buttons(src="images/animal-btn-bw.png")
+											a(href="#" name="6" id="family-es") &nbsp;
+												img.buttons(src="images/family-btn-bw.png")
+									div#thirdlang
+										h4 French
+										h5 Memory Game
+										div.col.s12.offset-l0
+											a(href="/memory-food-fr" name="7" id="food-fr")
+												img.buttons(src="images/food-btn-bw.png")
+											a(href="#" name="8" id="animal-fr") &nbsp;
+												img.buttons(src="images/animal-btn-bw.png")
+											a(href="#" name="9" id="family-fr") &nbsp;
+												img.buttons(src="images/family-btn-bw.png")

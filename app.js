@@ -148,7 +148,20 @@ app.post('/', (request, response) => {
 
 //Route Profile page
 app.get('/profile', (request, response) => {
-	response.render('profile')
+	Game.findAll ({
+		where: {
+			finished: true
+		},
+		attributes: ['id']
+	}).then(id => {
+		var result = []
+		for(var i = 0; i < id.length; i++){
+			result.push(id[i].id)
+		}
+		return result
+	}).then(id => {
+		response.render('profile', {id: id})
+	})
 })
 
 //Route Memory Games NL
