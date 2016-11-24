@@ -9,6 +9,11 @@ html
 		nav
 			div.nav-wrapper
 				a#logo.brand-logo eLearning
+				ul.right.hide-on-med-and-down
+					li
+						a#userLogo= user.userName
+					li
+						a#userLogo(href='/logout') Logout
 		h2 French Memory
 		h3 Family
 		div#my-memorygame.quizy-memorygame
