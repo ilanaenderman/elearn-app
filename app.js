@@ -152,14 +152,15 @@ app.get('/profile', (request, response) => {
 		where: {
 			finished: true
 		},
-		attributes: ['id']
+		attributes: ['id', 'language']
 	}).then(id => {
 		var result = []
 		for(var i = 0; i < id.length; i++){
-			result.push(id[i].id)
+			result.push({id: id[i].id, language: id[i].language})
 		}
 		return result
 	}).then(id => {
+		console.log(id)
 		response.render('profile', {id: id})
 	})
 })
@@ -258,13 +259,48 @@ db.sync({force: true}).then( database => {
 			password: hash
 		})
 		Game.create({
-			language: "NL",
+			language: 'NL',
 			theme: "food",
 			finished: false
 		})
 		Game.create({
-			language: "NL",
+			language: 'NL',
 			theme: "animal",
+			finished: false
+		})
+		Game.create({
+			language: 'NL',
+			theme: "family",
+			finished: false
+		})
+		Game.create({
+			language: 'ES',
+			theme: "food",
+			finished: false
+		})
+		Game.create({
+			language: 'ES',
+			theme: "animal",
+			finished: false
+		})
+		Game.create({
+			language: 'ES',
+			theme: "family",
+			finished: false
+		})
+		Game.create({
+			language: 'FR',
+			theme: "food",
+			finished: false
+		})
+		Game.create({
+			language: 'FR',
+			theme: "animal",
+			finished: false
+		})
+		Game.create({
+			language: 'FR',
+			theme: "family",
 			finished: false
 		})
 	})
