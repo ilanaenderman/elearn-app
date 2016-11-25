@@ -26,12 +26,13 @@ h1, h2, h3, h4, h5 {
   margin-left: 600px; }
   #parent #sidebar {
     position: fixed;
-    top: 64px;
+    top: 100px;
     left: 0px;
     bottom: 0px;
     width: 600px;
     border-right: 1px solid black;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #F4FFFE; }
     #parent #sidebar img {
       width: 200px;
       height: auto;
