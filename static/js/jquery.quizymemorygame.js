@@ -25,7 +25,7 @@ if(!Array.indexOf){
   
   var initData = ''; // Later enable to change this on the fly
   var initOpts = {}
-  
+
   var methods = {
     
       init : function(options) {
@@ -336,7 +336,6 @@ if(!Array.indexOf){
         if(opts.gameSummary){
           
           var gameEl = $(this);
-          
           gameEl.append('<div id="quizy-game-summary"><div class="gs-column" id="gs-column1">'+
                           opts.textSummaryTitle+
                           '</div><div class="gs-column" id="gs-column2"></div>'+
@@ -357,8 +356,8 @@ if(!Array.indexOf){
           }
           
           // Appends the close button
-          $('#quizy-game-summary').append('<div id="gs-closebut">'+
-                                          opts.closeButtonText+'</div>');
+          $('#quizy-game-summary').append('<form method="POST" action="">' + '<button type="submit" id="gs-closebut" value="">'+
+                                          opts.closeButtonText+ '</button>' + '</form>');
           
           // adds a click event to the close button to be removed on click
           $('div#gs-closebut').click(function(){

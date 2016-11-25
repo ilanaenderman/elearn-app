@@ -23,9 +23,9 @@ app.use(session({
 	saveUninitialized: false
 }))
 
-//contect to database
-const db = new sequelize('postgres://floriandalhuijsen@localhost/elearn')
-//const db = new sequelize('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/elearn')
+//connect to database
+// const db = new sequelize('postgres://floriandalhuijsen@localhost/elearn')
+const db = new sequelize('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/elearn')
 
 //define modes
 let User = db.define('user', {
@@ -33,6 +33,12 @@ let User = db.define('user', {
 	userName: sequelize.STRING,
 	email: sequelize.STRING,
 	password: sequelize.STRING
+})
+
+let Game = db.define('game', {
+	language: sequelize.STRING,
+	theme: sequelize.STRING,
+	finished: sequelize.BOOLEAN
 })
 
 //define relations
@@ -142,9 +148,105 @@ app.post('/', (request, response) => {
 
 //Route Profile page
 app.get('/profile', (request, response) => {
-	response.render('profile')
+	Game.findAll ({
+		where: {
+			finished: true
+		},
+		attributes: ['id', 'language']
+	}).then(id => {
+		var result = []
+		for(var i = 0; i < id.length; i++){
+			result.push({id: id[i].id, language: id[i].language})
+		}
+		return result
+	}).then(id => {
+		console.log(id)
+		response.render('profile', {id: id})
+	})
 })
 
+//Route Memory Games NL
+app.get('/memory-food-nl', (request, response) => {
+	Game.findOne ({
+		where: {
+			id: 1
+		},
+		attributes: ['id']
+	}).then(id => {
+		response.render('memorydutch', {id: id})
+	})
+})
+
+app.post('/memory-food-nl', (request, response) => {
+	console.log(request.body)
+	Game.findOne ({
+		where: {
+			id: 1
+		}
+	}).then(id => {
+		id.update ({
+			finished: true
+		}).then(id => {
+			response.redirect('/profile')
+		})
+	})
+})
+
+app.get('/memory-animal-nl', (request, response) => {
+	Game.findOne ({
+		where: {
+			id: 2
+		},
+		attributes: ['id']
+	}).then(id => {
+		response.render('memorydutch2')
+	})
+})
+
+app.post('/memory-animal-nl', (request, response) => {
+	console.log("Reacting!")
+	Game.findOne ({
+		where: {
+			id: 2
+		}
+	}).then(id => {
+		id.update ({
+			finished: true
+		}).then(id => {
+			response.redirect('/profile')
+		})
+	})
+})
+
+app.get('/memory-family-nl', (request, response) => {
+	response.render('memorydutch3')
+})
+
+//Route Memory Games ES
+app.get('/memory-food-es', (request, response) => {
+	response.render('memoryspain')
+})
+
+app.get('/memory-animal-es', (request, response) => {
+	response.render('memoryspain2')
+})
+
+app.get('/memory-family-es', (request, response) => {
+	response.render('memoryspain3')
+})
+
+//Route Memory Games FR
+app.get('/memory-food-fr', (request, response) => {
+	response.render('memoryfrench')
+})
+
+app.get('/memory-animal-fr', (request, response) => {
+	response.render('memoryfrench2')
+})
+
+app.get('/memory-family-fr', (request, response) => {
+	response.render('memoryfrench3')
+})
 
 // Sync
 //Create test User
@@ -155,6 +257,51 @@ db.sync({force: true}).then( database => {
 			userName: "ienderman",
 			email: "ilana@hotmail.com",
 			password: hash
+		})
+		Game.create({
+			language: 'NL',
+			theme: "food",
+			finished: false
+		})
+		Game.create({
+			language: 'NL',
+			theme: "animal",
+			finished: false
+		})
+		Game.create({
+			language: 'NL',
+			theme: "family",
+			finished: false
+		})
+		Game.create({
+			language: 'ES',
+			theme: "food",
+			finished: false
+		})
+		Game.create({
+			language: 'ES',
+			theme: "animal",
+			finished: false
+		})
+		Game.create({
+			language: 'ES',
+			theme: "family",
+			finished: false
+		})
+		Game.create({
+			language: 'FR',
+			theme: "food",
+			finished: false
+		})
+		Game.create({
+			language: 'FR',
+			theme: "animal",
+			finished: false
+		})
+		Game.create({
+			language: 'FR',
+			theme: "family",
+			finished: false
 		})
 	})
 })
