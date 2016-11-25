@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   background-color: $mainColor;
   font-family: "Comic Sans MS";
+  overflow: hidden;
 }
 
 main {
@@ -101,7 +102,7 @@ main {
 //sections in main
 
 .section1 {
-	padding-top: 100px;
+	padding-top: 90px;
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -119,7 +120,7 @@ main {
 }
 
 .section2 {
-	padding-top: 50px;
+	padding-top: 20px;
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -136,7 +137,7 @@ main {
 }
 
 .section3 {
-	padding-top: 50px;
+	padding-top: 30px;
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;

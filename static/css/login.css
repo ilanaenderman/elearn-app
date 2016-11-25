@@ -3,7 +3,8 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: #1EA4A4;
-  font-family: "Comic Sans MS"; }
+  font-family: "Comic Sans MS";
+  overflow: hidden; }
 
 main {
   flex: 1 0 auto; }
@@ -58,7 +59,7 @@ main {
         font-size: 20px; }
 
 .section1 {
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -71,7 +72,7 @@ main {
     color: white; }
 
 .section2 {
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -83,7 +84,7 @@ main {
       height: 300px; }
 
 .section3 {
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
