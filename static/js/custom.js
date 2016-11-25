@@ -5,26 +5,25 @@ $(document).ready(function(){
 })
 
 $(document).ready(function() {
-    	$('#submitProfile').click(function() {
-    		var profile = {
-    			fullName: $("#fullName").val(),
-    			userName: $("#userName").val(),
-    			email: 	$("#email").val(),
-    			password: $("#password").val(),
-    			conPassword: $("#conPassword").val()
-    		}
-    		$.post("/createdProfile", profile, function(response) {
-    			$('#error-message').append(response.message) 
-    	})
+    $('#submitLogin').click(function() {
+		var profile = {
+			email: 	$("#email2").val(),
+			password: $("#password2").val(),
+		}
+
+        $.post("/loginProfile", profile, function(response) {
+            $("#error-message2").append(response.message)
+        })
     })
 })
+
 
 //Keep create profile modal open after submit
 $(document).ready(function(){
 	var url = window.location.href
 	if(url.indexOf('?message=') != -1 || url.indexOf('/?message=') != -1) {
 		console.log(url)
-		$('#modal1').modal('open')
+		$('#modal2').modal('open')
 	}
 })
 

@@ -43,13 +43,12 @@ let Game = db.define('game', {
 
 //define relations
 
-//route login page
+//route landing page
 app.get('/', (request, response) => {
 	response.render('login', {message: request.query.message})
 })
 
-app.post('/createdProfile', (request, response) => {
-	console.log(request.body)
+app.post('/', (request, response) => {
 	let fullName = request.body.fullName
 	let userName = request.body.userName
 	let email 	 = request.body.email
@@ -116,38 +115,46 @@ app.post('/createdProfile', (request, response) => {
 	})
 })
 
+// //Ajax Login
+// app.post('/loginProfile', (request, response) => {
+// 	if(request.body.email.length === 0) {
+// 		response.redirect('/?message=' + encodeURIComponent("Please fill out your email."))
+// 		return;
+// 	}
 
-app.post('/', (request, response) => {	
-	if(request.body.email.length === 0) {
-		response.redirect('/?message=' + encodeURIComponent("Please fill out your email."))
-		return;
-	}
+// 	if(request.body.password.length === 0) {
+// 		response.redirect('/?message=' + encodeURIComponent("Please fill out your password."))
+// 		return;
+// 	}
 
-	if(request.body.password.length === 0) {
-		response.redirect('/?message=' + encodeURIComponent("Please fill out your password."))
-		return;
-	}
+// 	User.findOne({
+// 		where: {
+// 			email: request.body.email
+// 		}
+// 	}).then( (user) => {
+// 		var hash = user.password 
+// 		bcrypt.compare(request.body.password, hash, (err, res) => {
+// 			if (user !== null && res == true) {
+// 				request.session.user = user
+// 				response.redirect('/profile')
+// 			} 
+// 			else {
+// 				var message = "Invalid email or password"
+// 				response.send({message: message})
+// 			}
+// 		})
+// 	})
+// })
 
-	User.findOne({
-		where: {
-			email: request.body.email
-		}
-	}).then( (user) => {
-		var hash = user.password 
-		bcrypt.compare(request.body.password, hash, (err, res) => {
-			if (user !== null && res == true) {
-				request.session.user = user
-				response.redirect('/profile')
-			} 
-			else {
-				response.redirect('/?message=' + encodeURIComponent("Invalid email or password."))
-			}
-		})
-	})
-})
+
+
+
+
+
 
 //Route Profile page
 app.get('/profile', (request, response) => {
+	var user = request.session.user
 	Game.findAll ({
 		where: {
 			finished: true
@@ -161,19 +168,20 @@ app.get('/profile', (request, response) => {
 		return result
 	}).then(id => {
 		console.log(id)
-		response.render('profile', {id: id})
+		response.render('profile', {id: id, user: user})
 	})
 })
 
 //Route Memory Games NL
 app.get('/memory-food-nl', (request, response) => {
+	var user = request.session.user
 	Game.findOne ({
 		where: {
 			id: 1
 		},
 		attributes: ['id']
 	}).then(id => {
-		response.render('memorydutch', {id: id})
+		response.render('memorydutch', {id: id, user: user})
 	})
 })
 
@@ -193,13 +201,14 @@ app.post('/memory-food-nl', (request, response) => {
 })
 
 app.get('/memory-animal-nl', (request, response) => {
+	var user = request.session.user
 	Game.findOne ({
 		where: {
 			id: 2
 		},
 		attributes: ['id']
 	}).then(id => {
-		response.render('memorydutch2')
+		response.render('memorydutch2', {id: id, user: user})
 	})
 })
 
@@ -219,34 +228,52 @@ app.post('/memory-animal-nl', (request, response) => {
 })
 
 app.get('/memory-family-nl', (request, response) => {
-	response.render('memorydutch3')
+	var user = request.session.user
+	response.render('memorydutch3', {user: user})
 })
 
 //Route Memory Games ES
 app.get('/memory-food-es', (request, response) => {
-	response.render('memoryspain')
+	var user = request.session.user
+	response.render('memoryspain', {user: user})
 })
 
 app.get('/memory-animal-es', (request, response) => {
-	response.render('memoryspain2')
+	var user = request.session.user
+	response.render('memoryspain2', {user: user})
 })
 
 app.get('/memory-family-es', (request, response) => {
-	response.render('memoryspain3')
+	var user = request.session.user
+	response.render('memoryspain3', {user: user})
 })
 
 //Route Memory Games FR
 app.get('/memory-food-fr', (request, response) => {
-	response.render('memoryfrench')
+	var user = request.session.user
+	response.render('memoryfrench', {user: user})
 })
 
 app.get('/memory-animal-fr', (request, response) => {
-	response.render('memoryfrench2')
+	var user = request.session.user
+	response.render('memoryfrench2', {user: user})
 })
 
 app.get('/memory-family-fr', (request, response) => {
-	response.render('memoryfrench3')
+	var user = request.session.user
+	response.render('memoryfrench3', {user: user})
 })
+
+// Log out 
+app.get('/logout',  (request, response)  =>{
+	request.session.destroy( (error) => {
+		if(error) {
+			throw error;
+		}
+		response.redirect('/');
+	})
+});
+
 
 // Sync
 //Create test User

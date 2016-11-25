@@ -34,12 +34,10 @@ main {
 	}
 }
 
-//Modal1 Login Css
-#modal1.modal {
-	width: 600px;
-}
 
-#modal2.modal {
+
+//Modal layout
+.modal {
 	width: 600px;
 
 	.modal-content {
@@ -72,11 +70,11 @@ main {
 				font-size: $inputSize;
 			}
 
-			#email{
+			#email {
 				font-size: $inputSize;
 			}
 
-			#password{
+			#password {
 				font-size: $inputSize;
 			}
 
@@ -87,6 +85,14 @@ main {
 			.btn.btn-default.btn-large {
 				background-color: $mainColor;
 				color: white;
+			}
+
+			#email2 {
+				font-size: $inputSize;
+			}
+
+			#password2 {
+				font-size: $inputSize;
 			}
 		}
 	}
@@ -109,7 +115,6 @@ main {
 	h4 {
 		text-align: center;
 		color: white;
-
 	}
 }
 
@@ -123,7 +128,7 @@ main {
 	.col.l4 {
 		padding: 30px;
 
-		.language{
+		.language {
 			width: 300px;
 			height: 300px;
 		}
@@ -144,19 +149,3 @@ main {
 		width: 25%;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

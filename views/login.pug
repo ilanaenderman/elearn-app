@@ -1,11 +1,10 @@
 html
 	head
+		link(href='/css/materialize.min.css' type="text/css" rel="stylesheet")
+		link(href='/css/login.css' type="text/css" rel="stylesheet")
 		script(src='/js/jquery-3.1.1.min.js')
 		script(src='/js/materialize.min.js')
 		script(src='/js/custom.js')
-
-		link(href='/css/login.css' type="text/css" rel="stylesheet")
-		link(href='/css/materialize.min.css' type="text/css" rel="stylesheet")
 	body
 		nav.z-depth-0
 			div.nav-wrapper
@@ -17,11 +16,11 @@ html
 			div.modal-content
 				h2.modaltext Login on profile
 				br
-				h2#error-message= message
-				form(action='/' method='post')
+				h2#error-message
+				form#loginForm(action='/loginProfile' method='post')
 					input#email2(type="text" name='email' placeholder='Enter email' required)
 					input#password2(type='password' name='password' placeholder='Enter password' required)
-					input(type='submit' class='btn btn-default btn-large' value='login' id='submit')
+					input#submitLogin(type='submit' class='btn btn-default btn-large' value='login')
 							
 
 		main
@@ -46,13 +45,13 @@ html
 				h2.modaltext Create profile
 				br
 				h2#error-message= message
-				form(method='get')
+				form(action='/' method='post')
 					input#fullName(type="text" name='fullName' placeholder='Enter full name' required)
 					input#userName(type='text' name='userName' placeholder='Enter user name' required)
 					input#email(type="text" name='email' placeholder='Enter email' required)
 					input#password(type='password' name='password' placeholder='Enter password' required)
 					input#conPassword(type="password" name='conPassword' placeholder='Confirm password' required)
-					input#submitProfile(type='submit' class='btn btn-default btn-large' value='Submit')
+					input(type='submit' class='btn btn-default btn-large' value='Submit')
 
 
 						

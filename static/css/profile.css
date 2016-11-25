@@ -13,17 +13,26 @@ h1, h2, h3, h4, h5 {
     padding-left: 150px;
     font-size: 40px;
     color: white; }
+  .nav-wrapper #userLogo {
+    font-size: 30px; }
+  .nav-wrapper .right.hide-on-med-and-down {
+    padding-right: 150px; }
+    .nav-wrapper .right.hide-on-med-and-down #loginButton {
+      background-color: white;
+      color: #1EA4A4;
+      font-size: 20px; }
 
 #parent {
   margin-left: 600px; }
   #parent #sidebar {
     position: fixed;
-    top: 64px;
+    top: 100px;
     left: 0px;
     bottom: 0px;
     width: 600px;
     border-right: 1px solid black;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #F4FFFE; }
     #parent #sidebar img {
       width: 200px;
       height: auto;
