@@ -154,6 +154,7 @@ app.post('/', (request, response) => {
 
 //Route Profile page
 app.get('/profile', (request, response) => {
+	var user = request.session.user
 	Game.findAll ({
 		where: {
 			finished: true
@@ -167,19 +168,20 @@ app.get('/profile', (request, response) => {
 		return result
 	}).then(id => {
 		console.log(id)
-		response.render('profile', {id: id})
+		response.render('profile', {id: id, user: user})
 	})
 })
 
 //Route Memory Games NL
 app.get('/memory-food-nl', (request, response) => {
+	var user = request.session.user
 	Game.findOne ({
 		where: {
 			id: 1
 		},
 		attributes: ['id']
 	}).then(id => {
-		response.render('memorydutch', {id: id})
+		response.render('memorydutch', {id: id, user: user})
 	})
 })
 
@@ -199,13 +201,14 @@ app.post('/memory-food-nl', (request, response) => {
 })
 
 app.get('/memory-animal-nl', (request, response) => {
+	var user = request.session.user
 	Game.findOne ({
 		where: {
 			id: 2
 		},
 		attributes: ['id']
 	}).then(id => {
-		response.render('memorydutch2')
+		response.render('memorydutch2', {id: id, user: user})
 	})
 })
 
@@ -270,8 +273,6 @@ app.get('/logout',  (request, response)  =>{
 		response.redirect('/');
 	})
 });
-
-
 
 
 // Sync
