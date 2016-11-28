@@ -60,11 +60,13 @@ let Game = db.define('game', {
 //Define relations
 
 
-// Make DB accessible to router
+// Make DB accessible to router ???
 app.use(function(request, response, next){
     request.db = db
     next()
 })
+
+
 
 // Routes
 app.use( loginRoute )
