@@ -115,42 +115,41 @@ app.post('/', (request, response) => {
 	})
 })
 
-// //Ajax Login
-// app.post('/loginProfile', (request, response) => {
-// 	if(request.body.email.length === 0) {
-// 		response.redirect('/?message=' + encodeURIComponent("Please fill out your email."))
-// 		return;
-// 	}
+//Ajax Login
+app.post('/loginProfile', (request, response) => {
+	if(request.body.email.length === 0) {
+		response.redirect('/?message=' + encodeURIComponent("You need to fill out your email."))
+		return;
+	}
 
-// 	if(request.body.password.length === 0) {
-// 		response.redirect('/?message=' + encodeURIComponent("Please fill out your password."))
-// 		return;
-// 	}
+	if(request.body.password.length === 0) {
+		response.redirect('/?message=' + encodeURIComponent("You need to fill out your password."))
+		return;
+	}
 
-// 	User.findOne({
-// 		where: {
-// 			email: request.body.email
-// 		}
-// 	}).then( (user) => {
-// 		var hash = user.password 
-// 		bcrypt.compare(request.body.password, hash, (err, res) => {
-// 			if (user !== null && res == true) {
-// 				request.session.user = user
-// 				response.redirect('/profile')
-// 			} 
-// 			else {
-// 				var message = "Invalid email or password"
-// 				response.send({message: message})
-// 			}
-// 		})
-// 	})
-// })
-
-
-
-
-
-
+	User.findOne({
+		where: {
+			email: request.body.email
+		}
+	}).then( (user) => {
+		if(user == null) {
+			response.redirect('/?message=' + encodeURIComponent("You need to fill out a valid email."))
+			return
+		}
+		else{
+			var hash = user.password 
+			bcrypt.compare(request.body.password, hash, (err, res) => {
+				if (user !== null && res == true) {
+					request.session.user = user
+					response.redirect('/profile')
+				} 
+				else {
+					response.redirect('/?message=' + encodeURIComponent("Your password or email is invalid."))
+				}
+			})
+		}
+	})
+})
 
 //Route Profile page
 app.get('/profile', (request, response) => {
@@ -167,7 +166,6 @@ app.get('/profile', (request, response) => {
 		}
 		return result
 	}).then(id => {
-		console.log(id)
 		response.render('profile', {id: id, user: user})
 	})
 })
@@ -175,18 +173,10 @@ app.get('/profile', (request, response) => {
 //Route Memory Games NL
 app.get('/memory-food-nl', (request, response) => {
 	var user = request.session.user
-	Game.findOne ({
-		where: {
-			id: 1
-		},
-		attributes: ['id']
-	}).then(id => {
-		response.render('memorydutch', {id: id, user: user})
-	})
+	response.render('memorydutch', {user: user})
 })
 
 app.post('/memory-food-nl', (request, response) => {
-	console.log(request.body)
 	Game.findOne ({
 		where: {
 			id: 1
@@ -202,18 +192,10 @@ app.post('/memory-food-nl', (request, response) => {
 
 app.get('/memory-animal-nl', (request, response) => {
 	var user = request.session.user
-	Game.findOne ({
-		where: {
-			id: 2
-		},
-		attributes: ['id']
-	}).then(id => {
-		response.render('memorydutch2', {id: id, user: user})
-	})
+	response.render('memorydutch2', {user: user})
 })
 
 app.post('/memory-animal-nl', (request, response) => {
-	console.log("Reacting!")
 	Game.findOne ({
 		where: {
 			id: 2
@@ -232,10 +214,38 @@ app.get('/memory-family-nl', (request, response) => {
 	response.render('memorydutch3', {user: user})
 })
 
+app.post('/memory-family-nl', (request, response) => {
+	Game.findOne ({
+		where: {
+			id: 3
+		}
+	}).then(id => {
+		id.update ({
+			finished: true
+		}).then(id => {
+			response.redirect('/profile')
+		})
+	})
+})
+
 //Route Memory Games ES
 app.get('/memory-food-es', (request, response) => {
 	var user = request.session.user
 	response.render('memoryspain', {user: user})
+})
+
+app.post('/memory-food-es', (request, response) => {
+	Game.findOne ({
+		where: {
+			id: 4
+		}
+	}).then(id => {
+		id.update ({
+			finished: true
+		}).then(id => {
+			response.redirect('/profile')
+		})
+	})
 })
 
 app.get('/memory-animal-es', (request, response) => {
@@ -243,9 +253,37 @@ app.get('/memory-animal-es', (request, response) => {
 	response.render('memoryspain2', {user: user})
 })
 
+app.post('/memory-animal-es', (request, response) => {
+	Game.findOne ({
+		where: {
+			id: 5
+		}
+	}).then(id => {
+		id.update ({
+			finished: true
+		}).then(id => {
+			response.redirect('/profile')
+		})
+	})
+})
+
 app.get('/memory-family-es', (request, response) => {
 	var user = request.session.user
 	response.render('memoryspain3', {user: user})
+})
+
+app.post('/memory-family-es', (request, response) => {
+	Game.findOne ({
+		where: {
+			id: 6
+		}
+	}).then(id => {
+		id.update ({
+			finished: true
+		}).then(id => {
+			response.redirect('/profile')
+		})
+	})
 })
 
 //Route Memory Games FR
@@ -254,14 +292,56 @@ app.get('/memory-food-fr', (request, response) => {
 	response.render('memoryfrench', {user: user})
 })
 
+app.post('/memory-food-fr', (request, response) => {
+	Game.findOne ({
+		where: {
+			id: 7
+		}
+	}).then(id => {
+		id.update ({
+			finished: true
+		}).then(id => {
+			response.redirect('/profile')
+		})
+	})
+})
+
 app.get('/memory-animal-fr', (request, response) => {
 	var user = request.session.user
 	response.render('memoryfrench2', {user: user})
 })
 
+app.post('/memory-animal-fr', (request, response) => {
+	Game.findOne ({
+		where: {
+			id: 8
+		}
+	}).then(id => {
+		id.update ({
+			finished: true
+		}).then(id => {
+			response.redirect('/profile')
+		})
+	})
+})
+
 app.get('/memory-family-fr', (request, response) => {
 	var user = request.session.user
 	response.render('memoryfrench3', {user: user})
+})
+
+app.post('/memory-family-fr', (request, response) => {
+	Game.findOne ({
+		where: {
+			id: 9
+		}
+	}).then(id => {
+		id.update ({
+			finished: true
+		}).then(id => {
+			response.redirect('/profile')
+		})
+	})
 })
 
 // Log out 
