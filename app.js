@@ -24,8 +24,8 @@ app.use(session({
 }))
 
 //connect to database
- const db = new sequelize('postgres://floriandalhuijsen@localhost/elearn')
-//const db = new sequelize('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/elearn')
+ // const db = new sequelize('postgres://floriandalhuijsen@localhost/elearn')
+const db = new sequelize('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/elearn')
 
 //define modes
 let User = db.define('user', {
