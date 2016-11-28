@@ -16,7 +16,7 @@ html
 			div.modal-content
 				h2.modaltext Login on profile
 				br
-				h2#error-message
+				h2#error-message= message
 				form#loginForm(action='/loginProfile' method='post')
 					input#email2(type="text" name='email' placeholder='Enter email' required)
 					input#password2(type='password' name='password' placeholder='Enter password' required)
