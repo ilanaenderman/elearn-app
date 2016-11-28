@@ -344,6 +344,11 @@ app.post('/memory-family-fr', (request, response) => {
 	})
 })
 
+//Quiz App Demo
+app.get('/quiz', (request, response) => {
+	response.render('demoquiz')
+})
+
 // Log out 
 app.get('/logout',  (request, response)  =>{
 	request.session.destroy( (error) => {
