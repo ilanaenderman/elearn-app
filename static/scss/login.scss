@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   background-color: $mainColor;
   font-family: "Comic Sans MS";
+  overflow: hidden;
 }
 
 main {
@@ -30,6 +31,7 @@ main {
 			background-color: white;
 			color: $mainColor;
 			font-size: 20px;
+			border-radius: 30px;
 		}
 	}
 }
@@ -39,6 +41,7 @@ main {
 //Modal layout
 .modal {
 	width: 600px;
+	border-radius: 30px;
 
 	.modal-content {
 		width: 550px;
@@ -85,6 +88,7 @@ main {
 			.btn.btn-default.btn-large {
 				background-color: $mainColor;
 				color: white;
+				border-radius: 30px!important;
 			}
 
 			#email2 {
@@ -101,7 +105,7 @@ main {
 //sections in main
 
 .section1 {
-	padding-top: 100px;
+	padding-top: 90px;
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -119,7 +123,7 @@ main {
 }
 
 .section2 {
-	padding-top: 50px;
+	padding-top: 20px;
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -136,7 +140,7 @@ main {
 }
 
 .section3 {
-	padding-top: 50px;
+	padding-top: 30px;
 	padding-bottom: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -147,5 +151,6 @@ main {
 		color: $mainColor;
 		font-size: 20px;
 		width: 25%;
+		border-radius: 30px;
 	}
 }

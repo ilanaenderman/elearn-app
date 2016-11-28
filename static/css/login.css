@@ -3,7 +3,8 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: #1EA4A4;
-  font-family: "Comic Sans MS"; }
+  font-family: "Comic Sans MS";
+  overflow: hidden; }
 
 main {
   flex: 1 0 auto; }
@@ -19,10 +20,12 @@ main {
     .nav-wrapper .right.hide-on-med-and-down #loginButton {
       background-color: white;
       color: #1EA4A4;
-      font-size: 20px; }
+      font-size: 20px;
+      border-radius: 30px; }
 
 .modal {
-  width: 600px; }
+  width: 600px;
+  border-radius: 30px; }
   .modal .modal-content {
     width: 550px; }
     .modal .modal-content .modaltext {
@@ -51,14 +54,15 @@ main {
         font-size: 20px; }
       .modal .modal-content form .btn.btn-default.btn-large {
         background-color: #1EA4A4;
-        color: white; }
+        color: white;
+        border-radius: 30px !important; }
       .modal .modal-content form #email2 {
         font-size: 20px; }
       .modal .modal-content form #password2 {
         font-size: 20px; }
 
 .section1 {
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -71,7 +75,7 @@ main {
     color: white; }
 
 .section2 {
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -83,7 +87,7 @@ main {
       height: 300px; }
 
 .section3 {
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -92,4 +96,5 @@ main {
     background-color: white;
     color: #1EA4A4;
     font-size: 20px;
-    width: 25%; }
+    width: 25%;
+    border-radius: 30px; }

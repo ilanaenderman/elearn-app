@@ -1,17 +1,21 @@
 $langWidth: 400px;
 $mainColor: #1EA4A4;
 $backgroundColor: #F4FFFE;
+$mainTextColor: #FD4F21;
 
 body {
     padding: 0;
     margin: 0;
     overflow: hidden; 
     font-family: "Comic Sans MS";
+    background-color: $backgroundColor;
 }
 
 h1, h2, h3, h4, h5 {
     text-align: center;
+    color: $mainTextColor;
 }
+
 
 .nav-wrapper {
     background-color: $mainColor;
@@ -22,7 +26,7 @@ h1, h2, h3, h4, h5 {
         color: white;
     }
 
-    #userLogo {
+    a {
         font-size: 30px;
     }
 
@@ -47,24 +51,31 @@ h1, h2, h3, h4, h5 {
         left: 0px;
         bottom: 0px;
         width: 600px;
-        border-right: 1px solid black;
+        border-right: 1px solid $backgroundColor;
         overflow: hidden;
-        background-color: $backgroundColor;
-        img {
-            width: 200px;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 100px;
+
+        #row1 {
+            padding: 40px;
+
+            .card-image {
+                height: 300px;
+                width: auto;
+            }
+
         }
-        #profile {
-            text-align: center;
-        }
+
     }
+
     //Progress content
     #games {
         width: 100%;
+
+        #gameTitle {
+            text-align: left;
+            padding-left: 120px;
+            padding-top: 30px;
+        }
+
         .gamepic {
             display: block;
             width: 700px;
@@ -86,6 +97,8 @@ h1, h2, h3, h4, h5 {
             #firstlang {
                 float: left;
                 width: $langWidth;
+                margin-bottom: 10
+                0px;
             }
             #seclang {
                 float: left;
