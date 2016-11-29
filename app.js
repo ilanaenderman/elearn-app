@@ -38,6 +38,15 @@ app.use( memoryNLRoute )
 app.use( memoryESRoute )
 app.use( memoryFRRoute )
 
+//Quiz App Demo
+app.get('/quiz', (request, response) => {
+	response.render('demoquiz')
+})
+
+app.post('/quiz-food-NL', (request, response) => {
+	console.log(request.body) //{input: '5/5'}
+})
+
 // Listen port 8000
 app.listen(8000, () => {
 	console.log('Server is running')
