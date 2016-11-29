@@ -22,4 +22,22 @@ router.get('/profile', (request, response) => {
 	})
 })
 
+router.get('/profile2', (request, response) => {
+	var user = request.session.user
+	db.game.findAll ({
+		where: {
+			finished: true
+		},
+		attributes: ['id', 'language']
+	}).then(id => {
+		var result = []
+		for(var i = 0; i < id.length; i++){
+			result.push({id: id[i].id, language: id[i].language})
+		}
+		return result
+	}).then(id => {
+		response.render('profile2', {id: id, user: user})
+	})
+})
+
 module.exports = router

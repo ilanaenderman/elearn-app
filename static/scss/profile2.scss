@@ -1,0 +1,78 @@
+$langWidth: 400px;
+$mainColor: #1EA4A4;
+$backgroundColor: #F4FFFE;
+$mainTextColor: #FD4F21;
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden; 
+    font-family: "Comic Sans MS";
+    background-color: $backgroundColor;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+    color: $mainTextColor;
+}
+
+
+.nav-wrapper {
+    background-color: $mainColor;
+
+    #logo {
+        padding-left: 150px;
+        font-size: 40px;
+        color: white;
+    }
+
+    a {
+        font-size: 30px;
+    }
+
+    .right.hide-on-med-and-down {
+        padding-right: 150px;
+
+    }
+}
+
+//Body Content
+
+#profile {
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    #gameTitle {
+            background-color: $mainTextColor;
+        }
+
+    .card {
+        border-radius: 30px;
+
+        .game {
+            color: white;
+        }
+
+        .results {
+            text-align: center;
+        }
+
+        .buttons {
+            width: 100px;
+            height: 100px;
+        }
+
+        .card-image {
+            height: 300px;
+            width: auto;
+            padding-top: 40px;
+        }
+
+        .card-content {
+            margin: 10px;
+        }
+    }
+}
+
+
