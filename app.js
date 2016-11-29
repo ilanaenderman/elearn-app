@@ -21,6 +21,7 @@ let profileRoute	= require(__dirname + '/routes/profile')
 let memoryNLRoute	= require(__dirname + '/routes/memory-nl')
 let memoryESRoute	= require(__dirname + '/routes/memory-es')
 let memoryFRRoute	= require(__dirname + '/routes/memory-fr')
+let quizNLRoute		= require(__dirname + '/routes/quiz-nl')
 
 app.use( express.static('static'))
 app.use( bodyParser.urlencoded({extended: true}))
@@ -37,15 +38,8 @@ app.use( profileRoute )
 app.use( memoryNLRoute )
 app.use( memoryESRoute )
 app.use( memoryFRRoute )
+app.use( quizNLRoute )
 
-//Quiz App Demo
-app.get('/quiz', (request, response) => {
-	response.render('demoquiz')
-})
-
-app.post('/quiz-food-NL', (request, response) => {
-	console.log(request.body) //{input: '5/5'}
-})
 
 //listen port 8000
 app.listen(8000, () => {

@@ -1,0 +1,43 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Comic Sans MS";
+  background-color: #F4FFFE; }
+
+h1, h2, h3, h4, h5 {
+  text-align: center;
+  color: #FD4F21; }
+
+.nav-wrapper {
+  background-color: #1EA4A4; }
+  .nav-wrapper #logo {
+    padding-left: 150px;
+    font-size: 40px;
+    color: white; }
+  .nav-wrapper a {
+    font-size: 30px; }
+  .nav-wrapper .right.hide-on-med-and-down {
+    padding-right: 150px; }
+
+#profile {
+  padding-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px; }
+  #profile #gameTitle {
+    background-color: #FD4F21; }
+  #profile .card {
+    border-radius: 30px; }
+    #profile .card .game {
+      color: white; }
+    #profile .card .results {
+      text-align: center; }
+    #profile .card .buttons {
+      width: 100px;
+      height: 100px; }
+    #profile .card .card-image {
+      height: 300px;
+      width: auto;
+      padding-top: 40px; }
+    #profile .card .card-content {
+      margin: 10px; }
