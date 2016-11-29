@@ -1,3 +1,9 @@
+$backgroundColor: #F4FFFE;
+
+// body.dutch-memory, body.spanish-memory {
+// 	zoom: 0.8;
+// }
+
 .dutch-memory h1, h2, h3{
   text-align: center;
 }
@@ -18,4 +24,13 @@ div#my-memorygame {
 	img {
 		border-radius: 20px;
 	}
+}
+
+.row {
+	padding-top: 30px;
+
+}
+
+.card {
+	border-radius: 30px;
 }

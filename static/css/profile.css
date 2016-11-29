@@ -1,9 +1,9 @@
 body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
   font-family: "Comic Sans MS";
-  background-color: #F4FFFE; }
+  background-color: #F4FFFE;
+  zoom: 0.8; }
 
 h1, h2, h3, h4, h5 {
   text-align: center;
@@ -19,54 +19,25 @@ h1, h2, h3, h4, h5 {
     font-size: 30px; }
   .nav-wrapper .right.hide-on-med-and-down {
     padding-right: 150px; }
-    .nav-wrapper .right.hide-on-med-and-down #loginButton {
-      background-color: white;
-      color: #1EA4A4;
-      font-size: 20px; }
 
-#parent {
-  margin-left: 600px; }
-  #parent #sidebar {
-    position: fixed;
-    top: 100px;
-    left: 0px;
-    bottom: 0px;
-    width: 600px;
-    border-right: 1px solid #F4FFFE;
-    overflow: hidden; }
-    #parent #sidebar #row1 {
-      padding: 40px; }
-      #parent #sidebar #row1 .card-image {
-        height: 300px;
-        width: auto; }
-  #parent #games {
-    width: 100%; }
-    #parent #games #gameTitle {
-      text-align: left;
-      padding-left: 120px;
-      padding-top: 30px; }
-    #parent #games .gamepic {
-      display: block;
-      width: 700px;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto; }
-    #parent #games .games {
+#profile {
+  padding-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px; }
+  #profile #gameTitle {
+    background-color: #FD4F21; }
+  #profile .card {
+    border-radius: 30px; }
+    #profile .card .game {
+      color: white; }
+    #profile .card .results {
       text-align: center; }
-      #parent #games .games h4 {
-        margin-top: 40px;
-        margin-left: auto;
-        margin-right: auto; }
-      #parent #games .games .buttons {
-        width: 50px;
-        height: 50px; }
-      #parent #games .games #firstlang {
-        float: left;
-        width: 400px;
-        margin-bottom: 100px; }
-      #parent #games .games #seclang {
-        float: left;
-        width: 400px; }
-      #parent #games .games #thirdlang {
-        float: left;
-        width: 400px; }
+    #profile .card .buttons {
+      width: 100px;
+      height: 100px; }
+    #profile .card .card-image {
+      height: 300px;
+      width: auto;
+      padding-top: 40px; }
+    #profile .card .card-content {
+      margin: 10px; }
