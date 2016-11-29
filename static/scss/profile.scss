@@ -33,81 +33,46 @@ h1, h2, h3, h4, h5 {
     .right.hide-on-med-and-down {
         padding-right: 150px;
 
-        #loginButton {
-            background-color: white;
-            color: $mainColor;
-            font-size: 20px;
-        }
     }
 }
 
 //Body Content
-#parent {
-    margin-left: 600px;
-    //Profile bar
-    #sidebar {
-        position: fixed;
-        top: 100px;
-        left: 0px;
-        bottom: 0px;
-        width: 600px;
-        border-right: 1px solid $backgroundColor;
-        overflow: hidden;
 
-        #row1 {
-            padding: 40px;
+#profile {
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
 
-            .card-image {
-                height: 300px;
-                width: auto;
-            }
-
+    #gameTitle {
+            background-color: $mainTextColor;
         }
 
-    }
+    .card {
+        border-radius: 30px;
 
-    //Progress content
-    #games {
-        width: 100%;
-
-        #gameTitle {
-            text-align: left;
-            padding-left: 120px;
-            padding-top: 30px;
+        .game {
+            color: white;
         }
 
-        .gamepic {
-            display: block;
-            width: 700px;
-            height: auto;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .games {
+        .results {
             text-align: center;
-            h4 {
-                margin-top: 40px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .buttons {
-                width: 50px;
-                height: 50px;
-            }
-            #firstlang {
-                float: left;
-                width: $langWidth;
-                margin-bottom: 10
-                0px;
-            }
-            #seclang {
-                float: left;
-                width: $langWidth;
-            }
-            #thirdlang {
-                float: left;
-                width: $langWidth;
-            }
+        }
+
+        .buttons {
+            width: 100px;
+            height: 100px;
+        }
+
+        .card-image {
+            height: 300px;
+            width: auto;
+            padding-top: 40px;
+        }
+
+        .card-content {
+            margin: 10px;
         }
     }
 }
+
+
