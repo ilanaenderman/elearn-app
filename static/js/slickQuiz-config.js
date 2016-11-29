@@ -38,7 +38,7 @@ var quizJSON = {
             "incorrect": "<p><span>Hmmm.</span>The right answer is 'Geit' and 'Koe'.</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
-            "q": "Which of these animals can fly? You can pick multiple answers.",
+            "q": "Which of these animals can fly?",
             "a": [
                 {"option": "Paard",   "correct": false},
                 {"option": "Vogel",   "correct": true},
