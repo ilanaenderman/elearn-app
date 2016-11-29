@@ -2,11 +2,11 @@
 
 const express 	= require( 'express')
 const router	= express.Router( )
-const db		= require('../app')
+const db		= require(__dirname + '/../modules/database')
 
 router.get('/profile', (request, response) => {
 	var user = request.session.user
-	Game.findAll ({
+	db.game.findAll ({
 		where: {
 			finished: true
 		},

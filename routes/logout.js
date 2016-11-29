@@ -2,6 +2,7 @@
 
 const express 	= require( 'express')
 const router	= express.Router( )
+const db		= require(__dirname + '/../modules/database')
 
 
 router.get('/logout',  (request, response)  =>{

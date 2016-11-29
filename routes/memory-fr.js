@@ -2,6 +2,7 @@
 
 const express 	= require( 'express')
 const router	= express.Router( )
+const db		= require(__dirname + '/../modules/database')
 
 
 // FOOD
@@ -11,7 +12,7 @@ router.get('/memory-food-fr', (request, response) => {
 })
 
 router.post('/memory-food-fr', (request, response) => {
-	Game.findOne ({
+	db.game.findOne ({
 		where: {
 			id: 7
 		}
@@ -32,7 +33,7 @@ router.get('/memory-animal-fr', (request, response) => {
 })
 
 router.post('/memory-animal-fr', (request, response) => {
-	Game.findOne ({
+	db.game.findOne ({
 		where: {
 			id: 8
 		}
@@ -53,7 +54,7 @@ router.get('/memory-family-fr', (request, response) => {
 })
 
 router.post('/memory-family-fr', (request, response) => {
-	Game.findOne ({
+	db.game.findOne ({
 		where: {
 			id: 9
 		}
