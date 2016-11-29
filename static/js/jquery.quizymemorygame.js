@@ -336,7 +336,7 @@ if(!Array.indexOf){
         if(opts.gameSummary){
           
           var gameEl = $(this);
-          gameEl.append('<form method="POST" action=""><div id="quizy-game-summary"><div class="gs-column" id="gs-column1">'+
+          gameEl.append('<form id="memoryForm" method="POST" action="/memory-food-nl"><div id="quizy-game-summary"><div class="gs-column" id="gs-column1">'+
                           opts.textSummaryTitle+
                           '</div><div class="gs-column" id="gs-column2"></div>'+
                           '<div class="gs-column" id="gs-column3"></div>'+
@@ -356,8 +356,7 @@ if(!Array.indexOf){
           }
           
           // Appends the close button
-          $('#quizy-game-summary').append('<button type="submit" id="gs-closebut" value="">'+
-                                          opts.closeButtonText+ '</button>');
+          $('#quizy-game-summary').append('<input type="button" id="gs-closebut" value="Close">');
           
           // adds a click event to the close button to be removed on click
           $('div#gs-closebut').click(function(){

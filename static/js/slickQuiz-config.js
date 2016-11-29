@@ -6,7 +6,7 @@ var quizJSON = {
     "info": {
         "name":    "Dutch animals",
         "main":    "<p>Test your knowledge of dutch animals!</p>",
-        "results": "<h5>Learn More</h5><p>Play the memory game to practice your Dutch Animals. You also try this quiz as many times as you want!</p>",
+        "results": "<h5>Learn More</h5><p>Play the memory game to practice your Dutch Animals. You also try this quiz as many times as you want!</p><input type='button' value='Play Again' id='againBtn' style='margin-top: 20px;'><form method='POST' action='/quiz'><input type='button' value='Go Back' id='backBtn' style='margin-top: 20px; margin-left: 20px;'></form>",
         "level1":  "Amazing you got all of them!",
         "level2":  "Almost perfect!",
         "level3":  "Great job, but you need some more practice.",
@@ -42,11 +42,11 @@ var quizJSON = {
             "a": [
                 {"option": "Paard",   "correct": false},
                 {"option": "Vogel",   "correct": true},
-                {"option": "Kip",     "correct": true},
+                {"option": "Kip",     "correct": false},
                 {"option": "Hond",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Brilliant!</span> Let's continue!</p>",
-            "incorrect": "<p><span>Not Quite.</span> Both a 'Vogel' and a 'Kip' can fly.</p>" // no comma here
+            "incorrect": "<p><span>Not Quite.</span> Only a 'Vogel' can fly.</p>" // no comma here
         },
         { // Question 4
             "q": "What is a 'Muis'?",

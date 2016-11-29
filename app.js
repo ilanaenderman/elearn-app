@@ -177,17 +177,18 @@ app.get('/memory-food-nl', (request, response) => {
 })
 
 app.post('/memory-food-nl', (request, response) => {
-	Game.findOne ({
-		where: {
-			id: 1
-		}
-	}).then(id => {
-		id.update ({
-			finished: true
-		}).then(id => {
-			response.redirect('/profile')
-		})
-	})
+	console.log(request.body)
+	// Game.findOne ({
+	// 	where: {
+	// 		id: 1
+	// 	}
+	// }).then(id => {
+	// 	id.update ({
+	// 		finished: true
+	// 	}).then(id => {
+	// 		response.redirect('/profile')
+	// 	})
+	// })
 })
 
 app.get('/memory-animal-nl', (request, response) => {
@@ -347,6 +348,10 @@ app.post('/memory-family-fr', (request, response) => {
 //Quiz App Demo
 app.get('/quiz', (request, response) => {
 	response.render('demoquiz')
+})
+
+app.post('/quiz-food-NL', (request, response) => {
+	console.log(request.body) //{input: '5/5'}
 })
 
 // Log out 
