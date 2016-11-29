@@ -8,7 +8,13 @@ $(document).ready(function(){
 			input: $("#score").html()
 		}
 		$.post('/quiz-food-NL', score, function(response) {
-			response.redirect('/profile')
+			var redirect = function(url, method) {
+              $('<form>', {
+                 method: method,
+                 action: url
+              }).submit();
+            };
+            redirect('http://localhost:8000/profile', 'get')
 		})
 	})
 	$("#againBtn").click(function() {
@@ -16,7 +22,13 @@ $(document).ready(function(){
 			input: $("#score").html()
 		}
 		$.post('/quiz-food-NL', score, function(response) {
-			response.redirect('/quiz')
+			var redirect = function(url, method) {
+              $('<form>', {
+                 method: method,
+                 action: url
+              }).submit();
+            };
+            redirect('http://localhost:8000/profile', 'get')
 		})
 	})
 })

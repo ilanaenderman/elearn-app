@@ -7,12 +7,12 @@ const sequelize = require( 'sequelize' )
 const bcrypt		= require('bcrypt-node')
 
 // db.sequelize = sequelize
-// db.conn = new sequelize('elearn', floriandalhuijsen, null, {
-// 	host: 'localhost',
-// 	dialect: 'postgres'
-// })
+db.conn = new sequelize('elearn', process.env.POSTGRES_USER, process.env.POSTGRES_PASSWORD, {
+	host: 'localhost',
+	dialect: 'postgres'
+})
 
-db.conn = new sequelize('postgres://floriandalhuijsen@localhost/elearn')
+// db.conn = new sequelize('postgres://floriandalhuijsen@localhost/elearn')
 
 
 //>>>>>>>>>>> MODELS
@@ -27,11 +27,23 @@ db.user = db.conn.define('user', {
 db.game = db.conn.define('game', {
 	language: sequelize.STRING,
 	theme: sequelize.STRING,
-	finished: sequelize.BOOLEAN
+	finished: sequelize.BOOLEAN,
+	score: sequelize.INTEGER
+})
+
+db.quiz = db.conn.define('quiz', {
+	language: sequelize.STRING,
+	theme: sequelize.STRING,
+	finished: sequelize.BOOLEAN,
+	score: sequelize.INTEGER
 })
 
 
 // Define relationships between tables
+// db.game.hasMany(db.user)
+// db.user.belongsTo(db.game)
+// db.quiz.hasMany(db.user)
+// db.user.belongsTo(db.quiz)
 
 // Create test User
 db.conn.sync({force: true}).then( database => {
@@ -45,47 +57,62 @@ db.conn.sync({force: true}).then( database => {
 		db.game.create({
 			language: 'NL',
 			theme: "food",
-			finished: false
+			finished: false,
+			score: 0
 		})
 		db.game.create({
 			language: 'NL',
 			theme: "animal",
-			finished: false
+			finished: false,
+			score: 0
 		})
 		db.game.create({
 			language: 'NL',
 			theme: "family",
-			finished: false
+			finished: false,
+			score: 0
 		})
 		db.game.create({
 			language: 'ES',
 			theme: "food",
-			finished: false
+			finished: false,
+			score: 0
 		})
 		db.game.create({
 			language: 'ES',
 			theme: "animal",
-			finished: false
+			finished: false,
+			score: 0
 		})
 		db.game.create({
 			language: 'ES',
 			theme: "family",
-			finished: false
+			finished: false,
+			score: 0
 		})
 		db.game.create({
 			language: 'FR',
 			theme: "food",
-			finished: false
+			finished: false,
+			score: 0
 		})
 		db.game.create({
 			language: 'FR',
 			theme: "animal",
-			finished: false
+			finished: false,
+			score: 0
 		})
 		db.game.create({
 			language: 'FR',
 			theme: "family",
-			finished: false
+			finished: false,
+			score: 0
+		})
+		db.quiz.create({
+			language: 'NL',
+			theme: 'animal',
+			finished: false,
+			score: 0
 		})
 	})
 })
