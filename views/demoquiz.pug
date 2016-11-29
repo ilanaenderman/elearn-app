@@ -1,0 +1,32 @@
+html
+  head
+    title Quiz
+    link(href='/css/materialize.min.css' type="text/css" rel="stylesheet")
+    link(href="css/reset.css" media="screen" rel="stylesheet" type="text/css")
+    link(href="css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css")
+    link(href="css/quiz.css" media="screen" rel="stylesheet" type="text/css")
+  body#slickQuiz
+    nav.z-depth-0
+      div.nav-wrapper
+        a#logo.brand-logo eLearning
+        ul.right.hide-on-med-and-down
+          li
+            a user.userName
+          li
+            a(href='/logout') Logout
+    div.quizContent
+      h1.quizName
+      div.quizArea
+        div.quizHeader
+          a.button.startQuiz(href="#") Get Started!
+      div.quizResults
+        h3.quizScore You Scored: &nbsp;
+          span#score
+        h3.quizLevel Ranking: &nbsp; <!--strong-->
+          span
+        h3.quizResultsCopy
+    script(src="js/jquery-3.1.1.min.js")
+    script(src='/js/materialize.min.js')
+    script(src="js/slickQuiz.js")
+    script(src="js/slickQuiz-config.js")
+    script(src="js/quiz.js")

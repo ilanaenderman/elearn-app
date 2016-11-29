@@ -336,11 +336,11 @@ if(!Array.indexOf){
         if(opts.gameSummary){
           
           var gameEl = $(this);
-          gameEl.append('<div id="quizy-game-summary"><div class="gs-column" id="gs-column1">'+
+          gameEl.append('<form id="memoryForm" method="POST" action="/memory-food-nl"><div id="quizy-game-summary"><div class="gs-column" id="gs-column1">'+
                           opts.textSummaryTitle+
                           '</div><div class="gs-column" id="gs-column2"></div>'+
                           '<div class="gs-column" id="gs-column3"></div>'+
-                          '<div class="quizy-game-clear"></div></div>');
+                          '<div class="quizy-game-clear"></div></div></form>');
           // // positions the summary div in the middle of the div wrapper
           // var xMid = gameEl.width()/2 - 
           //             $('div#quizy-game-summary').width()/2;
@@ -356,8 +356,7 @@ if(!Array.indexOf){
           }
           
           // Appends the close button
-          $('#quizy-game-summary').append('<form method="POST" action="">' + '<button type="submit" id="gs-closebut" value="">'+
-                                          opts.closeButtonText+ '</button>' + '</form>');
+          $('#quizy-game-summary').append('<input type="button" id="gs-closebut" value="Close">');
           
           // adds a click event to the close button to be removed on click
           $('div#gs-closebut').click(function(){
