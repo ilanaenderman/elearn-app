@@ -47,7 +47,7 @@ app.post('/quiz-food-NL', (request, response) => {
 	console.log(request.body) //{input: '5/5'}
 })
 
-// Listen port 8000
+//listen port 8000
 app.listen(8000, () => {
 	console.log('Server is running')
 })
