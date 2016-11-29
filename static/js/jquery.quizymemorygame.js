@@ -124,7 +124,7 @@ if(!Array.indexOf){
                       html(numSeconds+'<br>'+opts.textSummaryTime);
                   $('div#quizy-game-summary').
                       children('div#gs-column3').
-                      html(numTotalClicks+'<br>'+opts.textSummaryClicks);
+                      html((numTotalClicks/2) +'<br>'+opts.textSummaryClicks);
                   $('div#quizy-game-summary').delay(2000).fadeIn(1000);
                 }
                 // if is set makes an AJAX call and sends the the necessary params
@@ -336,10 +336,10 @@ if(!Array.indexOf){
         if(opts.gameSummary){
           
           var gameEl = $(this);
-          gameEl.append('<form id="memoryForm" method="POST" action="/memory-food-nl"><div id="quizy-game-summary"><div class="gs-column" id="gs-column1">'+
+          gameEl.append('<form id="memoryForm" method="POST" action="#"><div id="quizy-game-summary"><div class="gs-column" id="gs-column1">'+
                           opts.textSummaryTitle+
-                          '</div><div class="gs-column" id="gs-column2"></div>'+
-                          '<div class="gs-column" id="gs-column3"></div>'+
+                          '</div><div class="gs-column" id="gs-column2" name="seconds"></div>'+
+                          '<div class="gs-column" id="gs-column3" name="tries"></div>'+
                           '<div class="quizy-game-clear"></div></div></form>');
           // // positions the summary div in the middle of the div wrapper
           // var xMid = gameEl.width()/2 - 
@@ -351,16 +351,30 @@ if(!Array.indexOf){
           
           // Appends replay but if set in the opts.
           if(opts.replayButton){
-            $('#quizy-game-summary').append('<div id="gs-replaybut">'+
-                                            opts.replayButtonText+'</div>');
+            $('#quizy-game-summary').append('<input type="button" id="gs-replaybut" value="Replay">');
           }
           
           // Appends the close button
           $('#quizy-game-summary').append('<input type="button" id="gs-closebut" value="Close">');
           
           // adds a click event to the close button to be removed on click
-          $('div#gs-closebut').click(function(){
+          $('input#gs-closebut').click(function(){
             $(this).parent().fadeOut();
+            $("#memoryForm").attr('action', location.pathname)
+              var memoryScore = {
+                seconds: $("#gs-column2").html().replace(/\D/g,''),
+                tries: $("#gs-column3").html().replace(/\D/g,'')
+              }
+              $.post(location.pathname, memoryScore, function(response){
+                //To get redirect after ajax request
+                var redirect = function(url, method) {
+                  $('<form>', {
+                     method: method,
+                     action: url
+                  }).submit();
+                };
+                redirect('http://localhost:8000/profile', 'get')
+              })
           });
           
           // adds a click event to the replay button
@@ -445,7 +459,7 @@ if(!Array.indexOf){
                          
   ****************************************************************************/
   
-  $.fn.quizyMemoryGame.defaults = {itemWidth: 150, itemHeight: 150, itemsMargin:10, colCount:4, animType:'scroll', animSpeed:250, openDelay:2500, flipAnim:'rl', resultIcons:true, gameSummary:true, randomised:true, textSummaryTitle:'Your game summary', replayButton:true, replayButtonText:'Replay', closeButtonText:'Close', textSummaryClicks:'clicks', textSummaryTime:'seconds', onFinishCall:''}
+  $.fn.quizyMemoryGame.defaults = {itemWidth: 150, itemHeight: 150, itemsMargin:10, colCount:4, animType:'scroll', animSpeed:250, openDelay:2500, flipAnim:'rl', resultIcons:true, gameSummary:true, randomised:true, textSummaryTitle:'Your game summary', replayButton:true, replayButtonText:'Replay', closeButtonText:'Close', textSummaryClicks:'tries', textSummaryTime:'seconds', onFinishCall:''}
   
   
 })(jQuery);

@@ -6,7 +6,7 @@ var quizJSON = {
     "info": {
         "name":    "Dutch animals",
         "main":    "<p>Test your knowledge of dutch animals!</p>",
-        "results": "<h5>Learn More</h5><p>Play the memory game to practice your Dutch Animals. You also try this quiz as many times as you want!</p><input type='button' value='Play Again' id='againBtn' style='margin-top: 20px;'><form method='POST' action='/quiz'><input type='button' value='Go Back' id='backBtn' style='margin-top: 20px; margin-left: 20px;'></form>",
+        "results": "<h5>Learn More</h5><p>Play the memory game to practice your Dutch Animals. You also try this quiz as many times as you want!</p><form method='POST' action='/quiz'><input type='button' name='replay' value='Play Again' id='againBtn' style='margin-top: 20px;'><input type='button' value='Go Back' id='backBtn' name='score' style='margin-top: 20px; margin-left: 20px;'></form>",
         "level1":  "Amazing you got all of them!",
         "level2":  "Almost perfect!",
         "level3":  "Great job, but you need some more practice.",
