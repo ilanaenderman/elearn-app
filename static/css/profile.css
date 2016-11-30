@@ -9,6 +9,9 @@ h1, h2, h3, h4, h5 {
   text-align: center;
   color: #FD4F21; }
 
+h3 {
+  max-width: 100%; }
+
 .nav-wrapper {
   background-color: #1EA4A4; }
   .nav-wrapper #logo {
@@ -35,9 +38,10 @@ h1, h2, h3, h4, h5 {
     #profile .card .buttons {
       width: 100px;
       height: 100px; }
-    #profile .card .card-image {
-      height: 300px;
-      width: auto;
-      padding-top: 40px; }
     #profile .card .card-content {
       margin: 10px; }
+      #profile .card .card-content .image {
+        max-width: 100%;
+        border-radius: 30px;
+        display: block;
+        margin: auto; }

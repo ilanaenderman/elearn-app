@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5 {
     color: $mainTextColor;
 }
 
+h3 {
+    max-width: 100%;
+}
+
 
 .nav-wrapper {
     background-color: $mainColor;
@@ -63,14 +67,15 @@ h1, h2, h3, h4, h5 {
             height: 100px;
         }
 
-        .card-image {
-            height: 300px;
-            width: auto;
-            padding-top: 40px;
-        }
-
         .card-content {
             margin: 10px;
+
+            .image {
+                max-width: 100%;
+                border-radius: 30px;
+                display: block;
+                margin: auto;
+            }
         }
     }
 }

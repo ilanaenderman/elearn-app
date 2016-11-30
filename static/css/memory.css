@@ -1,25 +1,39 @@
-body.dutch-memory, body.spanish-memory {
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Comic Sans MS";
+  background-color: #F4FFFE;
   zoom: 0.8; }
 
-.dutch-memory h1, h2, h3 {
-  text-align: center; }
+h1, h2, h3, h4, h5 {
+  color: #FD4F21; }
 
-.spanish-memory h1, h2, h3 {
-  text-align: center; }
-
-div#my-memorygame .text-style1 {
-  font-family: Yanone;
-  font-size: 24pt;
-  color: #56605f;
-  font-weight: normal;
-  text-shadow: 1px 1px 1px #fff;
-  margin: -65px 0 0 0; }
-
-div#my-memorygame img {
-  border-radius: 20px; }
+.nav-wrapper {
+  background-color: #1EA4A4; }
+  .nav-wrapper #logo {
+    padding-left: 150px;
+    font-size: 40px;
+    color: white; }
+  .nav-wrapper a {
+    font-size: 30px; }
+  .nav-wrapper .right.hide-on-med-and-down {
+    padding-right: 150px; }
 
 .row {
-  padding-top: 30px; }
-
-.card {
-  border-radius: 30px; }
+  padding-top: 20px; }
+  .row .card {
+    border-radius: 30px; }
+    .row .card .card-content {
+      text-align: center;
+      content-align: center;
+      display: block;
+      margin: 0 auto; }
+      .row .card .card-content div#my-memorygame .text-style1 {
+        font-family: Yanone;
+        font-size: 24pt;
+        color: #56605f;
+        font-weight: normal;
+        text-shadow: 1px 1px 1px #fff;
+        margin: -65px 0 0 0; }
+      .row .card .card-content div#my-memorygame img {
+        border-radius: 20px; }
