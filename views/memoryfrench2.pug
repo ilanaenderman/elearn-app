@@ -3,7 +3,7 @@ html
 		title Memory
 		link(rel="stylesheet" type="text/css" href="css/materialize.min.css")
 		link(rel="stylesheet" type="text/css" href="css/quizymemorygame.css")
-		link(rel="stylesheet" type="text/css" href="css/profile.css")
+		//- link(rel="stylesheet" type="text/css" href="css/profile.css")
 		link(rel="stylesheet" type="text/css" href="css/memory.css")
 	body.french-memory
 		nav
@@ -11,83 +11,95 @@ html
 				a#logo.brand-logo eLearning
 				ul.right.hide-on-med-and-down
 					li
-						a= user.userName
+						a(href='/profile') user.userName
 					li
-						a(href='/logout') Logout
-		h2 French Memory
-		h3 Animals
-		div#my-memorygame.quizy-memorygame
-			ul
-				li.match1
-					br
-					br
-					br
-					p.text-style1 Cheval
-				li.match2
-					br
-					br
-					br
-					p.text-style1 Chat
-				li.match3
-					br
-					br
-					br
-					p.text-style1 Chien
-				li.match4
-					br
-					br
-					br
-					p.text-style1 Vache
-				li.match5
-					br
-					br
-					br
-					p.text-style1 Souris
-				li.match6
-					br
-					br
-					br
-					p.text-style1 Chèvre
-				li.match7
-					br
-					br
-					br
-					p.text-style1 Mouton
-				li.match8
-					br
-					br
-					br
-					p.text-style1 Oiseau
-				li.match9
-					br
-					br
-					br
-					p.text-style1 Poulet
-				li.match10
-					br
-					br
-					br
-					p.text-style1 Lapin
-				li.match1
-					img(src="images/horse.jpg")
-				li.match2
-					img(src="images/cat.jpg")
-				li.match3
-					img(src="images/dog.jpg")
-				li.match4
-					img(src="images/cow.jpg")
-				li.match5
-					img(src="images/mouse.jpg")
-				li.match6
-					img(src="images/goat.jpg")
-				li.match7
-					img(src="images/sheep.jpg")
-				li.match8
-					img(src="images/bird.jpg")
-				li.match9
-					img(src="images/chicken.jpg")
-				li.match10
-					img(src="images/rabbit.jpg")
+						a#logoutButton.waves-effect.waves-light.btn-large.z-depth-0(href='/logout') Logout
+		div.row
+			div.col.s3
+				div.card
+					div.card-content
+						img.image(src="images/duck.jpg")
+						h3#Memory Memory
+						div#topscore
+							h5 Theme: Animals
+							h5 Language: French
+							h5 Top Score: 
+			div.col.s9
+				div.col.s10.offset-s1
+					div.card
+						div.card-content
+							div#my-memorygame.quizy-memorygame
+								ul
+									li.match1
+										br
+										br
+										br
+										p.text-style1 Cheval
+									li.match2
+										br
+										br
+										br
+										p.text-style1 Chat
+									li.match3
+										br
+										br
+										br
+										p.text-style1 Chien
+									li.match4
+										br
+										br
+										br
+										p.text-style1 Vache
+									li.match5
+										br
+										br
+										br
+										p.text-style1 Souris
+									li.match6
+										br
+										br
+										br
+										p.text-style1 Chèvre
+									li.match7
+										br
+										br
+										br
+										p.text-style1 Mouton
+									li.match8
+										br
+										br
+										br
+										p.text-style1 Oiseau
+									li.match9
+										br
+										br
+										br
+										p.text-style1 Poulet
+									li.match10
+										br
+										br
+										br
+										p.text-style1 Lapin
+									li.match1
+										img(src="images/horse.jpg")
+									li.match2
+										img(src="images/cat.jpg")
+									li.match3
+										img(src="images/dog.jpg")
+									li.match4
+										img(src="images/cow.jpg")
+									li.match5
+										img(src="images/mouse.jpg")
+									li.match6
+										img(src="images/goat.jpg")
+									li.match7
+										img(src="images/sheep.jpg")
+									li.match8
+										img(src="images/bird.jpg")
+									li.match9
+										img(src="images/chicken.jpg")
+									li.match10
+										img(src="images/rabbit.jpg")
 		script(src="js/jquery-3.1.1.min.js") 
 		script(src="js/jquery-ui.min.js")
 		script(src="js/jquery.flip.min.js")

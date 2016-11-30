@@ -1,5 +1,6 @@
 html
 	head
+		title
 		link(href='/css/materialize.min.css' type="text/css" rel="stylesheet")
 		link(href='/css/profile.css' type="text/css" rel="stylesheet")
 		script(src='/js/jquery-3.1.1.min.js')
@@ -12,7 +13,7 @@ html
 					li
 						a user.userName
 					li
-						a(href='/logout') Logout
+						a#logoutButton.waves-effect.waves-light.btn-large.z-depth-0(href='/logout') Logout
 		div#profile.row
 			div.col.s3
 				div.card
