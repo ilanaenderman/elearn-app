@@ -378,7 +378,7 @@ if(!Array.indexOf){
           });
           
           // adds a click event to the replay button
-          $('div#gs-replaybut').click(function(){
+          $('input#gs-replaybut').click(function(){
             gameEl.quizyMemoryGame('restart');
           });
           

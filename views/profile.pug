@@ -2,9 +2,11 @@ html
 	head
 		title
 		link(href='/css/materialize.min.css' type="text/css" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
 		link(href='/css/profile.css' type="text/css" rel="stylesheet")
 		script(src='/js/jquery-3.1.1.min.js')
 		script(src='/js/materialize.min.js')
+		script(src='/js/custom.js')
 	body
 		nav
 			div.nav-wrapper
@@ -16,6 +18,11 @@ html
 						a(href='/profile') user.userName
 					li
 						a#logoutButton.waves-effect.waves-light.btn-large.z-depth-0(href='/logout') Logout
+				ul.side-nav#mobile-demo
+					li
+						a(href='/logout') Logout
+					li
+						a(href='/') Home
 		div#profile.row
 			div.col.s3
 				div.card
@@ -162,7 +169,7 @@ html
 							div.results
 								- var esresult = []
 									- for(var j = 0; j < id.length; j++)
-										- if(id[j].language == "ES")
+										- if(id[j].language == "NL")
 											- esresult.push(id[j].id)
 									- if(esresult.length == 0)
 										a(href="/quiz-food-nl" name="food-es" id="food-es")
@@ -233,7 +240,6 @@ html
 											img.buttons(src="images/family-btn-bw.png")
 							br
 
-
 				div.col.s4
 					div.card
 						div.card-content
@@ -241,7 +247,7 @@ html
 							div.results
 								- var esresult = []
 									- for(var j = 0; j < id.length; j++)
-										- if(id[j].language == "ES")
+										- if(id[j].language == "FR")
 											- esresult.push(id[j].id)
 									- if(esresult.length == 0)
 										a(href="/quiz-food-fr" name="food-fr" id="food-fr")
@@ -272,5 +278,4 @@ html
 										a(href="/quiz-family-fr" name="family-fr" id="family-fr") &nbsp;
 											img.buttons(src="images/family-btn-color.png")
 							br
-
 							

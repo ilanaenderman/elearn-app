@@ -112,6 +112,25 @@
         else if(location.pathname == '/quiz-family-nl') {
             var quizValues = (plugin.config.json ? plugin.config.json : typeof quizNLFamily != 'undefined' ? quizNLFamily : null);
         }
+        else if(location.pathname == '/quiz-food-es') {
+            var quizValues = (plugin.config.json ? plugin.config.json : typeof quizESFood != 'undefined' ? quizESFood : null);
+        }
+        else if(location.pathname == '/quiz-animal-es') {
+            var quizValues = (plugin.config.json ? plugin.config.json : typeof quizESAnimal != 'undefined' ? quizESAnimal : null);
+        }
+        else if(location.pathname == '/quiz-family-es') {
+            var quizValues = (plugin.config.json ? plugin.config.json : typeof quizESFamily != 'undefined' ? quizESFamily : null);
+        }
+        else if(location.pathname == '/quiz-food-fr') {
+            var quizValues = (plugin.config.json ? plugin.config.json : typeof quizFRFood != 'undefined' ? quizFRFood : null);
+        }
+        else if(location.pathname == '/quiz-animal-fr') {
+            var quizValues = (plugin.config.json ? plugin.config.json : typeof quizFRAnimal != 'undefined' ? quizFRAnimal : null);
+        }
+        else if(location.pathname == '/quiz-family-fr') {
+            var quizValues = (plugin.config.json ? plugin.config.json : typeof quizFRFamily != 'undefined' ? quizFRFamily : null);
+        }
+
 
         // Get questions, possibly sorted randomly
         var questions = plugin.config.randomSort || plugin.config.randomSortQuestions ?

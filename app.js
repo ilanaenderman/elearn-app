@@ -22,6 +22,8 @@ let memoryNLRoute	= require(__dirname + '/routes/memory-nl')
 let memoryESRoute	= require(__dirname + '/routes/memory-es')
 let memoryFRRoute	= require(__dirname + '/routes/memory-fr')
 let quizNLRoute		= require(__dirname + '/routes/quiz-nl')
+let quizESRoute 	= require(__dirname + '/routes/quiz-es')
+let quizFRRoute 	= require(__dirname + '/routes/quiz-fr')
 
 
 app.use( express.static('static'))
@@ -40,6 +42,8 @@ app.use( memoryNLRoute )
 app.use( memoryESRoute )
 app.use( memoryFRRoute )
 app.use( quizNLRoute )
+app.use( quizESRoute )
+app.use( quizFRRoute )
 
 
 //listen port 8000

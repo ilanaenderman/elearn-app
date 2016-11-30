@@ -2,6 +2,9 @@ $langWidth: 400px;
 $mainColor: #1EA4A4;
 $backgroundColor: #F4FFFE;
 $mainTextColor: #FD4F21;
+$smallLaptop: 1024px;
+$tabletSize: 768px;
+$mobileSize: 425px;
 
 body {
     padding: 0;
@@ -23,6 +26,9 @@ h1, h2, h3, h4, h5 {
         padding-left: 150px;
         font-size: 40px;
         color: white;
+    }
+    #hamburger {
+        font-size: 70px;
     }
 
     a {

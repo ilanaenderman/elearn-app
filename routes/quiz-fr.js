@@ -5,11 +5,11 @@ const router	= express.Router( )
 const db		= require(__dirname + '/../modules/database')
 
 //Food FR Quiz
-router.get('/quiz-food-FR', (request, response) => {
+router.get('/quiz-food-fr', (request, response) => {
 	response.render('demoquiz')
 })
 
-router.post('/quiz-food-FR', (request, response) => {
+router.post('/quiz-food-fr', (request, response) => {
 	let input = request.body.input
 	if (input.substring(0,1) == 0) {
 		input = 0
@@ -49,11 +49,11 @@ router.post('/quiz-food-FR', (request, response) => {
 })
 
 //Animal FR Quiz
-router.get('/quiz-animal-FR', (request, response) => {
+router.get('/quiz-animal-fr', (request, response) => {
 	response.render('demoquiz')
 })
 
-router.post('/quiz-animal-FR', (request, response) => {
+router.post('/quiz-animal-fr', (request, response) => {
 	let input = request.body.input
 	if (input.substring(0,1) == 0) {
 		input = 0
@@ -93,11 +93,11 @@ router.post('/quiz-animal-FR', (request, response) => {
 })
 
 //Family NL Quiz
-router.get('/quiz-family-FR', (request, response) => {
+router.get('/quiz-family-fr', (request, response) => {
 	response.render('demoquiz')
 })
 
-router.post('/quiz-family-FR', (request, response) => {
+router.post('/quiz-family-fr', (request, response) => {
 	let input = request.body.input
 	if (input.substring(0,1) == 0) {
 		input = 0
