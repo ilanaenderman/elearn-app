@@ -28,7 +28,7 @@ $(document).ready(function(){
                  action: url
               }).submit();
             };
-            redirect('http://localhost:8000/quiz', 'get')
+            redirect('http://localhost:8000/quiz-food-nl', 'get')
 		})
 	})
 })

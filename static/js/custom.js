@@ -31,4 +31,7 @@ $(document).ready(function(){
 	}
 })
 
-
+//Profile page navigation hamburger
+$(document).ready(function(){
+	$(".button-collapse").sideNav()
+})

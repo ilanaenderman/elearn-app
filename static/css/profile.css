@@ -1,9 +1,9 @@
 body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
   font-family: "Comic Sans MS";
-  background-color: #F4FFFE; }
+  background-color: #F4FFFE;
+  zoom: 0.8; }
 
 h1, h2, h3, h4, h5 {
   text-align: center;
@@ -15,6 +15,8 @@ h1, h2, h3, h4, h5 {
     padding-left: 150px;
     font-size: 40px;
     color: white; }
+  .nav-wrapper #hamburger {
+    font-size: 70px; }
   .nav-wrapper a {
     font-size: 30px; }
   .nav-wrapper .right.hide-on-med-and-down {
@@ -35,9 +37,14 @@ h1, h2, h3, h4, h5 {
     #profile .card .buttons {
       width: 100px;
       height: 100px; }
-    #profile .card .card-image {
-      height: 300px;
-      width: auto;
-      padding-top: 40px; }
     #profile .card .card-content {
       margin: 10px; }
+      #profile .card .card-content .card-image {
+        height: 240px;
+        width: auto;
+        border-radius: 30px;
+        display: block;
+        margin: 0 auto; }
+        @media screen and (max-width: 1024px) {
+          #profile .card .card-content .card-image {
+            height: 150px; } }

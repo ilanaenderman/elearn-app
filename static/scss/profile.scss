@@ -2,13 +2,16 @@ $langWidth: 400px;
 $mainColor: #1EA4A4;
 $backgroundColor: #F4FFFE;
 $mainTextColor: #FD4F21;
+$smallLaptop: 1024px;
+$tabletSize: 768px;
+$mobileSize: 425px;
 
 body {
     padding: 0;
     margin: 0;
-    overflow: hidden; 
     font-family: "Comic Sans MS";
     background-color: $backgroundColor;
+    zoom: 0.8;
 }
 
 h1, h2, h3, h4, h5 {
@@ -24,6 +27,9 @@ h1, h2, h3, h4, h5 {
         padding-left: 150px;
         font-size: 40px;
         color: white;
+    }
+    #hamburger {
+        font-size: 70px;
     }
 
     a {
@@ -63,14 +69,18 @@ h1, h2, h3, h4, h5 {
             height: 100px;
         }
 
-        .card-image {
-            height: 300px;
-            width: auto;
-            padding-top: 40px;
-        }
-
         .card-content {
             margin: 10px;
+            .card-image {
+                height: 240px;
+                width: auto;
+                border-radius: 30px;
+                display: block;
+                margin: 0 auto;
+                @media screen and (max-width: 1024px) {
+                    height: 150px;
+                }
+            }
         }
     }
 }
