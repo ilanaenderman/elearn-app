@@ -6,7 +6,7 @@ var quizNLFood = {
     "info": {
         "name":    "Dutch food",
         "main":    "<p>Test your knowledge of dutch food!</p>",
-        "results": "<h5>Learn More</h5><p>Play the memory game to practice your Dutch Food. You also try this quiz as many times as you want!</p><form method='POST' action='/quiz'><input type='button' name='replay' value='Play Again' id='againBtn' style='margin-top: 20px;'><input type='button' value='Go Back' id='backBtn' name='score' style='margin-top: 20px; margin-left: 20px;'></form>",
+        "results": "<p>Play the memory game to practice your Dutch Food. You also try this quiz as many times as you want!</p><form method='POST' action='/quiz'><input type='button' name='replay' value='Play Again' id='againBtn' style='margin-top: 20px;'><input type='button' value='Go Back' id='backBtn' name='score' style='margin-top: 20px; margin-left: 20px;'></form>",
         "level1":  "Amazing you got all of them!",
         "level2":  "Almost perfect!",
         "level3":  "Great job, but you need some more practice.",
@@ -18,9 +18,9 @@ var quizNLFood = {
             "q": "Which of the following pictures is a 'Aardappel'?",
             "a": [
                 {"option": "<img src='images/fruit.png'> 1",    "correct": false},
-                {"option": "<img src='images/dinner.jpg'> 2", "correct": false},
-                {"option": "<img src='images/potato.jpg'> 3",    "correct": true},
-                {"option": "<img src='images/fish.jpg'> 4",    "correct": false} // no comma here
+                {"option": "<img src='images/dinner.jpg'> 2",   "correct": false},
+                {"option": "<img src='images/potato.jpg'> 3",   "correct": true},
+                {"option": "<img src='images/fish.jpg'> 4",     "correct": false} // no comma here
             ],
             "correct": "<p><span>That's right!</span> Let's continue!</p>",
             "incorrect": "<p><img src='images/potato.jpg'><span>No, this is a 'Aardappel' </span>Let's try a new question!</p>" // no comma here
@@ -38,7 +38,7 @@ var quizNLFood = {
             "incorrect": "<p><span>Hmmm.</span>The right answer is 'Vlees' and 'Vis'.</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
-            "q": "Which food item can you see in this picture? <img src='images/lunch.jpg'>",
+            "q": "<img src='images/lunch.jpg'> Which food item can you see in this picture?",
             "a": [
                 {"option": "Aardappel", "correct": false},
                 {"option": "Brood",     "correct": true},
@@ -63,11 +63,11 @@ var quizNLFood = {
             "q": "Pick the answer that has a picture of 'Rijst', 'Avondeten' and 'Vis'.",
             "a": [
                 {"option": "<img src='images/fruit.png'><img src='images/lunch.jpg'><img src='images/rice.jpg'> 1",     "correct": false},
-                {"option": "<img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'> 2",     "correct": true} 
+                {"option": "<img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'> 2",     "correct": true}, 
                 {"option": "<img src='images/dinner.jpg'><img src='images/meat.jpg'><img src='images/potato.jpg'> 2",   "correct": false}// no comma here
             ],
             "correct": "<p><span>Great!</span> Keep this up!</p>",
-            "incorrect": "<p><img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'><span>No, this is the right answer.</span> Let's see what you have scored!</p>" // no comma here
+            "incorrect": "<p><img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'><span>No, this is the right answer.</span> Let's continue!</p>" // no comma here
         } // no comma here
     ]
 };
@@ -137,7 +137,7 @@ var quizNLAnimal = { //Done!
                 {"option": "<img src='images/sheep.jpg'><img src='images/cow.jpg'><img src='images/dog.jpg'> 3",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Great!</span> Keep this up!</p>",
-            "incorrect": "<p><img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'><span>No, this is the right answer.</span> Let's see what you have scored!</p>" // no comma here
+            "incorrect": "<p><img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'><span>No, this is the right answer.</span> Let's continue!</p>" // no comma here
         } // no comma here
     ]
 };
@@ -155,58 +155,59 @@ var quizNLFamily = {
     },
     "questions": [
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "Which of the following pictures is a 'Kat'?",
+            "q": "Which of the following pictures is a 'Oma'?",
             "a": [
-                {"option": "<img src='images/dog.jpg'> 1",    "correct": false},
-                {"option": "<img src='images/rabbit.jpg'> 2", "correct": false},
-                {"option": "<img src='images/cat.jpg'> 3",    "correct": true},
-                {"option": "<img src='images/cow.jpg'> 4",    "correct": false} // no comma here
+                {"option": "<img src='images/brother.jpg'> 1",    "correct": false},
+                {"option": "<img src='images/child.jpg'> 2",      "correct": false},
+                {"option": "<img src='images/parent.jpg'> 3",     "correct": false},
+                {"option": "<img src='images/grandma.jpg'> 4",    "correct": true} // no comma here
             ],
             "correct": "<p><span>That's right!</span> Let's continue!</p>",
-            "incorrect": "<p><img src='images/cat.jpg'><span>No, this is a 'Kat' </span>Let's try a new question!</p>" // no comma here
+            "incorrect": "<p><img src='images/grandma.jpg'><span>No, this is a 'Oma' </span>Let's try a new question!</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
-            "q": "Which of these animals would you see on a farm? You can pick multiple answers.",
+            "q": "Which of these people are male? You can pick multiple answers.",
             "a": [
-                {"option": "Geit",    "correct": true},
-                {"option": "Konijn",  "correct": false},
-                {"option": "Koe",     "correct": true},
-                {"option": "Kat",     "correct": false} // no comma here
+                {"option": "Vader",     "correct": true},
+                {"option": "Zus",       "correct": false},
+                {"option": "Moeder",    "correct": false},
+                {"option": "Opa",       "correct": true} // no comma here
             ],
             // "select_any": true,
             "correct": "<p><span>You are right!</span> You're doing great, keep this up!</p>",
-            "incorrect": "<p><span>Hmmm.</span>The right answer is 'Geit' and 'Koe'.</p>" // no comma here
+            "incorrect": "<p><span>Hmmm.</span>The right answer is 'Vader' and 'Opa'.</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
-            "q": "Which of these animals can fly?",
+            "q": "Which of these are multiple people? You can pick multiple answers.",
             "a": [
-                {"option": "Paard",   "correct": false},
-                {"option": "Vogel",   "correct": true},
-                {"option": "Kip",     "correct": false},
-                {"option": "Hond",    "correct": false} // no comma here
+                {"option": "Ouders",   "correct": true},
+                {"option": "Familie",  "correct": true},
+                {"option": "Baby",     "correct": false},
+                {"option": "Broer",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Brilliant!</span> Let's go on!</p>",
-            "incorrect": "<p><span>Not Quite.</span> Only a 'Vogel' can fly.</p>" // no comma here
+            "incorrect": "<p><span>Not Quite.</span> Both 'Ouders' and 'Familie' are multiple people.</p>" // no comma here
         },
         { // Question 4
-            "q": "What is a 'Muis'?",
+            "q": "What is a 'Kind'?",
             "a": [
-                {"option": "<img src='images/horse.jpg'> 1",    "correct": false},
-                {"option": "<img src='images/sheep.jpg'> 2",    "correct": false},
-                {"option": "<img src='images/rabbit.jpg'> 3",   "correct": false},
-                {"option": "<img src='images/mouse.jpg'> 4",    "correct": true} // no comma here
+                {"option": "<img src='images/family.jpg'> 1",   "correct": false},
+                {"option": "<img src='images/sister.jpg'> 2",   "correct": false},
+                {"option": "<img src='images/mom.jpg'> 3",   "correct": false},
+                {"option": "<img src='images/child.jpg'> 4",    "correct": true} // no comma here
             ],
             "correct": "<p><span>Great job!</span> You know more than you think!</p>",
-            "incorrect": "<p><img src='images/mouse.jpg'><span>No sorry, this is a 'Muis</span> Let's continue!</p>" // no comma here
+            "incorrect": "<p><img src='images/child.jpg'><span>No sorry, this is a 'Kind'.</span> Let's continue!</p>" // no comma here
         },
         { // Question 5
-            "q": "Pick the answer that has a picture of a 'Paard', 'Koe' and 'Schaap'.",
+            "q": "Pick the answer that has a picture of a 'Baby', 'Opa' and 'Family'.",
             "a": [
-                {"option": "<img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'> 1",    "correct": true},
-                {"option": "<img src='images/mouse.jpg'><img src='images/goat.jpg'><img src='images/bird.jpg'> 2",     "correct": false} // no comma here
+                {"option": "<img src='images/baby.jpg'><img src='images/family.jpg'><img src='images/grandpa.jpg'> 1",      "correct": true},
+                {"option": "<img src='images/grandpa.jpg'><img src='images/sister.jpg'><img src='images/child.jpg'> 2",     "correct": false},
+                {"option": "<img src='images/family.jpg'><img src='images/dad.jpg'><img src='images/brother.jpg'> 2",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Great!</span> Keep this up!</p>",
-            "incorrect": "<p><img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'><span>No, this is the right answer.</span> Let's see what you have scored!</p>" // no comma here
+            "incorrect": "<p><img src='images/baby.jpg'><img src='images/family.jpg'><img src='images/grandpa.jpg'><span>No, this is the right answer.</span> Let's continue!</p>" // no comma here
         } // no comma here
     ]
 };
@@ -232,27 +233,27 @@ var quizESFood = {
                 {"option": "<img src='images/fish.jpg'> 4",     "correct": false} // no comma here
             ],
             "correct": "<p><span>That's right!</span> Let's continue!</p>",
-            "incorrect": "<p><img src='images/potato.jpg'><span>No, this is a 'Patata' </span>Let's try a new question!</p>" // no comma here
+            "incorrect": "<p><img src='images/potato.jpg'><span>No, this is a 'Patata'. </span>Let's try a new question!</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "q": "Which of these food items would you eat in the evening? You can pick multiple answers.",
             "a": [
-                {"option": "Carne",     "correct": true},
-                {"option": "Pan",     "correct": false},
+                {"option": "Carne",      "correct": true},
+                {"option": "Pan",        "correct": false},
                 {"option": "Desayuno",   "correct": false},
-                {"option": "Pescado",       "correct": true} // no comma here
+                {"option": "Pescado",    "correct": true} // no comma here
             ],
             // "select_any": true,
             "correct": "<p><span>You are right!</span> You're doing great, keep this up!</p>",
             "incorrect": "<p><span>Hmmm.</span>The right answer is 'Carne' and 'Pescado'.</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
-            "q": "Which food item can you see in this picture? <img src='images/lunch.jpg'>",
+            "q": "<img src='images/lunch.jpg'> Which food item can you see in this picture?",
             "a": [
-                {"option": "Patata", "correct": false},
+                {"option": "Patata",  "correct": false},
                 {"option": "Pan",     "correct": true},
-                {"option": "Arroz",     "correct": false},
-                {"option": "Carne",     "correct": false} // no comma here
+                {"option": "Arroz",   "correct": false},
+                {"option": "Carne",   "correct": false} // no comma here
             ],
             "correct": "<p><span>Brilliant!</span> Let's go on!</p>",
             "incorrect": "<p><span>Not Quite.</span> You can see 'Pan'.</p>" // no comma here
@@ -266,17 +267,17 @@ var quizESFood = {
                 {"option": "<img src='images/rice.jpg'> 4",        "correct": false} // no comma here
             ],
             "correct": "<p><span>Great job!</span> You know more than you think!</p>",
-            "incorrect": "<p><img src='images/vegetable.jpg'><span>No sorry, this is a 'Groente'.</span> Let's continue!</p>" // no comma here
+            "incorrect": "<p><img src='images/vegetable.jpg'><span>No sorry, this is a 'Vegetal'.</span> Let's continue!</p>" // no comma here
         },
         { // Question 5
-            "q": "Pick the answer that has a picture of 'Rijst', 'Avondeten' and 'Vis'.",
+            "q": "Pick the answer that has a picture of 'Arroz', 'Cena' and 'Pescado'.",
             "a": [
                 {"option": "<img src='images/fruit.png'><img src='images/lunch.jpg'><img src='images/rice.jpg'> 1",     "correct": false},
-                {"option": "<img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'> 2",     "correct": true} 
+                {"option": "<img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'> 2",     "correct": true}, 
                 {"option": "<img src='images/dinner.jpg'><img src='images/meat.jpg'><img src='images/potato.jpg'> 2",   "correct": false}// no comma here
             ],
             "correct": "<p><span>Great!</span> Keep this up!</p>",
-            "incorrect": "<p><img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'><span>No, this is the right answer.</span> Let's see what you have scored!</p>" // no comma here
+            "incorrect": "<p><img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'><span>No, this is the right answer.</span> Let's continue!</p>" // no comma here
         } // no comma here
     ]
 };
@@ -308,7 +309,7 @@ var quizESAnimal = {
             "q": "Which of these animals would you see on a farm? You can pick multiple answers.",
             "a": [
                 {"option": "Cabre",    "correct": true},
-                {"option": "Conejo",  "correct": false},
+                {"option": "Conejo",   "correct": false},
                 {"option": "Vaca",     "correct": true},
                 {"option": "Gato",     "correct": false} // no comma here
             ],
@@ -319,9 +320,9 @@ var quizESAnimal = {
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
             "q": "Which of these animals can fly?",
             "a": [
-                {"option": "Caballo",   "correct": false},
+                {"option": "Caballo",  "correct": false},
                 {"option": "Pájaro",   "correct": true},
-                {"option": "Pollo",     "correct": false},
+                {"option": "Pollo",    "correct": false},
                 {"option": "Perro",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Brilliant!</span> Let's go on!</p>",
@@ -346,7 +347,7 @@ var quizESAnimal = {
                 {"option": "<img src='images/sheep.jpg'><img src='images/cow.jpg'><img src='images/dog.jpg'> 3",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Great!</span> Keep this up!</p>",
-            "incorrect": "<p><img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'><span>No, this is the right answer.</span> Let's see what you have scored!</p>" // no comma here
+            "incorrect": "<p><img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'><span>No, this is the right answer.</span> Let's continue!</p>" // no comma here
         } // no comma here
     ]
 };
@@ -364,58 +365,59 @@ var quizESFamily = {
     },
     "questions": [
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "Which of the following pictures is a 'Kat'?",
+            "q": "Which of the following pictures is a 'Abuela'?",
             "a": [
-                {"option": "<img src='images/dog.jpg'> 1",    "correct": false},
-                {"option": "<img src='images/rabbit.jpg'> 2", "correct": false},
-                {"option": "<img src='images/cat.jpg'> 3",    "correct": true},
-                {"option": "<img src='images/cow.jpg'> 4",    "correct": false} // no comma here
+                {"option": "<img src='images/brother.jpg'> 1",    "correct": false},
+                {"option": "<img src='images/child.jpg'> 2",      "correct": false},
+                {"option": "<img src='images/parent.jpg'> 3",     "correct": false},
+                {"option": "<img src='images/grandma.jpg'> 4",    "correct": true} // no comma here
             ],
             "correct": "<p><span>That's right!</span> Let's continue!</p>",
-            "incorrect": "<p><img src='images/cat.jpg'><span>No, this is a 'Kat' </span>Let's try a new question!</p>" // no comma here
+            "incorrect": "<p><img src='images/grandma.jpg'><span>No, this is a 'Abuela' </span>Let's try a new question!</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
-            "q": "Which of these animals would you see on a farm? You can pick multiple answers.",
+            "q": "Which of these people are male? You can pick multiple answers.",
             "a": [
-                {"option": "Geit",    "correct": true},
-                {"option": "Konijn",  "correct": false},
-                {"option": "Koe",     "correct": true},
-                {"option": "Kat",     "correct": false} // no comma here
+                {"option": "Padre",     "correct": true},
+                {"option": "Hermana",   "correct": false},
+                {"option": "Madre",     "correct": false},
+                {"option": "Abuelo",    "correct": true} // no comma here
             ],
             // "select_any": true,
             "correct": "<p><span>You are right!</span> You're doing great, keep this up!</p>",
-            "incorrect": "<p><span>Hmmm.</span>The right answer is 'Geit' and 'Koe'.</p>" // no comma here
+            "incorrect": "<p><span>Hmmm.</span>The right answer is 'Padre' and 'Abuelo'.</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
-            "q": "Which of these animals can fly?",
+            "q": "Which of these are multiple people? You can pick multiple answers.",
             "a": [
-                {"option": "Paard",   "correct": false},
-                {"option": "Vogel",   "correct": true},
-                {"option": "Kip",     "correct": false},
-                {"option": "Hond",    "correct": false} // no comma here
+                {"option": "Padres",    "correct": true},
+                {"option": "Familia",   "correct": true},
+                {"option": "Bebé",      "correct": false},
+                {"option": "Hermano",   "correct": false} // no comma here
             ],
             "correct": "<p><span>Brilliant!</span> Let's go on!</p>",
-            "incorrect": "<p><span>Not Quite.</span> Only a 'Vogel' can fly.</p>" // no comma here
+            "incorrect": "<p><span>Not Quite.</span> Both 'Padres' and 'Familia' are multiple people.</p>" // no comma here
         },
         { // Question 4
-            "q": "What is a 'Muis'?",
+            "q": "What is a 'Niño'?",
             "a": [
-                {"option": "<img src='images/horse.jpg'> 1",    "correct": false},
-                {"option": "<img src='images/sheep.jpg'> 2",    "correct": false},
-                {"option": "<img src='images/rabbit.jpg'> 3",   "correct": false},
-                {"option": "<img src='images/mouse.jpg'> 4",    "correct": true} // no comma here
+                {"option": "<img src='images/family.jpg'> 1",   "correct": false},
+                {"option": "<img src='images/sister.jpg'> 2",   "correct": false},
+                {"option": "<img src='images/mom.jpg'> 3",   "correct": false},
+                {"option": "<img src='images/child.jpg'> 4",    "correct": true} // no comma here
             ],
             "correct": "<p><span>Great job!</span> You know more than you think!</p>",
-            "incorrect": "<p><img src='images/mouse.jpg'><span>No sorry, this is a 'Muis</span> Let's continue!</p>" // no comma here
+            "incorrect": "<p><img src='images/child.jpg'><span>No sorry, this is a 'Niño'.</span> Let's continue!</p>" // no comma here
         },
         { // Question 5
-            "q": "Pick the answer that has a picture of a 'Paard', 'Koe' and 'Schaap'.",
+            "q": "Pick the answer that has a picture of a 'Bebé', 'Abuelo' and 'Familia'.",
             "a": [
-                {"option": "<img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'> 1",    "correct": true},
-                {"option": "<img src='images/mouse.jpg'><img src='images/goat.jpg'><img src='images/bird.jpg'> 2",     "correct": false} // no comma here
+                {"option": "<img src='images/baby.jpg'><img src='images/family.jpg'><img src='images/grandpa.jpg'> 1",      "correct": true},
+                {"option": "<img src='images/grandpa.jpg'><img src='images/sister.jpg'><img src='images/child.jpg'> 2",     "correct": false},
+                {"option": "<img src='images/family.jpg'><img src='images/dad.jpg'><img src='images/brother.jpg'> 2",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Great!</span> Keep this up!</p>",
-            "incorrect": "<p><img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'><span>No, this is the right answer.</span> Let's see what you have scored!</p>" // no comma here
+            "incorrect": "<p><img src='images/baby.jpg'><img src='images/family.jpg'><img src='images/grandpa.jpg'><span>No, this is the right answer.</span> Let's continue!</p>" // no comma here
         } // no comma here
     ]
 };
@@ -433,41 +435,41 @@ var quizFRFood = {
     },
     "questions": [
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "Which of the following pictures is a 'Aardappel'?",
+            "q": "Which of the following pictures is a 'Pommes de Terre'?",
             "a": [
                 {"option": "<img src='images/fruit.png'> 1",    "correct": false},
-                {"option": "<img src='images/dinner.jpg'> 2", "correct": false},
-                {"option": "<img src='images/potato.jpg'> 3",    "correct": true},
-                {"option": "<img src='images/fish.jpg'> 4",    "correct": false} // no comma here
+                {"option": "<img src='images/dinner.jpg'> 2",   "correct": false},
+                {"option": "<img src='images/potato.jpg'> 3",   "correct": true},
+                {"option": "<img src='images/fish.jpg'> 4",     "correct": false} // no comma here
             ],
             "correct": "<p><span>That's right!</span> Let's continue!</p>",
-            "incorrect": "<p><img src='images/potato.jpg'><span>No, this is a 'Aardappel' </span>Let's try a new question!</p>" // no comma here
+            "incorrect": "<p><img src='images/potato.jpg'><span>No, this is a 'Pommes de Terre' </span>Let's try a new question!</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "q": "Which of these food items would you eat in the evening? You can pick multiple answers.",
             "a": [
-                {"option": "Vlees",     "correct": true},
-                {"option": "Brood",     "correct": false},
-                {"option": "Ontbijt",   "correct": false},
-                {"option": "Vis",       "correct": true} // no comma here
+                {"option": "Viande",            "correct": true},
+                {"option": "Pain",              "correct": false},
+                {"option": "Petit Déjeuner",    "correct": false},
+                {"option": "Poisson",           "correct": true} // no comma here
             ],
             // "select_any": true,
             "correct": "<p><span>You are right!</span> You're doing great, keep this up!</p>",
-            "incorrect": "<p><span>Hmmm.</span>The right answer is 'Vlees' and 'Vis'.</p>" // no comma here
+            "incorrect": "<p><span>Hmmm.</span>The right answer is 'Viande' and 'Poisson'.</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
-            "q": "Which food item can you see in this picture? <img src='images/lunch.jpg'>",
+            "q": "<img src='images/lunch.jpg'> Which food item can you see in this picture?",
             "a": [
-                {"option": "Aardappel", "correct": false},
-                {"option": "Brood",     "correct": true},
-                {"option": "Rijst",     "correct": false},
-                {"option": "Vlees",     "correct": false} // no comma here
+                {"option": "Pommes de Terre", "correct": false},
+                {"option": "Pain",            "correct": true},
+                {"option": "Riz",             "correct": false},
+                {"option": "Viande",          "correct": false} // no comma here
             ],
             "correct": "<p><span>Brilliant!</span> Let's go on!</p>",
             "incorrect": "<p><span>Not Quite.</span> You can see 'Brood'.</p>" // no comma here
         },
         { // Question 4
-            "q": "What is a 'Groente'?",
+            "q": "What is a 'Légume'?",
             "a": [
                 {"option": "<img src='images/vegetable.jpg'> 1",   "correct": true},
                 {"option": "<img src='images/fruit.png'> 2",       "correct": false},
@@ -475,17 +477,17 @@ var quizFRFood = {
                 {"option": "<img src='images/rice.jpg'> 4",        "correct": false} // no comma here
             ],
             "correct": "<p><span>Great job!</span> You know more than you think!</p>",
-            "incorrect": "<p><img src='images/vegetable.jpg'><span>No sorry, this is a 'Groente'.</span> Let's continue!</p>" // no comma here
+            "incorrect": "<p><img src='images/vegetable.jpg'><span>No sorry, this is a 'Légume'.</span> Let's continue!</p>" // no comma here
         },
         { // Question 5
-            "q": "Pick the answer that has a picture of 'Rijst', 'Avondeten' and 'Vis'.",
+            "q": "Pick the answer that has a picture of 'Riz', 'Dîner' and 'Poisson'.",
             "a": [
                 {"option": "<img src='images/fruit.png'><img src='images/lunch.jpg'><img src='images/rice.jpg'> 1",     "correct": false},
-                {"option": "<img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'> 2",     "correct": true} 
+                {"option": "<img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'> 2",     "correct": true}, 
                 {"option": "<img src='images/dinner.jpg'><img src='images/meat.jpg'><img src='images/potato.jpg'> 2",   "correct": false}// no comma here
             ],
             "correct": "<p><span>Great!</span> Keep this up!</p>",
-            "incorrect": "<p><img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'><span>No, this is the right answer.</span> Let's see what you have scored!</p>" // no comma here
+            "incorrect": "<p><img src='images/rice.jpg'><img src='images/dinner.jpg'><img src='images/fish.jpg'><span>No, this is the right answer.</span> Let's continue!</p>" // no comma here
         } // no comma here
     ]
 };
@@ -517,9 +519,9 @@ var quizFRAnimal = {
             "q": "Which of these animals would you see on a farm? You can pick multiple answers.",
             "a": [
                 {"option": "Chèvre",    "correct": true},
-                {"option": "Lapin",  "correct": false},
+                {"option": "Lapin",     "correct": false},
                 {"option": "Vache",     "correct": true},
-                {"option": "Chat",     "correct": false} // no comma here
+                {"option": "Chat",      "correct": false} // no comma here
             ],
             // "select_any": true,
             "correct": "<p><span>You are right!</span> You're doing great, keep this up!</p>",
@@ -530,7 +532,7 @@ var quizFRAnimal = {
             "a": [
                 {"option": "Cheval",   "correct": false},
                 {"option": "Oiseau",   "correct": true},
-                {"option": "Poulet",     "correct": false},
+                {"option": "Poulet",   "correct": false},
                 {"option": "Chien",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Brilliant!</span> Let's go on!</p>",
@@ -555,7 +557,7 @@ var quizFRAnimal = {
                 {"option": "<img src='images/sheep.jpg'><img src='images/cow.jpg'><img src='images/dog.jpg'> 3",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Great!</span> Keep this up!</p>",
-            "incorrect": "<p><img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'><span>No, this is the right answer.</span> Let's see what you have scored!</p>" // no comma here
+            "incorrect": "<p><img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'><span>No, this is the right answer.</span> Let's continue!</p>" // no comma here
         } // no comma here
     ]
 };
@@ -573,58 +575,59 @@ var quizFRFamily = {
     },
     "questions": [
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "Which of the following pictures is a 'Kat'?",
+            "q": "Which of the following pictures is a 'Grand-mère'?",
             "a": [
-                {"option": "<img src='images/dog.jpg'> 1",    "correct": false},
-                {"option": "<img src='images/rabbit.jpg'> 2", "correct": false},
-                {"option": "<img src='images/cat.jpg'> 3",    "correct": true},
-                {"option": "<img src='images/cow.jpg'> 4",    "correct": false} // no comma here
+                {"option": "<img src='images/brother.jpg'> 1",    "correct": false},
+                {"option": "<img src='images/child.jpg'> 2",      "correct": false},
+                {"option": "<img src='images/parent.jpg'> 3",     "correct": false},
+                {"option": "<img src='images/grandma.jpg'> 4",    "correct": true} // no comma here
             ],
             "correct": "<p><span>That's right!</span> Let's continue!</p>",
-            "incorrect": "<p><img src='images/cat.jpg'><span>No, this is a 'Kat' </span>Let's try a new question!</p>" // no comma here
+            "incorrect": "<p><img src='images/grandma.jpg'><span>No, this is a 'Grand-mère' </span>Let's try a new question!</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
-            "q": "Which of these animals would you see on a farm? You can pick multiple answers.",
+            "q": "Which of these people are male? You can pick multiple answers.",
             "a": [
-                {"option": "Geit",    "correct": true},
-                {"option": "Konijn",  "correct": false},
-                {"option": "Koe",     "correct": true},
-                {"option": "Kat",     "correct": false} // no comma here
+                {"option": "Père",              "correct": true},
+                {"option": "Soeur",             "correct": false},
+                {"option": "Mère",              "correct": false},
+                {"option": "Grand-père",        "correct": true} // no comma here
             ],
             // "select_any": true,
             "correct": "<p><span>You are right!</span> You're doing great, keep this up!</p>",
-            "incorrect": "<p><span>Hmmm.</span>The right answer is 'Geit' and 'Koe'.</p>" // no comma here
+            "incorrect": "<p><span>Hmmm.</span>The right answer is 'Père' and 'Grand-père'.</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
-            "q": "Which of these animals can fly?",
+            "q": "Which of these are multiple people? You can pick multiple answers.",
             "a": [
-                {"option": "Paard",   "correct": false},
-                {"option": "Vogel",   "correct": true},
-                {"option": "Kip",     "correct": false},
-                {"option": "Hond",    "correct": false} // no comma here
+                {"option": "Parents",  "correct": true},
+                {"option": "Famille",  "correct": true},
+                {"option": "Bébé",     "correct": false},
+                {"option": "Frère",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Brilliant!</span> Let's go on!</p>",
-            "incorrect": "<p><span>Not Quite.</span> Only a 'Vogel' can fly.</p>" // no comma here
+            "incorrect": "<p><span>Not Quite.</span> Both 'Parents' and 'Famille' are multiple people.</p>" // no comma here
         },
         { // Question 4
-            "q": "What is a 'Muis'?",
+            "q": "What is a 'Enfant'?",
             "a": [
-                {"option": "<img src='images/horse.jpg'> 1",    "correct": false},
-                {"option": "<img src='images/sheep.jpg'> 2",    "correct": false},
-                {"option": "<img src='images/rabbit.jpg'> 3",   "correct": false},
-                {"option": "<img src='images/mouse.jpg'> 4",    "correct": true} // no comma here
+                {"option": "<img src='images/family.jpg'> 1",   "correct": false},
+                {"option": "<img src='images/sister.jpg'> 2",   "correct": false},
+                {"option": "<img src='images/mom.jpg'> 3",   "correct": false},
+                {"option": "<img src='images/child.jpg'> 4",    "correct": true} // no comma here
             ],
             "correct": "<p><span>Great job!</span> You know more than you think!</p>",
-            "incorrect": "<p><img src='images/mouse.jpg'><span>No sorry, this is a 'Muis</span> Let's continue!</p>" // no comma here
+            "incorrect": "<p><img src='images/child.jpg'><span>No sorry, this is a 'Enfant'.</span> Let's continue!</p>" // no comma here
         },
         { // Question 5
-            "q": "Pick the answer that has a picture of a 'Paard', 'Koe' and 'Schaap'.",
+            "q": "Pick the answer that has a picture of a 'Bébé', 'Grand-père' and 'Famille'.",
             "a": [
-                {"option": "<img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'> 1",    "correct": true},
-                {"option": "<img src='images/mouse.jpg'><img src='images/goat.jpg'><img src='images/bird.jpg'> 2",     "correct": false} // no comma here
+                {"option": "<img src='images/baby.jpg'><img src='images/family.jpg'><img src='images/grandpa.jpg'> 1",      "correct": true},
+                {"option": "<img src='images/grandpa.jpg'><img src='images/sister.jpg'><img src='images/child.jpg'> 2",     "correct": false},
+                {"option": "<img src='images/family.jpg'><img src='images/dad.jpg'><img src='images/brother.jpg'> 2",    "correct": false} // no comma here
             ],
             "correct": "<p><span>Great!</span> Keep this up!</p>",
-            "incorrect": "<p><img src='images/horse.jpg'><img src='images/sheep.jpg'><img src='images/cow.jpg'><span>No, this is the right answer.</span> Let's see what you have scored!</p>" // no comma here
+            "incorrect": "<p><img src='images/baby.jpg'><img src='images/family.jpg'><img src='images/grandpa.jpg'><span>No, this is the right answer.</span> Let's continue!</p>" // no comma here
         } // no comma here
     ]
 };
