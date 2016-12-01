@@ -7,63 +7,123 @@ const db		= require(__dirname + '/../modules/database')
 
 // FOOD
 router.get('/memory-food-fr', (request, response) => {
-	var user = request.session.user
+	let user = request.session.user
 	response.render('memoryfrench', {user: user})
 })
 
 router.post('/memory-food-fr', (request, response) => {
-	db.game.findOne ({
+	let seconds = request.body.seconds
+	let tries = request.body.tries
+	let points = Number(tries) + (Number(seconds)/10)
+	db.game.findOne({
 		where: {
-			id: 7
+			language: 'FR',
+			theme: 'food',
+			userId: request.session.user.id
 		}
 	}).then(id => {
-		id.update ({
-			finished: true
-		}).then(id => {
-			response.redirect('/profile')
-		})
+		if(id == null) {
+			db.game.create({
+				language: 'FR',
+				theme: 'food',
+				finished: true,
+				score: points * 10,
+				userId: request.session.user.id
+			})
+			response.send('Done')
+		} else {
+			if(points < id.score) {
+				id.update ({
+					finished: true,
+					score: points * 10
+				})
+				response.send('Done')
+			} else {
+				response.send('Done')
+			}
+		}
 	})
 })
 
 
 // ANIMALS
 router.get('/memory-animal-fr', (request, response) => {
-	var user = request.session.user
+	let user = request.session.user
 	response.render('memoryfrench2', {user: user})
 })
 
 router.post('/memory-animal-fr', (request, response) => {
-	db.game.findOne ({
+	let seconds = request.body.seconds
+	let tries = request.body.tries
+	let points = Number(tries) + (Number(seconds)/10)
+	db.game.findOne({
 		where: {
-			id: 8
+			language: 'FR',
+			theme: 'animal',
+			userId: request.session.user.id
 		}
 	}).then(id => {
-		id.update ({
-			finished: true
-		}).then(id => {
-			response.redirect('/profile')
-		})
+		if(id == null) {
+			db.game.create({
+				language: 'FR',
+				theme: 'animal',
+				finished: true,
+				score: points * 10,
+				userId: request.session.user.id
+			})
+			response.send('Done')
+		} else {
+			if(points < id.score) {
+				id.update ({
+					finished: true,
+					score: points * 10
+				})
+				response.send('Done')
+			} else {
+				response.send('Done')
+			}
+		}
 	})
 })
 
 
 // FAMILY
 router.get('/memory-family-fr', (request, response) => {
-	var user = request.session.user
+	let user = request.session.user
 	response.render('memoryfrench3', {user: user})
 })
 
 router.post('/memory-family-fr', (request, response) => {
-	db.game.findOne ({
+	let seconds = request.body.seconds
+	let tries = request.body.tries
+	let points = Number(tries) + (Number(seconds)/10)
+	db.game.findOne({
 		where: {
-			id: 9
+			language: 'FR',
+			theme: 'family',
+			userId: request.session.user.id
 		}
 	}).then(id => {
-		id.update ({
-			finished: true
-		}).then(id => {
-			response.redirect('/profile')
-		})
+		if(id == null) {
+			db.game.create({
+				language: 'FR',
+				theme: 'family',
+				finished: true,
+				score: points * 10,
+				userId: request.session.user.id
+			})
+			response.send('Done')
+		} else {
+			if(points < id.score) {
+				id.update ({
+					finished: true,
+					score: points * 10
+				})
+				response.send('Done')
+			} else {
+				response.send('Done')
+			}
+		}
 	})
 })
 

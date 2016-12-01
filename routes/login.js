@@ -3,6 +3,7 @@
 const express 	= require( 'express')
 const router	= express.Router( )
 const db		= require(__dirname + '/../modules/database')
+const bcrypt	= require('bcrypt-node')
 
 
 // GET
@@ -53,7 +54,7 @@ router.post('/', (request, response) => {
 		return
 	}
 
-	User.findOne({
+	db.user.findOne({
 		where: {
 			$or: [{
 				userName: userName
@@ -64,7 +65,7 @@ router.post('/', (request, response) => {
 	}).then (user => {
 		bcrypt.hash(password, null, null, (err, hash) => {
 			if(user == null) {
-				User.create({
+				db.user.create({
 					fullName: fullName,
 					userName: userName,
 					email: email,
@@ -90,7 +91,7 @@ router.post('/loginProfile', (request, response) => {
 		return;
 	}
 
-	User.findOne({
+	db.user.findOne({
 		where: {
 			email: request.body.email
 		}
@@ -100,7 +101,7 @@ router.post('/loginProfile', (request, response) => {
 			return
 		}
 		else{
-			var hash = user.password 
+			let hash = user.password 
 			bcrypt.compare(request.body.password, hash, (err, res) => {
 				if (user !== null && res == true) {
 					request.session.user = user

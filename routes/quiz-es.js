@@ -31,19 +31,28 @@ router.post('/quiz-food-es', (request, response) => {
 	}
 	db.quiz.findOne({
 		where: {
-			id: 1
+			language: 'ES',
+			theme: 'food',
+			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id.score == 0 || input > id.score) {
-			id.update ({
+		if(id == null) {
+			db.quiz.create({
+				language: 'ES',
+				theme: 'food',
 				finished: true,
-				score: input
-			}).then(id => {
-				response.send('done')
+				score: input,
+				userId: request.session.user.id
 			})
-		}
-		else {
-			response.send('done')
+			response.send('Done')
+		} else {
+			if(input > id.score) {
+				id.update({
+					score: input
+				})
+			} else {
+				response.send('Done')
+			}
 		}
 	})
 })
@@ -75,19 +84,28 @@ router.post('/quiz-animal-es', (request, response) => {
 	}
 	db.quiz.findOne({
 		where: {
-			id: 1
+			language: 'ES',
+			theme: 'animal',
+			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id.score == 0 || input > id.score) {
-			id.update ({
+		if(id == null) {
+			db.quiz.create({
+				language: 'ES',
+				theme: 'animal',
 				finished: true,
-				score: input
-			}).then(id => {
-				response.send('done')
+				score: input,
+				userId: request.session.user.id
 			})
-		}
-		else {
-			response.send('done')
+			response.send('Done')
+		} else {
+			if(input > id.score) {
+				id.update({
+					score: input
+				})
+			} else {
+				response.send('Done')
+			}
 		}
 	})
 })
@@ -119,19 +137,28 @@ router.post('/quiz-family-es', (request, response) => {
 	}
 	db.quiz.findOne({
 		where: {
-			id: 1
+			language: 'ES',
+			theme: 'family',
+			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id.score == 0 || input > id.score) {
-			id.update ({
+		if(id == null) {
+			db.quiz.create({
+				language: 'ES',
+				theme: 'family',
 				finished: true,
-				score: input
-			}).then(id => {
-				response.send('done')
+				score: input,
+				userId: request.session.user.id
 			})
-		}
-		else {
-			response.send('done')
+			response.send('Done')
+		} else {
+			if(input > id.score) {
+				id.update({
+					score: input
+				})
+			} else {
+				response.send('Done')
+			}
 		}
 	})
 })
