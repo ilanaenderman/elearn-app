@@ -21,29 +21,32 @@ body {
 h1,h2,h3,h4,h5,h6 {font-weight: bold;}
 
 h1 {
-    font-size: 26px;
+    font-size: 40px;
     margin: 0 0 20px;
     color: #0C4569;
 }
 h2 {
-    font-size: 22px;
+    font-size: 36px;
     margin: 15px 0;
 }
 h3 {
-    font-size: 18px;
-    margin: 15px 0 10px;
+    font-size: 30px;
 }
+
 h4 {
-    font-size: 16px;
+    font-size: 28px;
     margin: 10px 0;
 }
 h5 {
-    font-size: 14px;
+    font-size: 26px;
     margin: 10px 0 5px;
 }
 h6 {
-    font-size: 12px;
+    font-size: 24px;
     margin: 5px 0;
+}
+p {
+    font-size: 24px;
 }
 
 strong { font-weight: bold; }
@@ -86,9 +89,18 @@ ol li { list-style-type: decimal; margin-left: 20px; }
     -moz-border-radius: 5px;
     border-radius: 5px;
 	text-decoration: none;
+    font-size: 20px;
 }
 .button:hover {
     background-color:darkslategray;
+}
+
+.button.checkAnswer {
+    margin-top: 20px;
+}
+
+.button.nextQuestion {
+    margin-top: 20px;
 }
 
 .startQuiz {
@@ -100,7 +112,7 @@ ol li { list-style-type: decimal; margin-left: 20px; }
 }
 
 .quizContent {
-    width: 800px;
+    width: 675px;
     margin: 40px auto;
 }
 
@@ -119,8 +131,13 @@ ol li { list-style-type: decimal; margin-left: 20px; }
     clear: both;
 }
 
+.quizArea h3 {
+    padding: 30px 0;
+    line-height: 30px;
+}
+
 .questionCount {
-    font-size: 14px;
+    font-size: 22px;
     font-style: italic;
 }
 .questionCount span {
@@ -133,11 +150,22 @@ ol.questions {
 }
 ol.questions li {
     margin-left: 0;
+    font-size: 24px;
 }
 
 ul.answers {
     margin-left: 20px;
     margin-bottom: 20px;
+}
+
+ul.answers li {
+    display: inline;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+ul.answers li label {
+    font-size: 24px !important;
 }
 
 ul.responses li {
@@ -146,7 +174,7 @@ ul.responses li {
 ul.responses li p span {
     display: block;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
 }
 ul.responses li.correct p span {
     color: #6C9F2E;
@@ -155,7 +183,7 @@ ul.responses li.correct p span {
 }
 
 .quizResults h3 {
-    margin: 0;
+    margin: 20px 0;
 }
 .quizResults h3 span {
     font-weight: normal;

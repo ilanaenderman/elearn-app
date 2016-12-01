@@ -1,23 +1,15 @@
-//Quiz NL routes
+//Quiz ES routes
 
 const express 	= require( 'express')
 const router	= express.Router( )
 const db		= require(__dirname + '/../modules/database')
 
-//Food NL Quiz
-router.get('/quiz-food-nl', (request, response) => {
-	db.quiz.findOne({
-		where: {
-			id: 1
-		},
-		attributes: ['id']
-	}).then(id => {
-		let quizId = id.id
-		response.render('demoquiz', {id: quizId})
-	})
+//Food ES Quiz
+router.get('/quiz-food-es', (request, response) => {
+	response.render('demoquiz')
 })
 
-router.post('/quiz-food-nl', (request, response) => {
+router.post('/quiz-food-es', (request, response) => {
 	let input = request.body.input
 	if (input.substring(0,1) == 0) {
 		input = 0
@@ -56,12 +48,12 @@ router.post('/quiz-food-nl', (request, response) => {
 	})
 })
 
-//Animal NL Quiz
-router.get('/quiz-animal-nl', (request, response) => {
+//Animal ES Quiz
+router.get('/quiz-animal-es', (request, response) => {
 	response.render('demoquiz')
 })
 
-router.post('/quiz-animal-nl', (request, response) => {
+router.post('/quiz-animal-es', (request, response) => {
 	let input = request.body.input
 	if (input.substring(0,1) == 0) {
 		input = 0
@@ -100,12 +92,12 @@ router.post('/quiz-animal-nl', (request, response) => {
 	})
 })
 
-//Family NL Quiz
-router.get('/quiz-family-nl', (request, response) => {
+//Family ES Quiz
+router.get('/quiz-family-es', (request, response) => {
 	response.render('demoquiz')
 })
 
-router.post('/quiz-family-nl', (request, response) => {
+router.post('/quiz-family-es', (request, response) => {
 	let input = request.body.input
 	if (input.substring(0,1) == 0) {
 		input = 0
