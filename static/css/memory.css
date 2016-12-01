@@ -52,7 +52,12 @@ h1, h2, h3, h4, h5 {
         font-size: 22pt;
         color: #FD4F21;
         font-weight: normal;
-        text-shadow: 1px 1px 1px #fff;
-        margin: -65px 0 0 0; }
+        margin: -55px 0 0 0; }
+      .row .card .card-content div#my-memorygame .text-style2 {
+        font-family: "Comic Sans MS";
+        font-size: 22pt;
+        color: #FD4F21;
+        font-weight: normal;
+        margin: -72px 0 0 0; }
       .row .card .card-content div#my-memorygame img {
         border-radius: 20px; }
