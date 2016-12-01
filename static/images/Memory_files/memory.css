@@ -14,8 +14,6 @@ h1, h2, h3, h4, h5 {
     padding-left: 150px;
     font-size: 40px;
     color: white; }
-  .nav-wrapper #hamburger {
-    font-size: 70px; }
   .nav-wrapper a {
     font-size: 30px; }
   .nav-wrapper .right.hide-on-med-and-down {
@@ -48,9 +46,9 @@ h1, h2, h3, h4, h5 {
         border-radius: 30px;
         border-color: #FD4F21; }
       .row .card .card-content div#my-memorygame .text-style1 {
-        font-family: "Comic Sans MS";
-        font-size: 22pt;
-        color: #FD4F21;
+        font-family: Yanone;
+        font-size: 24pt;
+        color: #56605f;
         font-weight: normal;
         text-shadow: 1px 1px 1px #fff;
         margin: -65px 0 0 0; }

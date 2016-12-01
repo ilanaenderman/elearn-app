@@ -4,15 +4,27 @@ html
 		link(rel="stylesheet" type="text/css" href="css/materialize.min.css")
 		link(rel="stylesheet" type="text/css" href="css/memorygame.css")
 		link(rel="stylesheet" type="text/css" href="css/memory.css")
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
 	body.dutch-memory
 		nav
 			div.nav-wrapper
 				a#logo.brand-logo eLearning
-				ul.right.hide-on-med-and-down
+				a.button-collapse(href="#" data-activates="mobile-demo")
+					i.material-icons#hamburger menu
+				ul.right.hide-on-med-and-down#nav-mobile
+					li
+						a(href='/account') Account
 					li
 						a(href='/profile') user.userName
 					li
 						a#logoutButton.waves-effect.waves-light.btn-large.z-depth-0(href='/logout') Logout
+				ul.side-nav#mobile-demo
+					li 
+						a(href='/account') Account
+					li
+						a(href='/logout') Logout
+					li
+						a(href='/') Home
 		div.row
 			div.col.s3
 				div.card
@@ -103,6 +115,7 @@ html
 		script(src="js/jquery-ui.min.js")
 		script(src="js/jquery.flip.min.js")
 		script(src="js/jquery.quizymemorygame.js") 
-		script(src="js/materialize.min.js") 
+		script(src="js/materialize.min.js")
+		script(src="js/custom.js")
 		script.
 			$('#my-memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:40, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true});

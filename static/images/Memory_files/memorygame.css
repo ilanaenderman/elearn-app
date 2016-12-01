@@ -6,7 +6,7 @@
 /* the stle for the wrapper element */
 .quizy-memorygame{
   position:relative;
-  max-width:100%;
+  width:100%;
   font-size: 24px;
 }
 
@@ -70,16 +70,15 @@
 
 /* styles for the game summary */
 #quizy-game-summary {
-  width:500px;
-  height:300px;
+  width:300px;
+  height:160px;
   position:absolute;
   z-index:1001;
-  background: #1EA4A4;
+  background: #515b69;
   box-shadow: rgba(0,0,0,0.7) 0 0 4px, inset 0 0 20px rgba(0, 0, 0, 0.4);;
-  border:1px solid #1EA4A4;
+  border:1px solid #000;
   display:none;
   text-align: center;
-  border-radius: 30px;
 }
 
 #quizy-game-summary div.gs-column{
@@ -92,20 +91,23 @@
 }
 
 #quizy-game-summary #gs-column1{
-  font-size:35px;
-  padding: 65px 65px 30px 65px;
-  margin-right: 10px;
-}
-
-#quizy-game-summary #gs-column2{
-  font-size:35px;
-  padding:65px 65px 30px 65px;
+  font-size:16px;
+  padding-top:30px;
   margin-right: 20px;
 }
 
+#quizy-game-summary #gs-column2{
+  font-size:12px;
+  padding-top: 65px;
+  background:url('../images/mg-timeicon.png') no-repeat 70% 25%;
+  margin-left: 10px;
+}
+
 #quizy-game-summary #gs-column3{
-  font-size:35px;
-  padding: 65px 65px 30px 65px;
+  font-size:12px;
+  padding-top: 65px;
+  background:url('../images/mg-clickicon.png') no-repeat 70% 25%;
+  margin-left: 10px;
 }
 
 
@@ -113,20 +115,16 @@
 #quizy-game-summary #gs-replaybut{
   display: inline-block;
   margin-top: 10px;
-  margin-bottom: 10px;
-  width: 150px;
-  padding: 10px 10px 10px 10px;
+  width: 90px;
+  padding: 10px 10px 5px 10px;
   text-align: center;
-  font-size: 30px;
-  background: #FD4F21;
-  color: white;
+  background: #D7EEF0;
   cursor: pointer;
-  border-radius: 30px;
 }
 
 #quizy-game-summary #gs-closebut:hover, 
 #quizy-game-summary #gs-replaybut:hover{
-  background: #FF714B;
+  background: #fff;
 }
 
 #quizy-game-summary #gs-replaybut{

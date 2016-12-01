@@ -1,6 +1,6 @@
 html
 	head
-		title
+		title Profile
 		link(href='/css/materialize.min.css' type="text/css" rel="stylesheet")
 		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
 		link(href='/css/profile.css' type="text/css" rel="stylesheet")
@@ -15,10 +15,14 @@ html
 					i.material-icons#hamburger menu
 				ul.right.hide-on-med-and-down#nav-mobile
 					li
+						a(href='/account') Account
+					li
 						a(href='/profile') user.userName
 					li
 						a#logoutButton.waves-effect.waves-light.btn-large.z-depth-0(href='/logout') Logout
 				ul.side-nav#mobile-demo
+					li 
+						a(href='/account') Account
 					li
 						a(href='/logout') Logout
 					li
@@ -31,7 +35,7 @@ html
 						h3 username
 						p Lorem ipsumn dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-			div#progress.col.s9
+			div.col.s9
 				div.col.s12
 					div#gameTitle.card
 						div.card-content

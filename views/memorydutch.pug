@@ -4,17 +4,27 @@ html
 		link(rel="stylesheet" type="text/css" href="css/materialize.min.css")
 		link(rel="stylesheet" type="text/css" href="css/memorygame.css")
 		link(rel="stylesheet" type="text/css" href="css/memory.css")
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
 	body.dutch-memory
 		nav
 			div.nav-wrapper
-				a#logo.brand-logo(href="/profile") eLearning
-				ul.right.hide-on-med-and-down
+				a#logo.brand-logo eLearning
+				a.button-collapse(href="#" data-activates="mobile-demo")
+					i.material-icons#hamburger menu
+				ul.right.hide-on-med-and-down#nav-mobile
 					li
 						a(href='/account') Account
 					li
 						a(href='/profile') user.userName
 					li
 						a#logoutButton.waves-effect.waves-light.btn-large.z-depth-0(href='/logout') Logout
+				ul.side-nav#mobile-demo
+					li 
+						a(href='/account') Account
+					li
+						a(href='/logout') Logout
+					li
+						a(href='/') Home
 		div.row
 			div.col.s3
 				div.card
@@ -26,79 +36,79 @@ html
 							h5 Language: Dutch
 							h5 Top Score: 
 			div.col.s9
-				div.col.s10.offset-s1
+				div.col.s12
 					div.card
 						div.card-content
 							div#my-memorygame.quizy-memorygame
 								ul
-									li.match1
-										br
-										br
-										br
-										p.text-style1 Vlees
-									li.match2
-										br
-										br
-										br
-										p.text-style1 Vis
-									li.match3
-										br
-										br
-										br
-										p.text-style1 Groente
-									li.match4
-										br
-										br
-										br
-										p.text-style1 Lunch
-									li.match5
-										br
-										br
-										br
-										p.text-style1 Rijst
-									li.match6
-										br
-										br
-										br
-										p.text-style1 Brood
-									li.match7
-										br
-										br
-										br
-										p.text-style1 Aardappel
-									li.match8
-										br
-										br
-										br
-										p.text-style1 Fruit
-									li.match9
-										br
-										br
-										br
-										p.text-style1 Ontbijt
+									//- li.match1
+									//- 	br
+									//- 	br
+									//- 	br
+									//- 	p.text-style1 Vlees
+									//- li.match2
+									//- 	br
+									//- 	br
+									//- 	br
+									//- 	p.text-style1 Vis
+									//- li.match3
+									//- 	br
+									//- 	br
+									//- 	br
+									//- 	p.text-style1 Groente
+									//- li.match4
+									//- 	br
+									//- 	br
+									//- 	br
+									//- 	p.text-style1 Lunch
+									//- li.match5
+									//- 	br
+									//- 	br
+									//- 	br
+									//- 	p.text-style1 Rijst
+									//- li.match6
+									//- 	br
+									//- 	br
+									//- 	br
+									//- 	p.text-style1 Brood
+									//- li.match7
+									//- 	br
+									//- 	br
+									//- 	br
+									//- 	p.text-style1 Aardappel
+									//- li.match8
+									//- 	br
+									//- 	br
+									//- 	br
+									//- 	p.text-style1 Fruit
+									//- li.match9
+									//- 	br
+									//- 	br
+									//- 	br
+									//- 	p.text-style1 Ontbijt
 									li.match10
 										br
 										br
 										br
 										p.text-style1 Avondeten
-									li.match1
-										img(src="images/meat.jpg")
-									li.match2
-										img(src="images/fish.jpg")
-									li.match3
-										img(src="images/vegetable.jpg")
-									li.match4
-										img(src="images/lunch.jpg")
-									li.match5
-										img(src="images/rice.jpg")
-									li.match6
-										img(src="images/bread.jpg")
-									li.match7
-										img(src="images/potato.jpg")
-									li.match8
-										img(src="images/fruit.png")
-									li.match9
-										img(src="images/breakfast.jpg")
+									//- li.match1
+									//- 	img(src="images/meat.jpg")
+									//- li.match2
+									//- 	img(src="images/fish.jpg")
+									//- li.match3
+									//- 	img(src="images/vegetable.jpg")
+									//- li.match4
+									//- 	img(src="images/lunch.jpg")
+									//- li.match5
+									//- 	img(src="images/rice.jpg")
+									//- li.match6
+									//- 	img(src="images/bread.jpg")
+									//- li.match7
+									//- 	img(src="images/potato.jpg")
+									//- li.match8
+									//- 	img(src="images/fruit.png")
+									//- li.match9
+									//- 	img(src="images/breakfast.jpg")
 									li.match10
 										img(src="images/dinner.jpg")
 		script(src="js/jquery-3.1.1.min.js") 
@@ -106,5 +116,6 @@ html
 		script(src="js/jquery.flip.min.js")
 		script(src="js/jquery.quizymemorygame.js") 
 		script(src="js/materialize.min.js") 
+		script(src="js/custom.js")
 		script.
 			$('#my-memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:40, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true});
