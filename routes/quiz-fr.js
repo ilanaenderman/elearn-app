@@ -6,6 +6,7 @@ const db		= require(__dirname + '/../modules/database')
 
 //Food FR Quiz
 router.get('/quiz-food-fr', (request, response) => {
+	let user = request.session.user
 	db.game.findOne({
 		where: {
 			language: 'FR',
@@ -14,7 +15,7 @@ router.get('/quiz-food-fr', (request, response) => {
 		},
 		attributes: ['score']
 	}).then(score => {
-		response.render('demoquiz', {path: request.path, score: score})
+		response.render('demoquiz', {path: request.path, score: score, user: user})
 	})
 })
 
@@ -69,6 +70,7 @@ router.post('/quiz-food-fr', (request, response) => {
 
 //Animal FR Quiz
 router.get('/quiz-animal-fr', (request, response) => {
+	let user = request.session.user
 	db.game.findOne({
 		where: {
 			language: 'FR',
@@ -77,7 +79,7 @@ router.get('/quiz-animal-fr', (request, response) => {
 		},
 		attributes: ['score']
 	}).then(score => {
-		response.render('demoquiz', {path: request.path, score: score})
+		response.render('demoquiz', {path: request.path, score: score, user: user})
 	})
 })
 
@@ -132,6 +134,7 @@ router.post('/quiz-animal-fr', (request, response) => {
 
 //Family NL Quiz
 router.get('/quiz-family-fr', (request, response) => {
+	let user = request.session.user
 	db.game.findOne({
 		where: {
 			language: 'FR',
@@ -140,7 +143,7 @@ router.get('/quiz-family-fr', (request, response) => {
 		},
 		attributes: ['score']
 	}).then(score => {
-		response.render('demoquiz', {path: request.path, score: score})
+		response.render('demoquiz', {path: request.path, score: score, user: user})
 	})
 })
 
