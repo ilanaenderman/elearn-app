@@ -60,7 +60,7 @@ router.get('/memory-animal-nl', (request, response) => {
 	db.game.findOne({
 		where: {
 			language: 'NL',
-			theme: 'animal',
+			theme: 'animals',
 			userId: request.session.user.id
 		},
 		attributes: ['score']
@@ -76,14 +76,14 @@ router.post('/memory-animal-nl', (request, response) => {
 	db.game.findOne({
 		where: {
 			language: 'NL',
-			theme: 'animal',
+			theme: 'animals',
 			userId: request.session.user.id
 		}
 	}).then(id => {
 		if(id == null) {
 			db.game.create({
 				language: 'NL',
-				theme: 'animal',
+				theme: 'animals',
 				finished: true,
 				score: points * 10,
 				userId: request.session.user.id
