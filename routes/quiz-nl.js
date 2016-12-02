@@ -58,6 +58,7 @@ router.post('/quiz-food-nl', (request, response) => {
 				id.update({
 					score: input
 				})
+				response.send('Done')
 			} else {
 				response.send('Done')
 			}
@@ -111,6 +112,7 @@ router.post('/quiz-animal-nl', (request, response) => {
 				id.update({
 					score: input
 				})
+				response.send('Done')
 			} else {
 				response.send('Done')
 			}
@@ -164,6 +166,7 @@ router.post('/quiz-family-nl', (request, response) => {
 				id.update({
 					score: input
 				})
+				response.send('Done')
 			} else {
 				response.send('Done')
 			}

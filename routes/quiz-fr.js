@@ -50,6 +50,7 @@ router.post('/quiz-food-fr', (request, response) => {
 				id.update({
 					score: input
 				})
+				response.send('Done')
 			} else {
 				response.send('Done')
 			}
@@ -103,6 +104,7 @@ router.post('/quiz-animal-fr', (request, response) => {
 				id.update({
 					score: input
 				})
+				response.send('Done')
 			} else {
 				response.send('Done')
 			}
@@ -156,6 +158,7 @@ router.post('/quiz-family-fr', (request, response) => {
 				id.update({
 					score: input
 				})
+				response.send('Done')
 			} else {
 				response.send('Done')
 			}

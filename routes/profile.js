@@ -15,13 +15,13 @@ router.get('/profile', (request, response) => {
 			where: {
 				finished: true
 			},
-			attributes: ['id', 'language']
+			attributes: ['id', 'language', 'theme', 'score']
 		}, {
 			model: db.quiz,
 			where: {
 				finished: true
 			},
-			attributes: ['id', 'language']
+			attributes: ['id', 'language', 'theme', 'score']
 		}]
 	}).then(id => {
 		let gamesresult = []
@@ -30,13 +30,17 @@ router.get('/profile', (request, response) => {
 		for(let i = 0; i < id.games.length; i++){
 			gamesresult.push({
 					id: id.games[i].id, 
-					language: id.games[i].language
+					language: id.games[i].language,
+					theme: id.games[i].theme,
+					score: id.games[i].score
 			})
 		}
 		for(let j = 0; j < id.quizzes.length; j++) {
 			quizresult.push({
 					id: id.quizzes[j].id,
-					language: id.quizzes[j].language
+					language: id.quizzes[j].language,
+					theme: id.quizzes[j].theme,
+					score: id.quizzes[j].score
 			})
 		}
 		totalresult.push({

@@ -58,7 +58,7 @@ db.conn.sync({force: true}).then( database => {
 			language: 'NL',
 			theme: "food",
 			finished: true,
-			score: 0,
+			score: 40,
 			userId: 1
 		})
 		db.game.create({
@@ -72,7 +72,7 @@ db.conn.sync({force: true}).then( database => {
 			language: 'NL',
 			theme: "family",
 			finished: true,
-			score: 0,
+			score: 20,
 			userId: 1
 		})
 		db.game.create({
@@ -86,7 +86,7 @@ db.conn.sync({force: true}).then( database => {
 			language: 'ES',
 			theme: "animal",
 			finished: true,
-			score: 0,
+			score: 60,
 			userId: 1
 		})
 		db.game.create({
