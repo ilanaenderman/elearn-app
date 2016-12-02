@@ -44,6 +44,8 @@ h1, h2, h3, h4, h5 {
       height: 100px; }
     #profile .card .card-content {
       margin: 10px; }
+      #profile .card .card-content p {
+        font-size: 20px; }
       #profile .card .card-content .image {
         max-width: 100%;
         border-radius: 30px;

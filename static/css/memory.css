@@ -47,6 +47,8 @@ h1, h2, h3, h4, h5 {
       .row .card .card-content #topscore {
         border-radius: 30px;
         border-color: #FD4F21; }
+      .row .card .card-content p {
+        font-size: 24px; }
       .row .card .card-content div#my-memorygame .text-style1 {
         font-family: "Comic Sans MS";
         font-size: 22pt;
