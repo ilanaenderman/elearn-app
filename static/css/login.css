@@ -7,8 +7,20 @@ body {
   overflow: hidden;
   zoom: 0.8; }
 
+@media only screen and (max-width: 992px) {
+  body {
+    overflow: auto; } }
+
 main {
   flex: 1 0 auto; }
+
+@media only screen and (max-width: 768px) {
+  main {
+    zoom: 1; } }
+
+@media only screen and (max-width: 425px) {
+  main {
+    zoom: 2; } }
 
 .nav-wrapper {
   background-color: #1EA4A4; }
@@ -91,7 +103,9 @@ main {
     padding: 20px; }
     .section2 .col.l4 .language {
       width: 300px;
-      height: 300px; }
+      height: 300px;
+      display: block;
+      margin: 0 auto; }
 
 .section3 {
   padding-top: 30px;
