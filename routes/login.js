@@ -29,6 +29,10 @@ router.post('/', (request, response) => {
 		response.redirect('/?message=' + encodeURIComponent("Please fill out your user name."))
 		return
 	}
+	if( userName.length <= 3 || userName.length >= 13) {
+		response.redirect('/?message=' + encodeURIComponent("Please fill out a username that is between 3 and 13 characters."))
+		return
+	}
 	if( !firstChar.match(/[a-zA-Z ]/)) {
 		response.redirect('/?message=' + encodeURIComponent("First letter must be alphabetic."))
 		return
@@ -46,7 +50,7 @@ router.post('/', (request, response) => {
 		return
 	}
 	if( password.length < 8 ){
-		response.redirect('/?message=' + encodeURIComponent("Password is too short."))
+		response.redirect('/?message=' + encodeURIComponent("Password must be at least 8 characters."))
 		return
 	}
 	if( pwConfirm !==  password) {
@@ -83,12 +87,12 @@ router.post('/', (request, response) => {
 router.post('/loginProfile', (request, response) => {
 	if(request.body.email.length === 0) {
 		response.redirect('/?message=' + encodeURIComponent("You need to fill out your email."))
-		return;
+		return
 	}
 
 	if(request.body.password.length === 0) {
 		response.redirect('/?message=' + encodeURIComponent("You need to fill out your password."))
-		return;
+		return
 	}
 
 	db.user.findOne({

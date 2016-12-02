@@ -55,23 +55,26 @@ h1, h2, h3, h4, h5 {
         padding-bottom: 80px; }
       .row .card #settings form {
         padding: 60px 300px 30px 200px;
-        font-size: 20px; }
-        .row .card #settings form #userName {
-          font-size: 20px; }
-        .row .card #settings form #email {
-          font-size: 20px; }
+        font-size: 25px; }
+        .row .card #settings form #newUserName {
+          font-size: 25px; }
+        .row .card #settings form #newEmail {
+          font-size: 25px; }
         .row .card #settings form #newPW {
-          font-size: 20px; }
+          font-size: 25px; }
         .row .card #settings form #currentPW {
-          font-size: 20px; }
+          font-size: 25px; }
         .row .card #settings form #confirmPW {
-          font-size: 20px; }
-        .row .card #settings form #fullName {
-          font-size: 20px; }
+          font-size: 25px; }
+        .row .card #settings form #newFullName {
+          font-size: 25px; }
         .row .card #settings form #location {
-          font-size: 20px; }
+          font-size: 25px; }
         .row .card #settings form #bio {
-          font-size: 20px; }
+          font-size: 25px; }
+        .row .card #settings form label {
+          font-size: 20px;
+          color: #FD4F21; }
         .row .card #settings form .btn.btn-default.btn-large {
           background-color: #FD4F21;
           color: white;
