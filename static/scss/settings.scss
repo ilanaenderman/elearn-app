@@ -1,0 +1,134 @@
+$langWidth: 400px;
+$mainColor: #1EA4A4;
+$backgroundColor: #F4FFFE;
+$mainTextColor: #FD4F21;
+$smallLaptop: 1024px;
+$tabletSize: 768px;
+$mobileSize: 425px;
+$inputSize: 20px;
+
+body {
+    padding: 0;
+    margin: 0; 
+    font-family: "Comic Sans MS";
+    background-color: $backgroundColor;
+    zoom: 0.8;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: left;
+    color: $mainTextColor;
+}
+
+.nav-wrapper {
+    background-color: $mainColor;
+
+    #logo {
+        padding-left: 150px;
+        font-size: 40px;
+        color: white;
+    }
+    
+    #hamburger {
+        font-size: 70px;
+    }
+
+    a {
+        font-size: 30px;
+    }
+
+    .right.hide-on-med-and-down {
+        padding-right: 150px;
+
+        #logoutButton {
+            background-color: white;
+            color: $mainColor;
+            font-size: 20px;
+            border-radius: 30px;
+        }
+    }
+}
+
+//Body Content
+.row {
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    .card {
+        border-radius: 30px;
+
+        .card-content {
+            margin: 10;
+
+            .image {
+                max-width: 100%;
+                text-align: left;
+                border-radius: 30px;
+                display: block;
+                margin: auto;
+            }
+
+            .Button {
+                background-color: $mainTextColor;
+                color: white;
+                width: 350px;
+                max-width: 100%;
+                font-size: 20px;
+                border-radius: 30px;
+            }
+        }
+        #settings {
+            text-align: left;
+            margin: 10;
+
+            h3 {
+                padding-bottom: 80px;
+            }
+
+            form {
+                padding: 60px 300px 30px 200px;
+                font-size: $inputSize;
+
+
+                #userName {
+                    font-size: $inputSize;
+                }
+
+                #email {
+                font-size: $inputSize;
+                }
+
+                #newPW {
+                    font-size: $inputSize;
+                }
+
+                #currentPW {
+                    font-size: $inputSize;
+                }
+
+                #confirmPW {
+                    font-size: $inputSize;
+                }
+
+                #fullName {
+                    font-size: $inputSize;
+                }
+
+                #location {
+                    font-size: $inputSize;
+                }
+
+                #bio {
+                    font-size: $inputSize;
+                }
+
+                .btn.btn-default.btn-large {
+                    background-color: $mainTextColor;
+                    color: white;
+                    border-radius: 30px!important;
+                }
+            }
+        }
+    }
+}

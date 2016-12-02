@@ -459,7 +459,7 @@ if(!Array.indexOf){
                          
   ****************************************************************************/
   
-  $.fn.quizyMemoryGame.defaults = {itemWidth: 150, itemHeight: 150, itemsMargin:10, colCount:5, animType:'scroll', animSpeed:250, openDelay:2500, flipAnim:'rl', resultIcons:true, gameSummary:true, randomised:true, textSummaryTitle:'Result:', replayButton:true, replayButtonText:'Replay', closeButtonText:'Close', textSummaryClicks:'tries', textSummaryTime:'seconds', onFinishCall:''}
+  $.fn.quizyMemoryGame.defaults = {itemWidth: 150, itemHeight: 150, itemsMargin:10, colCount:5, animType:'scroll', animSpeed:250, openDelay:2500, flipAnim:'rl', resultIcons:true, gameSummary:true, randomised:true, textSummaryTitle:'Your game summary', replayButton:true, replayButtonText:'Replay', closeButtonText:'Close', textSummaryClicks:'tries', textSummaryTime:'seconds', onFinishCall:''}
   
   
 })(jQuery);

@@ -12,9 +12,6 @@ db.conn = new sequelize('elearn', process.env.POSTGRES_USER, process.env.POSTGRE
 	dialect: 'postgres'
 })
 
-// db.conn = new sequelize('postgres://floriandalhuijsen@localhost/elearn')
-
-
 //>>>>>>>>>>> MODELS
 
 db.user = db.conn.define('user', {

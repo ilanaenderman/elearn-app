@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5 {
         color: white;
     }
 
+    #hamburger {
+        font-size: 70px;
+    }
+
     a {
         font-size: 30px;
     }
@@ -76,14 +80,21 @@ h1, h2, h3, h4, h5 {
 
 			div#my-memorygame {
 
-				.text-style1{
-				  font-family:Yanone;
-				  font-size:24pt;
-				  color:#56605f;
+				.text-style1 {
+				  font-family:"Comic Sans MS";
+				  font-size:22pt;
+				  color:#FD4F21;
 				  font-weight:normal;
-				  text-shadow: 1px 1px 1px #fff;
-				  margin: -65px 0 0 0;
+				  margin: -55px 0 0 0;
 				}
+
+                .text-style2 {
+                  font-family:"Comic Sans MS";
+                  font-size:22pt;
+                  color:#FD4F21;
+                  font-weight:normal;
+                  margin: -72px 0 0 0;
+                }
 
 				img {
 					border-radius: 20px;

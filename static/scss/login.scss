@@ -25,6 +25,10 @@ main {
   		color: white;
 	}
 
+	#hamburger {
+        font-size: 70px;
+    }
+
 	.right.hide-on-med-and-down {
 		padding-right: 150px;
 
@@ -131,7 +135,7 @@ main {
 	text-align: center;
 
 	.col.l4 {
-		padding: 30px;
+		padding: 20px;
 
 		.language {
 			width: 300px;
