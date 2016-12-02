@@ -10,7 +10,7 @@ html
 	body
 		nav
 			div.nav-wrapper
-				a#logo.brand-logo(href="#") eLearning
+				a#logo.brand-logo(href="#") LangGa
 				a.button-collapse(href="#" data-activates="mobile-demo")
 					i.material-icons#hamburger menu
 				ul.right.hide-on-med-and-down#nav-mobile
@@ -18,13 +18,15 @@ html
 						a(href='/profile')= user.userName
 					li
 						a(href='/settings') Settings
+
 					li
 						a#logoutButton.waves-effect.waves-light.btn-large.z-depth-0(href='/logout') Logout
 				ul.side-nav#mobile-demo
 					li
 						a(href='/profile')= user.userName
-					li 
-						a(href='/settings') Settings
+					li
+						a.dropdown-button(href='#' data-activates='dropdown1') Settings
+							i.material-icons.right arrow_drop_down
 					li
 						a(href='/logout') Logout
 		div.row
@@ -36,7 +38,6 @@ html
 						br
 						a.Button.waves-effect.waves-light.btn-large.z-depth-0(href='/settings') Account
 						a.Button.waves-effect.waves-light.btn-large.z-depth-0(href='/password') Password
-						a.Button.waves-effect.waves-light.btn-large.z-depth-0(href='/profileSettings') Profile
 
 
 
@@ -48,10 +49,13 @@ html
 							form(action='/settings' method='POST')
 								div.input-field
 									input#newUserName(type='text' name='newUserName' placeholder= user.userName length="13")
-									label.validate(for="newUserName") Fill in new username
+									label.validate(for="newUserName") Enter new username
+								div.input-field
+									input#newFullName(type='text' name='newFullName' placeholder=user.fullName)
+									label(for='newFullName') Enter in new full name
 								div.input-field
 									input#newEmail(type="email" name='newEmail' placeholder= user.email)
-									label(for="newEmail") Fill in new email address
+									label(for="newEmail") Enter in new email address
 									input#saveButton(type='submit' class='btn btn-default btn-large' value='Save Changes')
 									h5= message
 

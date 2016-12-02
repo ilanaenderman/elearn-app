@@ -7,36 +7,31 @@ const bcrypt	= require('bcrypt-node')
 
 // Account
 router.get('/settings', (request, response) => {
-	var user = request.session.user
+	let user = request.session.user
 	response.render('settings', {message: request.query.message ,user: user})
 })
 
 router.post('/settings', (request, response) => {
-	let user = request.session.user
+	let user 		= request.session.user
 	let newUserName = request.body.newUserName
-	let newEmail = request.body.newEmail
-	console.log(request.body)
+	let newEmail 	= request.body.newEmail
+	let newFullName = request.body.newFullName
 
-	if(  newUserName.length <= 3 || newUserName.length >= 13){
-		response.redirect('/settings?message=' + encodeURIComponent("Username must be between 3 and 13 characters long."))
-	}
-
-	if(  newUserName != "" && newEmail != "") {
-		console.log( 'both')
+	if(  newUserName != "" && newEmail != "" && newFullName!= "") {
 		db.user.findOne({
 			where: {id: user.id},
-			attributes: ['id', 'userName', 'email']
+			attributes: ['id', 'userName', 'email', 'fullName']
 		}).then( newSetting => {
 			newSetting.update({
 				userName: newUserName,
-				email: newEmail
+				email: newEmail,
+				fullName: newFullName
 			}).then( newSetting => {
 				response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your username and email address. Next time you login the changes will be visible."))
 			})
 		})
 	}
 	else if( newEmail != "") {
-		console.log('email')
 		db.user.findOne({
 			where: {id: user.id},
 			attributes: ['id', 'email']
@@ -44,28 +39,88 @@ router.post('/settings', (request, response) => {
 			newSetting.update({
 				email: newEmail
 			}).then( newSetting => {
-				response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your email address.Next time you login the changes will be visible"))
+				response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your email address. Next time you login the changes will be visible"))
+			})
+		})
+	}
+
+	else if( newEmail != "" && newUserName != "") {
+		db.user.findOne({
+			where: {id: user.id},
+			attributes: ['id', 'email', 'userName']
+		}).then( newSetting => {
+			newSetting.update({
+				userName: newUserName,
+				email: newEmail
+			}).then( newSetting => {
+				response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your username and email address. Next time you login the changes will be visible"))
+			})
+		})
+	}
+
+	else if( newEmail != "" && newFullName != "") {
+		db.user.findOne({
+			where: {id: user.id},
+			attributes: ['id', 'email', 'fullName']
+		}).then( newSetting => {
+			newSetting.update({
+				fullName: newFullName,
+				email: newEmail
+			}).then( newSetting => {
+				response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your full name and email address. Next time you login the changes will be visible"))
+			})
+		})
+	}
+	else if( newFullName != "" && newUserName != "") {
+		db.user.findOne({
+			where: {id: user.id},
+			attributes: ['id', 'fullName', 'userName']
+		}).then( newSetting => {
+			newSetting.update({
+				userName: newUserName,
+				fullName: newFullName
+			}).then( newSetting => {
+				response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your username and full name. Next time you login the changes will be visible"))
 			})
 		})
 	}
 
 	else if( newUserName != "") {
-		console.log('user')
+		if(  newUserName.length <= 2 || newUserName.length >= 13){
+		response.redirect('/settings?message=' + encodeURIComponent("Username must be between 2 and 13 characters long."))
+		}
+
+		else(
+			db.user.findOne({
+				where: {id: user.id},
+				attributes: ['id', 'userName']
+			}).then( newSetting => {
+				console.log(newSetting)
+				newSetting.update({
+					userName: newUserName
+				}).then( newSetting => {
+					response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your settings. Next time you login the changes will be visible."))
+				})
+			})
+		)
+	}
+
+	else if( newFullName != "") {
 		db.user.findOne({
 			where: {id: user.id},
-			attributes: ['id', 'userName']
+			attributes: ['id', 'fullName']
 		}).then( newSetting => {
 			console.log(newSetting)
 			newSetting.update({
-				userName: newUserName
+				fullName: newFullName
 			}).then( newSetting => {
-				response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your username. Next time you login the changes will be visible."))
+				response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your full name. Next time you login the changes will be visible."))
 			})
 		})
 	}
 	else {
 		console.log('none')
-		response.redirect('/settings?message=' + encodeURIComponent("Please fill in a new username and/or email address."))
+		response.redirect('/settings?message=' + encodeURIComponent("Please fill in a new full name, username and/or email address."))
 	}
 })
 
@@ -78,12 +133,11 @@ router.get('/password', (request, response) => {
 })
 
 router.post('/password', (request, response) => {
-	let user = request.session.user
-	let currentPW = request.body.currentPW
-	console.log(currentPW)
-	let newPW = request.body.newPW
-	let confirmPW = request.body.confirmPW
-	let hash = user.password
+	let user 		= request.session.user
+	let currentPW 	= request.body.currentPW
+	let newPW 		= request.body.newPW
+	let confirmPW 	= request.body.confirmPW
+	let hash 		= user.password
 
 
 	bcrypt.compare(currentPW, hash, (err, res) => {
@@ -121,19 +175,6 @@ router.post('/password', (request, response) => {
 		}
 	})
 })
-
-
-// Profile
-router.get('/profileSettings', (request, response) => {
-	var user = request.session.user
-	response.render('profileSettings', {user: user})
-})
-
-router.post('/profile', (request, response) => {
-	var user = request.session.user
-	response.render('profileSettings', {user: user})
-})
-
 
 
 module.exports = router

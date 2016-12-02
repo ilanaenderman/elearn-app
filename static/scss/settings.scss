@@ -47,10 +47,6 @@ h1, h2, h3, h4, h5 {
             font-size: 20px;
             border-radius: 30px;
         }
-
-        #logoutButton: hover {
-            background-color: white;
-        }
     }
 }
 
@@ -120,11 +116,11 @@ h1, h2, h3, h4, h5 {
                     font-size: $inputSize;
                 }
 
-                #location {
+                #bio {
                     font-size: $inputSize;
                 }
 
-                #bio {
+                #profileImage {
                     font-size: $inputSize;
                 }
 

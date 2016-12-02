@@ -72,6 +72,8 @@ h1, h2, h3, h4, h5 {
           font-size: 25px; }
         .row .card #settings form #bio {
           font-size: 25px; }
+        .row .card #settings form #profileImage {
+          font-size: 25px; }
         .row .card #settings form label {
           font-size: 20px;
           color: #FD4F21; }
