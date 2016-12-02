@@ -6,7 +6,16 @@ const db		= require(__dirname + '/../modules/database')
 
 //Food ES Quiz
 router.get('/quiz-food-es', (request, response) => {
-	response.render('demoquiz')
+	db.game.findOne({
+		where: {
+			language: 'ES',
+			theme: 'food',
+			userId: request.session.user.id
+		},
+		attributes: ['score']
+	}).then(score => {
+		response.render('demoquiz', {path: request.path, score: score})
+	})
 })
 
 router.post('/quiz-food-es', (request, response) => {
@@ -60,7 +69,16 @@ router.post('/quiz-food-es', (request, response) => {
 
 //Animal ES Quiz
 router.get('/quiz-animal-es', (request, response) => {
-	response.render('demoquiz')
+	db.game.findOne({
+		where: {
+			language: 'ES',
+			theme: 'animals',
+			userId: request.session.user.id
+		},
+		attributes: ['score']
+	}).then(score => {
+		response.render('demoquiz', {path: request.path, score: score})
+	})
 })
 
 router.post('/quiz-animal-es', (request, response) => {
@@ -86,14 +104,14 @@ router.post('/quiz-animal-es', (request, response) => {
 	db.quiz.findOne({
 		where: {
 			language: 'ES',
-			theme: 'animal',
+			theme: 'animals',
 			userId: request.session.user.id
 		}
 	}).then(id => {
 		if(id == null) {
 			db.quiz.create({
 				language: 'ES',
-				theme: 'animal',
+				theme: 'animals',
 				finished: true,
 				score: input,
 				userId: request.session.user.id
@@ -114,7 +132,16 @@ router.post('/quiz-animal-es', (request, response) => {
 
 //Family ES Quiz
 router.get('/quiz-family-es', (request, response) => {
-	response.render('demoquiz')
+	db.game.findOne({
+		where: {
+			language: 'ES',
+			theme: 'family',
+			userId: request.session.user.id
+		},
+		attributes: ['score']
+	}).then(score => {
+		response.render('demoquiz', {path: request.path, score: score})
+	})
 })
 
 router.post('/quiz-family-es', (request, response) => {
