@@ -12,6 +12,17 @@ body {
     zoom: 0.8;
 }
 
+@media only screen and (max-width: 768px) {
+    .row {
+        zoom: 1;
+    }
+}
+@media only screen and (max-width: 425px) {
+     .row {
+        zoom: 2;
+    }
+}
+
 h1, h2, h3, h4, h5 {
     text-align: left;
     color: $mainTextColor;
