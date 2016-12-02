@@ -35,3 +35,9 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$(".button-collapse").sideNav()
 })
+
+// Dropdown menu
+$(document).ready(function(){
+	$(".dropdown-button").dropdown()
+	$("#dropdown").dropdown()
+})

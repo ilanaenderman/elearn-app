@@ -5,7 +5,8 @@ $mainTextColor: #FD4F21;
 $smallLaptop: 1024px;
 $tabletSize: 768px;
 $mobileSize: 425px;
-$inputSize: 20px;
+$inputSize: 25px;
+$orangeHover: #FF714B;
 
 body {
     padding: 0;
@@ -91,11 +92,11 @@ h1, h2, h3, h4, h5 {
                 font-size: $inputSize;
 
 
-                #userName {
+                #newUserName {
                     font-size: $inputSize;
                 }
 
-                #email {
+                #newEmail {
                 font-size: $inputSize;
                 }
 
@@ -111,16 +112,21 @@ h1, h2, h3, h4, h5 {
                     font-size: $inputSize;
                 }
 
-                #fullName {
-                    font-size: $inputSize;
-                }
-
-                #location {
+                #newFullName {
                     font-size: $inputSize;
                 }
 
                 #bio {
                     font-size: $inputSize;
+                }
+
+                #profileImage {
+                    font-size: $inputSize;
+                }
+
+                label {
+                    font-size: 20px;
+                    color: $mainTextColor;
                 }
 
                 .btn.btn-default.btn-large {

@@ -1,4 +1,5 @@
 $mainColor: #1EA4A4;
+$mainTextColor: #FD4F21;
 $inputSize: 20px;
 
 body {
@@ -58,7 +59,7 @@ main {
 		}
 
 		#error-message {
-			color: red;
+			color: $mainTextColor;
 			font-size: 15px;
 			font-style: italic;
 			text-align: left;

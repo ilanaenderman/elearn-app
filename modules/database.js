@@ -4,7 +4,7 @@ const db = { }
 
 // Setup SQL
 const sequelize = require( 'sequelize' )
-const bcrypt		= require('bcrypt-node')
+const bcrypt 	= require('bcrypt-node')
 
 // db.sequelize = sequelize
 db.conn = new sequelize('elearn', process.env.POSTGRES_USER, process.env.POSTGRES_PASSWORD, {
