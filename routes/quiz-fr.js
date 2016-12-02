@@ -31,19 +31,29 @@ router.post('/quiz-food-fr', (request, response) => {
 	}
 	db.quiz.findOne({
 		where: {
-			id: 1
+			language: 'FR',
+			theme: 'food',
+			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id.score == 0 || input > id.score) {
-			id.update ({
+		if(id == null) {
+			db.quiz.create({
+				language: 'FR',
+				theme: 'food',
 				finished: true,
-				score: input
-			}).then(id => {
-				response.send('done')
+				score: input,
+				userId: request.session.user.id
 			})
-		}
-		else {
-			response.send('done')
+			response.send('Done')
+		} else {
+			if(input > id.score) {
+				id.update({
+					score: input
+				})
+				response.send('Done')
+			} else {
+				response.send('Done')
+			}
 		}
 	})
 })
@@ -75,19 +85,29 @@ router.post('/quiz-animal-fr', (request, response) => {
 	}
 	db.quiz.findOne({
 		where: {
-			id: 1
+			language: 'FR',
+			theme: 'animal',
+			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id.score == 0 || input > id.score) {
-			id.update ({
+		if(id == null) {
+			db.quiz.create({
+				language: 'FR',
+				theme: 'animal',
 				finished: true,
-				score: input
-			}).then(id => {
-				response.send('done')
+				score: input,
+				userId: request.session.user.id
 			})
-		}
-		else {
-			response.send('done')
+			response.send('Done')
+		} else {
+			if(input > id.score) {
+				id.update({
+					score: input
+				})
+				response.send('Done')
+			} else {
+				response.send('Done')
+			}
 		}
 	})
 })
@@ -119,19 +139,29 @@ router.post('/quiz-family-fr', (request, response) => {
 	}
 	db.quiz.findOne({
 		where: {
-			id: 1
+			language: 'FR',
+			theme: 'family',
+			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id.score == 0 || input > id.score) {
-			id.update ({
+		if(id == null) {
+			db.quiz.create({
+				language: 'FR',
+				theme: 'family',
 				finished: true,
-				score: input
-			}).then(id => {
-				response.send('done')
+				score: input,
+				userId: request.session.user.id
 			})
-		}
-		else {
-			response.send('done')
+			response.send('Done')
+		} else {
+			if(input > id.score) {
+				id.update({
+					score: input
+				})
+				response.send('Done')
+			} else {
+				response.send('Done')
+			}
 		}
 	})
 })

@@ -37,10 +37,10 @@ db.quiz = db.conn.define('quiz', {
 
 
 // Define relationships between tables
-// db.game.hasMany(db.user)
-// db.user.belongsTo(db.game)
-// db.quiz.hasMany(db.user)
-// db.user.belongsTo(db.quiz)
+db.user.hasMany(db.game)
+db.user.hasMany(db.quiz)
+db.game.belongsTo(db.user)
+db.quiz.belongsTo(db.user)
 
 // Create test User
 db.conn.sync({force: true}).then( database => {
@@ -54,62 +54,79 @@ db.conn.sync({force: true}).then( database => {
 		db.game.create({
 			language: 'NL',
 			theme: "food",
-			finished: false,
-			score: 0
+			finished: true,
+			score: 40,
+			userId: 1
 		})
 		db.game.create({
 			language: 'NL',
 			theme: "animal",
-			finished: false,
-			score: 0
+			finished: true,
+			score: 0,
+			userId: 1
 		})
 		db.game.create({
 			language: 'NL',
 			theme: "family",
-			finished: false,
-			score: 0
+			finished: true,
+			score: 20,
+			userId: 1
 		})
 		db.game.create({
 			language: 'ES',
 			theme: "food",
-			finished: false,
-			score: 0
+			finished: true,
+			score: 0,
+			userId: 1
 		})
 		db.game.create({
 			language: 'ES',
 			theme: "animal",
-			finished: false,
-			score: 0
+			finished: true,
+			score: 60,
+			userId: 1
 		})
 		db.game.create({
 			language: 'ES',
 			theme: "family",
-			finished: false,
-			score: 0
+			finished: true,
+			score: 0,
+			userId: 1
 		})
 		db.game.create({
 			language: 'FR',
 			theme: "food",
-			finished: false,
-			score: 0
+			finished: true,
+			score: 0,
+			userId: 1
 		})
 		db.game.create({
 			language: 'FR',
 			theme: "animal",
-			finished: false,
-			score: 0
+			finished: true,
+			score: 0,
+			userId: 1
 		})
 		db.game.create({
 			language: 'FR',
 			theme: "family",
-			finished: false,
-			score: 0
+			finished: true,
+			score: 0,
+			userId: 1
 		})
 		db.quiz.create({
 			language: 'NL',
 			theme: 'animal',
-			finished: false,
-			score: 0
+			finished: true,
+			score: 0,
+			userId: 1
+		})
+		db.quiz.create({
+			language: 'NL',
+			theme: 'food',
+			finished: true,
+			score: 0,
+			userId: 1
 		})
 	})
 })
