@@ -14,7 +14,6 @@ body {
     zoom: 2; } }
 
 h1, h2, h3, h4, h5 {
-  text-align: left;
   color: #FD4F21; }
 
 .nav-wrapper {
@@ -39,29 +38,32 @@ h1, h2, h3, h4, h5 {
   #hamburger {
     margin-top: 20px; } }
 
-#profile {
+.row {
   padding-top: 30px;
   padding-right: 10px;
   padding-left: 10px; }
-  #profile #gameTitle {
-    background-color: #FD4F21; }
-  #profile .card {
+  .row .card {
     border-radius: 30px; }
-    #profile .card .game {
-      color: white; }
-    #profile .card .results {
-      text-align: center; }
-    #profile .card .buttons {
-      width: 100px;
-      height: 100px; }
-    #profile .card .card-content {
-      margin: 10px; }
-      #profile .card .card-content p {
-        font-size: 20px; }
-      #profile .card .card-content .image {
+    .row .card .card-content {
+      margin: 10; }
+      .row .card .card-content .image {
         max-width: 100%;
         border-radius: 30px;
         display: block;
         margin: auto; }
-      #profile .card .card-content #title {
+      .row .card .card-content #Quiz {
+        background-color: #FD4F21;
+        color: white;
+        border-radius: 30px;
         text-align: center; }
+      .row .card .card-content #topscore {
+        border-radius: 30px;
+        border-color: #FD4F21; }
+      .row .card .card-content #againBtn, .row .card .card-content #backBtn {
+        border-radius: 30px;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #1EA4A4;
+        color: white; }
+      .row .card .card-content #backBtn {
+        margin-left: 20px; }

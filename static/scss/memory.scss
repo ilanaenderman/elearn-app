@@ -45,61 +45,70 @@ h1, h2, h3, h4, h5 {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    #hamburger {
+            margin-top: 20px;
+    }
+}
+
 //Body Content
 .row {
 	padding-top: 30px;
     padding-right: 10px;
     padding-left: 10px;
 
-	.card {
-		border-radius: 30px;
+	.image {
+        max-width: 100%;
+        border-radius: 30px;
+        display: block;
+        margin: auto;
+    }
 
-		.card-content {
-			margin: 10;
+    #Memory {
+    	background-color: $mainTextColor;
+    	color: white;
+    	border-radius: 30px;
+    	text-align: center;
 
-			.image {
-                max-width: 100%;
-                border-radius: 30px;
-                display: block;
-                margin: auto;
-            }
+    }
 
-            #Memory {
-            	background-color: $mainTextColor;
-            	color: white;
-            	border-radius: 30px;
-            	text-align: center;
+    #topscore {
+    	border-radius: 30px;
+    	border-color: $mainTextColor;
+    }
 
-            }
-
-            #topscore {
-            	border-radius: 30px;
-            	border-color: $mainTextColor;
-            }
+    p {
+        font-size: 24px;
+    }
 
 
-			div#my-memorygame {
+	div#my-memorygame {
 
-				.text-style1 {
-				  font-family:"Comic Sans MS";
-				  font-size:22pt;
-				  color:#FD4F21;
-				  font-weight:normal;
-				  margin: -55px 0 0 0;
-				}
+        margin-left: 10px;
+		.text-style1 {
+		  font-family:"Comic Sans MS";
+		  font-size:22pt;
+		  color:#FD4F21;
+		  font-weight:normal;
+		  margin: -55px 0 0 0;
+		}
 
-                .text-style2 {
-                  font-family:"Comic Sans MS";
-                  font-size:22pt;
-                  color:#FD4F21;
-                  font-weight:normal;
-                  margin: -72px 0 0 0;
-                }
+        .text-style2 {
+          font-family:"Comic Sans MS";
+          font-size:22pt;
+          color:#FD4F21;
+          font-weight:normal;
+          margin: -72px 0 0 0;
+        }
 
-				img {
-					border-radius: 20px;
-				}
-			}
+		img {
+			border-radius: 20px;
 		}
 	}
+}
+
+@media only screen and (max-width: 768px) {
+    #my-memorygame {
+        margin-left: 25px;
+    }
 }

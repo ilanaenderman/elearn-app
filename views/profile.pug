@@ -28,24 +28,35 @@ html
 					li
 						a(href='/logout') Logout
 		div#profile.row
-			div.col.l3
+			div.col.s12.offset-s0.m8.offset-m2.l3.offset-l0
 				div.card
 					div.card-content
 						img.image(src="images/duck.jpg")
 						h3#title= user.userName
 						h5= user.fullName
 						p 
-						h5 Best Score
+						h3 Best Score
 						- var bestMemoryResult = []
 						- for(var h = 0; h < id[0].memory.length; h++)
-							- bestMemoryResult.push(id[0].memory[h].score)
-						- var bestMemory = Math.min.apply(null, bestMemoryResult)
-						p=bestMemory
+							- bestMemoryResult.push({language: id[0].memory[h].language, theme: id[0].memory[h].theme, score: id[0].memory[h].score})
+						- var bestMemory = bestMemoryResult.reduce(function(prev, curr) { return prev.score < curr.score ? prev : curr; })
+						- if(bestMemory.language == "NL") 
+							h5 Memory: Dutch #{bestMemory.theme} - #{bestMemory.score}
+						- else if(bestMemory.language == "ES")
+							h5 Memory: Spanish #{bestMemory.theme} - #{bestMemory.score}
+						- else if(bestMemory.language == "FR")
+							h5 Memory: French #{bestMemory.theme} - #{bestMemory.score}
+
 						- var bestQuizResult = []
 						- for(var g = 0; g < id[1].quiz.length; g++)
-							- bestQuizResult.push(id[1].quiz[g].score)
-						- var bestQuiz = Math.max.apply(null, bestQuizResult)
-						p=bestQuiz
+							- bestQuizResult.push({language: id[1].quiz[g].language, theme: id[1].quiz[g].theme, score: id[1].quiz[g].score})
+						- var bestQuiz = bestQuizResult.reduce(function(prev, curr) { return prev.score > curr.score ? prev : curr; }) 
+						- if(bestQuiz.language == "NL") 
+							h5 Quiz: Dutch #{bestQuiz.theme} - #{bestQuiz.score}
+						- else if(bestQuiz.language == "ES")
+							h5 Quiz: Spanish #{bestQuiz.theme} - #{bestQuiz.score}
+						- else if(bestQuiz.language == "FR")
+							h5 Quiz: French #{bestQuiz.theme} - #{bestQuiz.score}
 
 			div.col.l9
 				div.col.l12.m12.s12
@@ -89,7 +100,7 @@ html
 										img.buttons(src="images/food-btn-color.png")
 									a(href="/memory-animal-nl" name="animal-nl" id="animal-nl") &nbsp;
 										img.buttons(src="images/animal-btn-color.png")
-									a(href="/" name="family-nl" id="family-nl") &nbsp;
+									a(href="/memory-family-nl" name="family-nl" id="family-nl") &nbsp;
 										img.buttons(src="images/family-btn-color.png")
 							br
 							
@@ -130,7 +141,7 @@ html
 											img.buttons(src="images/food-btn-color.png")
 										a(href="/memory-animal-es" name="animal-es" id="animal-es") &nbsp;
 											img.buttons(src="images/animal-btn-color.png")
-										a(href="/" name="family-es" id="family-es") &nbsp;
+										a(href="/memory-family-es" name="family-es" id="family-es") &nbsp;
 											img.buttons(src="images/family-btn-color.png")
 							br
 				div.col.l4.m4.s6

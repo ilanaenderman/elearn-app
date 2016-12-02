@@ -12,8 +12,25 @@ body {
   zoom: 0.8;
 }
 
+@media only screen and (max-width: 992px) {
+	body {
+		overflow: auto;
+	}
+}
+
 main {
   flex: 1 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        zoom: 1;
+    }
+}
+@media only screen and (max-width: 425px) {
+     main {
+        zoom: 2;
+    }
 }
 
 //Navbar CSS
@@ -42,7 +59,11 @@ main {
 	}
 }
 
-
+@media only screen and (max-width: 600px) {
+    #hamburger {
+            margin-top: 20px;
+    }
+}
 
 //Modal layout
 .modal {
@@ -141,6 +162,8 @@ main {
 		.language {
 			width: 300px;
 			height: 300px;
+			display: block;
+			margin: 0 auto;
 		}
 	}
 }

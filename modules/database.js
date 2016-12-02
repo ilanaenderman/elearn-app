@@ -60,7 +60,7 @@ db.conn.sync({force: true}).then( database => {
 		})
 		db.game.create({
 			language: 'NL',
-			theme: "animal",
+			theme: "animals",
 			finished: true,
 			score: 0,
 			userId: 1
@@ -81,7 +81,7 @@ db.conn.sync({force: true}).then( database => {
 		})
 		db.game.create({
 			language: 'ES',
-			theme: "animal",
+			theme: "animals",
 			finished: true,
 			score: 60,
 			userId: 1
@@ -102,7 +102,7 @@ db.conn.sync({force: true}).then( database => {
 		})
 		db.game.create({
 			language: 'FR',
-			theme: "animal",
+			theme: "animals",
 			finished: true,
 			score: 0,
 			userId: 1
@@ -116,9 +116,9 @@ db.conn.sync({force: true}).then( database => {
 		})
 		db.quiz.create({
 			language: 'NL',
-			theme: 'animal',
+			theme: 'animals',
 			finished: true,
-			score: 0,
+			score: 80,
 			userId: 1
 		})
 		db.quiz.create({
