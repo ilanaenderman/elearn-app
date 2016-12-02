@@ -6,7 +6,7 @@ var quizNLFood = {
     "info": {
         "name":    "Dutch food",
         "main":    "<p>Test your knowledge of dutch food!</p>",
-        "results": "<p>Play the memory game to practice your Dutch Food. You also try this quiz as many times as you want!</p><form method='POST' action='/quiz'><input type='button' name='replay' value='Play Again' id='againBtn' style='margin-top: 20px;'><input type='button' value='Go Back' id='backBtn' name='score' style='margin-top: 20px; margin-left: 20px;'></form>",
+        "results": "<p>Play the memory game to practice your Dutch Food. You also try this quiz as many times as you want!</p><form method='POST' action='/quiz'><input type='button' name='replay' value='Play Again' id='againBtn'><input type='button' value='Go Back' id='backBtn' name='score'></form>",
         "level1":  "Amazing you got all of them!",
         "level2":  "Almost perfect!",
         "level3":  "Great job, but you need some more practice.",
@@ -38,7 +38,7 @@ var quizNLFood = {
             "incorrect": "<p><span>Hmmm.</span>The right answer is 'Vlees' and 'Vis'.</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
-            "q": "Which food item can you see in this picture? <br> <img src='images/lunch.jpg' style='display: block; margin-left: 29%;'>",
+            "q": "Which food item can you see in this picture? <br> <img src='images/lunch.jpg' style='display: block; margin-right: auto; margin-left: 10%; margin-top: 10px;'>",
             "a": [
                 {"option": "Aardappel", "correct": false},
                 {"option": "Brood",     "correct": true},
