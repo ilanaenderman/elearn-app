@@ -1,34 +1,17 @@
 /* QUIZ STYLES */
 /* Styles to prettify the quiz page */
 
-html {
-    background: #eee;
-}
-
-body {
-    width: 100%;
-    margin: 0 auto;
-    border: 2px solid #ccc;
-    border-top: none;
-    padding: 0px;
-    font-size: 16px;
-    color: #353535;
-    line-height: 1.5em;
-    font-family: "Comic Sans MS";
-    background-color: #F4FFFE; 
-}
-
 h1,h2,h3,h4,h5,h6 {font-weight: bold;}
 
 h1 {
     font-size: 40px;
     margin: 0 0 20px;
-    color: #0C4569;
 }
 h2 {
     font-size: 36px;
     margin: 15px 0;
 }
+
 h3 {
     font-size: 30px;
 }
@@ -45,6 +28,7 @@ h6 {
     font-size: 24px;
     margin: 5px 0;
 }
+
 p {
     font-size: 24px;
 }
@@ -54,29 +38,6 @@ em { font-style: italic; }
 ul { list-style-type: circle; }
 ol { list-style-type: decimal; }
 ol li { list-style-type: decimal; margin-left: 20px; }
-
-.nav-wrapper {
-  background-color: #1EA4A4; 
-}
-.nav-wrapper #logo {
-    padding-left: 150px;
-    padding-top: 30px;
-    font-size: 40px;
-    color: white; 
-}
-.nav-wrapper a {
-    font-size: 30px;
-    padding-top: 30px; 
-}
-.nav-wrapper .right.hide-on-med-and-down {
-    padding-right: 150px; 
-}
-.nav-wrapper .right.hide-on-med-and-down #loginButton {
-    background-color: white;
-    color: #1EA4A4;
-    font-size: 20px;
-    padding-top: 30px; 
-}
 
 .button {
     float: left;
@@ -97,14 +58,17 @@ ol li { list-style-type: decimal; margin-left: 20px; }
 
 .button.checkAnswer {
     margin-top: 20px;
+    border-radius: 30px;
 }
 
 .button.nextQuestion {
     margin-top: 20px;
+    border-radius: 30px;
 }
 
 .startQuiz {
     margin-top: 40px;
+    border-radius: 30px;
 }
 
 .tryAgain {
@@ -112,13 +76,13 @@ ol li { list-style-type: decimal; margin-left: 20px; }
 }
 
 .quizContent {
-    width: 675px;
+    width: 100%;
     margin: 40px auto;
 }
 
 /* clearfix */
 .quizArea, .quizResults {
-    zoom: 1;
+/*    zoom: 1;*/
 }
 .quizArea:before, .quizArea:after, .quizResults:before, .quizResults:after {
     content: "\0020";
@@ -178,17 +142,25 @@ ul.responses li p span {
 }
 ul.responses li.correct p span {
     color: #6C9F2E;
-}ul.responses li.incorrect p span {
+}
+ul.responses li.incorrect p span {
     color: #B5121B;
 }
 
 .quizResults h3 {
     margin: 20px 0;
 }
+
 .quizResults h3 span {
     font-weight: normal;
     font-style: italic;
+    color: black;
 }
+
+.quizResults h3 p {
+    color: black !important;
+}
+
 .quizResultsCopy {
     clear: both;
     margin-top: 20px;

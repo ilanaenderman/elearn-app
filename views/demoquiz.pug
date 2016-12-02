@@ -1,11 +1,11 @@
 html
   head
     title Quiz
-    link(href='/css/materialize.min.css' type="text/css" rel="stylesheet")
-    link(href="css/resetslickquiz.css" media="screen" rel="stylesheet" type="text/css")
-    link(href="css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css")
+    link(href='css/materialize.min.css' type="text/css" rel="stylesheet")
+    link(href="css/slickQuiz.css" rel="stylesheet" type="text/css")
+    link(href="css/quiz.css" rel="stylesheet" type="text/css")
+    link(href="css/quizCustom.css" rel="stylesheet" type="text/css")
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-    link(href="css/quiz.css" media="screen" rel="stylesheet" type="text/css")
   body#slickQuiz
     nav.z-depth-0
       div.nav-wrapper
@@ -26,20 +26,35 @@ html
             a(href='/settings') Settings
           li
             a(href='/logout') Logout
-            
-    div.quizContent
-      h5 Highscore: #{score.score}
-      br
-      h1.quizName
-      div.quizArea
-        div.quizHeader
-          a.button.startQuiz(href="#") Get Started!
-      div.quizResults
-        h3.quizScore You Scored: &nbsp;
-          span#score
-        h3.quizLevel Ranking: &nbsp; <!--strong-->
-          span
-        h3.quizResultsCopy
+
+    div.row
+      div.col.s12.m12.l3
+        div.card
+          div.card-content
+            img.image(src="images/duck.jpg")
+            h3#Quiz Memory
+            div#topscore
+              h5 Theme: Food
+              h5 Language: Dutch
+              h5 Top Score: #{score.score}
+            p Try to answer as many of the questions. The more you answer correct, the more points you get! 
+
+      div.col.s12.m12.l9
+        div.card
+          div.card-content
+            div.quizContent
+              h5 Highscore: #{score.score}
+              br
+              h1.quizName
+              div.quizArea
+                div.quizHeader
+                  a.button.startQuiz(href="#") Get Started!
+              div.quizResults
+                h3.quizScore You Scored: &nbsp;
+                  span#score
+                h3.quizLevel Ranking: &nbsp; <!--strong-->
+                  span
+                h3.quizResultsCopy
     script(src="js/jquery-3.1.1.min.js")
     script(src='/js/materialize.min.js')
     script(src="js/slickQuiz.js")

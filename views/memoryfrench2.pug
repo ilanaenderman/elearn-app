@@ -26,7 +26,7 @@ html
 					li
 						a(href='/logout') Logout
 		div.row
-			div.col.s3
+			div.col.s12.offset-s0.m8.offset-m2.l3.offset-l0
 				div.card
 					div.card-content
 						img.image(src="images/duck.jpg")
@@ -36,82 +36,80 @@ html
 							h5 Language: French
 							h5 Top Score: #{score.score}
 						p Match the right picture with the word. The faster you are, and the less tries you use, the better your score. A lower score means a better game!
-			div.col.s9
-				div.col.s10.offset-s1
-					div.card
-						div.card-content
-							div#my-memorygame.quizy-memorygame
-								ul
-									li.match1
-										br
-										br
-										br
-										p.text-style1 Cheval
-									li.match2
-										br
-										br
-										br
-										p.text-style1 Chat
-									li.match3
-										br
-										br
-										br
-										p.text-style1 Chien
-									li.match4
-										br
-										br
-										br
-										p.text-style1 Vache
-									li.match5
-										br
-										br
-										br
-										p.text-style1 Souris
-									li.match6
-										br
-										br
-										br
-										p.text-style1 Chèvre
-									li.match7
-										br
-										br
-										br
-										p.text-style1 Mouton
-									li.match8
-										br
-										br
-										br
-										p.text-style1 Oiseau
-									li.match9
-										br
-										br
-										br
-										p.text-style1 Poulet
-									li.match10
-										br
-										br
-										br
-										p.text-style1 Lapin
-									li.match1
-										img(src="images/horse.jpg")
-									li.match2
-										img(src="images/cat.jpg")
-									li.match3
-										img(src="images/dog.jpg")
-									li.match4
-										img(src="images/cow.jpg")
-									li.match5
-										img(src="images/mouse.jpg")
-									li.match6
-										img(src="images/goat.jpg")
-									li.match7
-										img(src="images/sheep.jpg")
-									li.match8
-										img(src="images/bird.jpg")
-									li.match9
-										img(src="images/chicken.jpg")
-									li.match10
-										img(src="images/rabbit.jpg")
+						
+				div.col.s12.m11.offset-m1.l9
+					div#my-memorygame.quizy-memorygame
+						ul
+							li.match1
+								br
+								br
+								br
+								p.text-style1 Cheval
+							li.match2
+								br
+								br
+								br
+								p.text-style1 Chat
+							li.match3
+								br
+								br
+								br
+								p.text-style1 Chien
+							li.match4
+								br
+								br
+								br
+								p.text-style1 Vache
+							li.match5
+								br
+								br
+								br
+								p.text-style1 Souris
+							li.match6
+								br
+								br
+								br
+								p.text-style1 Chèvre
+							li.match7
+								br
+								br
+								br
+								p.text-style1 Mouton
+							li.match8
+								br
+								br
+								br
+								p.text-style1 Oiseau
+							li.match9
+								br
+								br
+								br
+								p.text-style1 Poulet
+							li.match10
+								br
+								br
+								br
+								p.text-style1 Lapin
+							li.match1
+								img(src="images/horse.jpg")
+							li.match2
+								img(src="images/cat.jpg")
+							li.match3
+								img(src="images/dog.jpg")
+							li.match4
+								img(src="images/cow.jpg")
+							li.match5
+								img(src="images/mouse.jpg")
+							li.match6
+								img(src="images/goat.jpg")
+							li.match7
+								img(src="images/sheep.jpg")
+							li.match8
+								img(src="images/bird.jpg")
+							li.match9
+								img(src="images/chicken.jpg")
+							li.match10
+								img(src="images/rabbit.jpg")
 		script(src="js/jquery-3.1.1.min.js") 
 		script(src="js/jquery-ui.min.js")
 		script(src="js/jquery.flip.min.js")
@@ -119,4 +117,4 @@ html
 		script(src="js/materialize.min.js")
 		script(src="js/custom.js") 
 		script.
-			$('#my-memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:40, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true});
+			$('#my-memorygame').quizyMemoryGame({itemWidth: 140, itemHeight: 140, itemsMargin:40, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true});

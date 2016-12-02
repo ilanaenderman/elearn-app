@@ -26,7 +26,7 @@ html
 					li
 						a(href='/logout') Logout
 		div.row
-			div.col.s3
+			div.col.s12.offset-s0.m8.offset-m2.l3.offset-l0
 				div.card
 					div.card-content
 						img.image(src="images/duck.jpg")
@@ -36,82 +36,80 @@ html
 							h5 Language: Dutch
 							h5 Top Score: #{score.score}
 						p Match the right picture with the word. The faster you are, and the less tries you use, the better your score. A lower score means a better game! 
-			div.col.s9
-				div.col.s12
-					div.card
-						div.card-content
-							div#my-memorygame.quizy-memorygame
-								ul
-									li.match1
-										br
-										br
-										br
-										p.text-style1 Vlees
-									//- li.match2
-									//- 	br
-									//- 	br
-									//- 	br
-									//- 	p.text-style1 Vis
-									//- li.match3
-									//- 	br
-									//- 	br
-									//- 	br
-									//- 	p.text-style1 Groente
-									//- li.match4
-									//- 	br
-									//- 	br
-									//- 	br
-									//- 	p.text-style1 Lunch
-									//- li.match5
-									//- 	br
-									//- 	br
-									//- 	br
-									//- 	p.text-style1 Rijst
-									//- li.match6
-									//- 	br
-									//- 	br
-									//- 	br
-									//- 	p.text-style1 Brood
-									//- li.match7
-									//- 	br
-									//- 	br
-									//- 	br
-									//- 	p.text-style1 Aardappel
-									//- li.match8
-									//- 	br
-									//- 	br
-									//- 	br
-									//- 	p.text-style1 Fruit
-									//- li.match9
-									//- 	br
-									//- 	br
-									//- 	br
-									//- 	p.text-style1 Ontbijt
-									//- li.match10
-									//- 	br
-									//- 	br
-									//- 	br
-									//- 	p.text-style1 Avondeten
-									li.match1
-										img(src="images/meat.jpg")
-									//- li.match2
-									//- 	img(src="images/fish.jpg")
-									//- li.match3
-									//- 	img(src="images/vegetable.jpg")
-									//- li.match4
-									//- 	img(src="images/lunch.jpg")
-									//- li.match5
-									//- 	img(src="images/rice.jpg")
-									//- li.match6
-									//- 	img(src="images/bread.jpg")
-									//- li.match7
-									//- 	img(src="images/potato.jpg")
-									//- li.match8
-									//- 	img(src="images/fruit.png")
-									//- li.match9
-									//- 	img(src="images/breakfast.jpg")
-									//- li.match10
-									//- 	img(src="images/dinner.jpg")
+
+			div.col.s12.m11.offset-m1.l9
+				div#my-memorygame.quizy-memorygame
+					ul
+						li.match1
+							br
+							br
+							br
+							p.text-style1 Vlees
+						li.match2
+							br
+							br
+							br
+							p.text-style1 Vis
+						li.match3
+							br
+							br
+							br
+							p.text-style1 Groente
+						li.match4
+							br
+							br
+							br
+							p.text-style1 Lunch
+						li.match5
+							br
+							br
+							br
+							p.text-style1 Rijst
+						li.match6
+							br
+							br
+							br
+							p.text-style1 Brood
+						li.match7
+							br
+							br
+							br
+							p.text-style1 Aardappel
+						li.match8
+							br
+							br
+							br
+							p.text-style1 Fruit
+						li.match9
+							br
+							br
+							br
+							p.text-style1 Ontbijt
+						li.match10
+							br
+							br
+							br
+							p.text-style1 Avondeten
+						li.match1
+							img(src="images/meat.jpg")
+						li.match2
+							img(src="images/fish.jpg")
+						li.match3
+							img(src="images/vegetable.jpg")
+						li.match4
+							img(src="images/lunch.jpg")
+						li.match5
+							img(src="images/rice.jpg")
+						li.match6
+							img(src="images/bread.jpg")
+						li.match7
+							img(src="images/potato.jpg")
+						li.match8
+							img(src="images/fruit.png")
+						li.match9
+							img(src="images/breakfast.jpg")
+						li.match10
+							img(src="images/dinner.jpg")
 		script(src="js/jquery-3.1.1.min.js") 
 		script(src="js/jquery-ui.min.js")
 		script(src="js/jquery.flip.min.js")

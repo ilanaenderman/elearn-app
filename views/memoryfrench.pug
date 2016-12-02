@@ -26,7 +26,7 @@ html
 					li
 						a(href='/logout') Logout
 		div.row
-			div.col.s3
+			div.col.s12.offset-s0.m8.offset-m2.l3.offset-l0
 				div.card
 					div.card-content
 						img.image(src="images/duck.jpg")
@@ -36,82 +36,80 @@ html
 							h5 Language: French
 							h5 Top Score: #{score.score}
 						p Match the right picture with the word. The faster you are, and the less tries you use, the better your score. A lower score means a better game!
-			div.col.s9
-				div.col.s10.offset-s1
-					div.card
-						div.card-content
-							div#my-memorygame.quizy-memorygame
-								ul
-									li.match1
-										br
-										br
-										br
-										p.text-style1 Viande
-									li.match2
-										br
-										br
-										br
-										p.text-style1 Poisson
-									li.match3
-										br
-										br
-										br
-										p.text-style1 Légume
-									li.match4
-										br
-										br
-										br
-										p.text-style1 Déjeuner
-									li.match5
-										br
-										br
-										br
-										p.text-style1 Riz
-									li.match6
-										br
-										br
-										br
-										p.text-style1 Pain
-									li.match7
-										br
-										br
-										br
-										p.text-style2 Pommes de Terre
-									li.match8
-										br
-										br
-										br
-										p.text-style1 Fruit
-									li.match9
-										br
-										br
-										br
-										p.text-style2 Petit Déjeuner
-									li.match10
-										br
-										br
-										br
-										p.text-style1 Dîner
-									li.match1
-										img(src="images/meat.jpg")
-									li.match2
-										img(src="images/fish.jpg")
-									li.match3
-										img(src="images/vegetable.jpg")
-									li.match4
-										img(src="images/lunch.jpg")
-									li.match5
-										img(src="images/rice.jpg")
-									li.match6
-										img(src="images/bread.jpg")
-									li.match7
-										img(src="images/potato.jpg")
-									li.match8
-										img(src="images/fruit.png")
-									li.match9
-										img(src="images/breakfast.jpg")
-									li.match10
-										img(src="images/dinner.jpg")
+
+				div.col.s12.m11.offset-m1.l9
+					div#my-memorygame.quizy-memorygame
+						ul
+							li.match1
+								br
+								br
+								br
+								p.text-style1 Viande
+							li.match2
+								br
+								br
+								br
+								p.text-style1 Poisson
+							li.match3
+								br
+								br
+								br
+								p.text-style1 Légume
+							li.match4
+								br
+								br
+								br
+								p.text-style1 Déjeuner
+							li.match5
+								br
+								br
+								br
+								p.text-style1 Riz
+							li.match6
+								br
+								br
+								br
+								p.text-style1 Pain
+							li.match7
+								br
+								br
+								br
+								p.text-style2 Pommes de Terre
+							li.match8
+								br
+								br
+								br
+								p.text-style1 Fruit
+							li.match9
+								br
+								br
+								br
+								p.text-style2 Petit Déjeuner
+							li.match10
+								br
+								br
+								br
+								p.text-style1 Dîner
+							li.match1
+								img(src="images/meat.jpg")
+							li.match2
+								img(src="images/fish.jpg")
+							li.match3
+								img(src="images/vegetable.jpg")
+							li.match4
+								img(src="images/lunch.jpg")
+							li.match5
+								img(src="images/rice.jpg")
+							li.match6
+								img(src="images/bread.jpg")
+							li.match7
+								img(src="images/potato.jpg")
+							li.match8
+								img(src="images/fruit.png")
+							li.match9
+								img(src="images/breakfast.jpg")
+							li.match10
+								img(src="images/dinner.jpg")
 		script(src="js/jquery-3.1.1.min.js") 
 		script(src="js/jquery-ui.min.js")
 		script(src="js/jquery.flip.min.js")
@@ -119,4 +117,4 @@ html
 		script(src="js/materialize.min.js")
 		script(src="js/custom.js")
 		script.
-			$('#my-memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:40, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true});
+			$('#my-memorygame').quizyMemoryGame({itemWidth: 140, itemHeight: 140, itemsMargin:40, colCount:5, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true});
