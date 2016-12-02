@@ -118,7 +118,7 @@ db.conn.sync({force: true}).then( database => {
 			language: 'NL',
 			theme: 'animal',
 			finished: true,
-			score: 0,
+			score: 80,
 			userId: 1
 		})
 		db.quiz.create({

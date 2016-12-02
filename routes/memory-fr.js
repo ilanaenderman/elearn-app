@@ -8,7 +8,16 @@ const db		= require(__dirname + '/../modules/database')
 // FOOD
 router.get('/memory-food-fr', (request, response) => {
 	let user = request.session.user
-	response.render('memoryfrench', {user: user})
+	db.game.findOne({
+		where: {
+			language: 'FR',
+			theme: 'food',
+			userId: request.session.user.id
+		},
+		attributes: ['score']
+	}).then(score => {
+		response.render('memoryfrench', {user: user, score: score})
+	})
 })
 
 router.post('/memory-food-fr', (request, response) => {
@@ -49,7 +58,16 @@ router.post('/memory-food-fr', (request, response) => {
 // ANIMALS
 router.get('/memory-animal-fr', (request, response) => {
 	let user = request.session.user
-	response.render('memoryfrench2', {user: user})
+	db.game.findOne({
+		where: {
+			language: 'FR',
+			theme: 'animal',
+			userId: request.session.user.id
+		},
+		attributes: ['score']
+	}).then(score => {
+		response.render('memoryfrench2', {user: user, score: score})
+	})
 })
 
 router.post('/memory-animal-fr', (request, response) => {
@@ -90,7 +108,16 @@ router.post('/memory-animal-fr', (request, response) => {
 // FAMILY
 router.get('/memory-family-fr', (request, response) => {
 	let user = request.session.user
-	response.render('memoryfrench3', {user: user})
+	db.game.findOne({
+		where: {
+			language: 'FR',
+			theme: 'family',
+			userId: request.session.user.id
+		},
+		attributes: ['score']
+	}).then(score => {
+		response.render('memoryfrench3', {user: user, score: score})
+	})
 })
 
 router.post('/memory-family-fr', (request, response) => {
