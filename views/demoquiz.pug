@@ -44,8 +44,13 @@ html
             img.image(src="images/duck.jpg")
             h3#Quiz Quiz
             div#topscore
-              h5 Theme: Food
-              h5 Language: Dutch
+              h5 Theme: #{score.theme}
+              - if(score.language == "NL")
+                h5 Language: Dutch
+              - else if(score.language == "ES")
+                h5 Language: Spanish
+              - else if(score.language == "FR")
+                h5 Language: French
               h5 Top Score: #{score.score}
             p Try to answer as many of the questions. The more you answer correct, the more points you get! 
 
@@ -53,8 +58,6 @@ html
         div.card
           div.card-content
             div.quizContent
-              h5 Highscore: #{score.score}
-              br
               h1.quizName
               div.quizArea
                 div.quizHeader
