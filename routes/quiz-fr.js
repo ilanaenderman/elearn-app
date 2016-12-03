@@ -7,7 +7,7 @@ const db		= require(__dirname + '/../modules/database')
 //Food FR Quiz
 router.get('/quiz-food-fr', (request, response) => {
 	let user = request.session.user
-	db.game.findOne({
+	db.quiz.findOne({
 		where: {
 			language: 'FR',
 			theme: 'food',
@@ -46,24 +46,14 @@ router.post('/quiz-food-fr', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.quiz.create({
-				language: 'FR',
-				theme: 'food',
+		if(input > id.score) {
+			id.update({
 				finished: true,
-				score: input,
-				userId: request.session.user.id
+				score: input
 			})
 			response.send('Done')
 		} else {
-			if(input > id.score) {
-				id.update({
-					score: input
-				})
-				response.send('Done')
-			} else {
-				response.send('Done')
-			}
+			response.send('Done')
 		}
 	})
 })
@@ -71,7 +61,7 @@ router.post('/quiz-food-fr', (request, response) => {
 //Animal FR Quiz
 router.get('/quiz-animal-fr', (request, response) => {
 	let user = request.session.user
-	db.game.findOne({
+	db.quiz.findOne({
 		where: {
 			language: 'FR',
 			theme: 'animals',
@@ -110,24 +100,14 @@ router.post('/quiz-animal-fr', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.quiz.create({
-				language: 'FR',
-				theme: 'animals',
+		if(input > id.score) {
+			id.update({
 				finished: true,
-				score: input,
-				userId: request.session.user.id
+				score: input
 			})
 			response.send('Done')
 		} else {
-			if(input > id.score) {
-				id.update({
-					score: input
-				})
-				response.send('Done')
-			} else {
-				response.send('Done')
-			}
+			response.send('Done')
 		}
 	})
 })
@@ -135,7 +115,7 @@ router.post('/quiz-animal-fr', (request, response) => {
 //Family NL Quiz
 router.get('/quiz-family-fr', (request, response) => {
 	let user = request.session.user
-	db.game.findOne({
+	db.quiz.findOne({
 		where: {
 			language: 'FR',
 			theme: 'family',
@@ -174,24 +154,14 @@ router.post('/quiz-family-fr', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.quiz.create({
-				language: 'FR',
-				theme: 'family',
+		if(input > id.score) {
+			id.update({
 				finished: true,
-				score: input,
-				userId: request.session.user.id
+				score: input
 			})
 			response.send('Done')
 		} else {
-			if(input > id.score) {
-				id.update({
-					score: input
-				})
-				response.send('Done')
-			} else {
-				response.send('Done')
-			}
+			response.send('Done')
 		}
 	})
 })

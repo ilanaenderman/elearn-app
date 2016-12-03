@@ -7,7 +7,7 @@ const db		= require(__dirname + '/../modules/database')
 //Food NL Quiz
 router.get('/quiz-food-nl', (request, response) => {
 	let user = request.session.user
-	db.game.findOne({
+	db.quiz.findOne({
 		where: {
 			language: 'NL',
 			theme: 'food',
@@ -15,7 +15,7 @@ router.get('/quiz-food-nl', (request, response) => {
 		},
 		attributes: ['score']
 	}).then(score => {
-		response.render('demoquiz', {path: request.path, score: score, user:user})
+		response.render('demoquiz', {path: request.path, score: score, user: user})
 	})
 })
 
@@ -46,24 +46,14 @@ router.post('/quiz-food-nl', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.quiz.create({
-				language: 'NL',
-				theme: 'food',
+		if(input > id.score) {
+			id.update({
 				finished: true,
-				score: input,
-				userId: request.session.user.id
+				score: input
 			})
 			response.send('Done')
 		} else {
-			if(input > id.score) {
-				id.update({
-					score: input
-				})
-				response.send('Done')
-			} else {
-				response.send('Done')
-			}
+			response.send('Done')
 		}
 	})
 })
@@ -71,7 +61,7 @@ router.post('/quiz-food-nl', (request, response) => {
 //Animal NL Quiz
 router.get('/quiz-animal-nl', (request, response) => {
 	let user = request.session.user
-	db.game.findOne({
+	db.quiz.findOne({
 		where: {
 			language: 'NL',
 			theme: 'animals',
@@ -110,24 +100,14 @@ router.post('/quiz-animal-nl', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.quiz.create({
-				language: 'NL',
-				theme: 'animals',
+		if(input > id.score) {
+			id.update({
 				finished: true,
-				score: input,
-				userId: request.session.user.id
+				score: input
 			})
 			response.send('Done')
 		} else {
-			if(input > id.score) {
-				id.update({
-					score: input
-				})
-				response.send('Done')
-			} else {
-				response.send('Done')
-			}
+			response.send('Done')
 		}
 	})
 })
@@ -135,7 +115,7 @@ router.post('/quiz-animal-nl', (request, response) => {
 //Family NL Quiz
 router.get('/quiz-family-nl', (request, response) => {
 	let user = request.session.user
-	db.game.findOne({
+	db.quiz.findOne({
 		where: {
 			language: 'NL',
 			theme: 'family',
@@ -174,24 +154,14 @@ router.post('/quiz-family-nl', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.quiz.create({
-				language: 'NL',
-				theme: 'family',
+		if(input > id.score) {
+			id.update({
 				finished: true,
-				score: input,
-				userId: request.session.user.id
+				score: input
 			})
 			response.send('Done')
 		} else {
-			if(input > id.score) {
-				id.update({
-					score: input
-				})
-				response.send('Done')
-			} else {
-				response.send('Done')
-			}
+			response.send('Done')
 		}
 	})
 })
