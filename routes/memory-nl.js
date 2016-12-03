@@ -41,7 +41,7 @@ router.post('/memory-food-nl', (request, response) => {
 			})
 			response.send('Done')
 		} else {
-			if(points < id.score) {
+			if((points * 10) < id.score) {
 				id.update ({
 					finished: true,
 					score: points * 10
@@ -90,7 +90,7 @@ router.post('/memory-animal-nl', (request, response) => {
 			})
 			response.send('Done')
 		} else {
-			if(points < id.score) {
+			if((points * 10) < id.score) {
 				id.update ({
 					finished: true,
 					score: points * 10
@@ -140,7 +140,7 @@ router.post('/memory-family-nl', (request, response) => {
 			})
 			response.send('Done')
 		} else {
-			if(points < id.score) {
+			if((points * 10) < id.score) {
 				id.update ({
 					finished: true,
 					score: points * 10
