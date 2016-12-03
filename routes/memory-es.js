@@ -31,13 +31,10 @@ router.post('/memory-food-es', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.game.create({
-				language: 'ES',
-				theme: 'food',
+		if(id.score == null) {
+			id.update({
 				finished: true,
-				score: points * 10,
-				userId: request.session.user.id
+				score: points * 10
 			})
 			response.send('Done')
 		} else {
@@ -81,13 +78,10 @@ router.post('/memory-animal-es', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.game.create({
-				language: 'ES',
-				theme: 'animals',
+		if(id.score == null) {
+			id.update({
 				finished: true,
-				score: points * 10,
-				userId: request.session.user.id
+				score: points * 10
 			})
 			response.send('Done')
 		} else {
@@ -131,13 +125,10 @@ router.post('/memory-family-es', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.game.create({
-				language: 'ES',
-				theme: 'family',
+		if(id.score == null) {
+			id.update({
 				finished: true,
-				score: points * 10,
-				userId: request.session.user.id
+				score: points * 10
 			})
 			response.send('Done')
 		} else {

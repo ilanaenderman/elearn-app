@@ -47,27 +47,34 @@ html
 						h5= user.fullName
 						p 
 						h3 Best Score
+						
 						- var bestMemoryResult = []
 						- for(var h = 0; h < id[0].memory.length; h++)
 							- bestMemoryResult.push({language: id[0].memory[h].language, theme: id[0].memory[h].theme, score: id[0].memory[h].score})
-						- var bestMemory = bestMemoryResult.reduce(function(prev, curr) { return prev.score < curr.score ? prev : curr; })
-						- if(bestMemory.language == "NL") 
-							h5 Memory: Dutch #{bestMemory.theme} - #{bestMemory.score}
-						- else if(bestMemory.language == "ES")
-							h5 Memory: Spanish #{bestMemory.theme} - #{bestMemory.score}
-						- else if(bestMemory.language == "FR")
-							h5 Memory: French #{bestMemory.theme} - #{bestMemory.score}
+						- if(bestMemoryResult.length != 0)
+							- var bestMemory = bestMemoryResult.reduce(function(prev, curr) { return prev.score < curr.score ? prev : curr; })
+							- if(bestMemory.language == "NL") 
+								h5 Memory: Dutch #{bestMemory.theme} - #{bestMemory.score}
+							- else if(bestMemory.language == "ES")
+								h5 Memory: Spanish #{bestMemory.theme} - #{bestMemory.score}
+							- else if(bestMemory.language == "FR")
+								h5 Memory: French #{bestMemory.theme} - #{bestMemory.score}
+						- else
+							h5 Memory: ""
 
 						- var bestQuizResult = []
 						- for(var g = 0; g < id[1].quiz.length; g++)
 							- bestQuizResult.push({language: id[1].quiz[g].language, theme: id[1].quiz[g].theme, score: id[1].quiz[g].score})
-						- var bestQuiz = bestQuizResult.reduce(function(prev, curr) { return prev.score > curr.score ? prev : curr; }) 
-						- if(bestQuiz.language == "NL") 
-							h5 Quiz: Dutch #{bestQuiz.theme} - #{bestQuiz.score}
-						- else if(bestQuiz.language == "ES")
-							h5 Quiz: Spanish #{bestQuiz.theme} - #{bestQuiz.score}
-						- else if(bestQuiz.language == "FR")
-							h5 Quiz: French #{bestQuiz.theme} - #{bestQuiz.score}
+						- if(bestQuizResult.length != 0)
+							- var bestQuiz = bestQuizResult.reduce(function(prev, curr) { return prev.score > curr.score ? prev : curr; }) 
+							- if(bestQuiz.language == "NL") 
+								h5 Quiz: Dutch #{bestQuiz.theme} - #{bestQuiz.score}
+							- else if(bestQuiz.language == "ES")
+								h5 Quiz: Spanish #{bestQuiz.theme} - #{bestQuiz.score}
+							- else if(bestQuiz.language == "FR")
+								h5 Quiz: French #{bestQuiz.theme} - #{bestQuiz.score}
+						- else
+							h5 Quiz: ""
 
 			div.col.l9
 				div.col.l12.m12.s12

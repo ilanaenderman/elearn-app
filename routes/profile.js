@@ -10,24 +10,13 @@ router.get('/profile', (request, response) => {
 		where: {
 			id: user.id
 		},
-		include: [{
-			model: db.game,
-			where: {
-				finished: true
-			},
-			attributes: ['id', 'language', 'theme', 'score']
-		}, {
-			model: db.quiz,
-			where: {
-				finished: true
-			},
-			attributes: ['id', 'language', 'theme', 'score']
-		}]
+		include: [db.game, db.quiz]
 	}).then(id => {
 		let gamesresult = []
 		let quizresult = []
 		let totalresult = []
 		for(let i = 0; i < id.games.length; i++){
+			if(id.games[i].finished == true)
 			gamesresult.push({
 					id: id.games[i].id, 
 					language: id.games[i].language,
@@ -36,6 +25,7 @@ router.get('/profile', (request, response) => {
 			})
 		}
 		for(let j = 0; j < id.quizzes.length; j++) {
+			if(id.quizzes[j].finished == true)
 			quizresult.push({
 					id: id.quizzes[j].id,
 					language: id.quizzes[j].language,
@@ -48,9 +38,7 @@ router.get('/profile', (request, response) => {
 			},{
 			quiz: quizresult
 			})
-		return totalresult
-	}).then(id => {
-		response.render('profile', {id: id, user: user})
+		response.render('profile', {id: totalresult, user: user})
 	})
 })
 

@@ -74,8 +74,135 @@ router.post('/', (request, response) => {
 					userName: userName,
 					email: email,
 					password: hash
+				}).then(user => {
+					db.game.create({
+						language: 'NL',
+						theme: 'food',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.game.create({
+						language: 'ES',
+						theme: 'food',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.game.create({
+						language: 'FR',
+						theme: 'food',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.quiz.create({
+						language: 'NL',
+						theme: 'food',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.quiz.create({
+						language: 'ES',
+						theme: 'food',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.quiz.create({
+						language: 'FR',
+						theme: 'food',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.game.create({
+						language: 'NL',
+						theme: 'animals',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.game.create({
+						language: 'ES',
+						theme: 'animals',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.game.create({
+						language: 'FR',
+						theme: 'animals',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.quiz.create({
+						language: 'NL',
+						theme: 'animals',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.quiz.create({
+						language: 'ES',
+						theme: 'animals',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.quiz.create({
+						language: 'FR',
+						theme: 'animals',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.game.create({
+						language: 'NL',
+						theme: 'family',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.game.create({
+						language: 'ES',
+						theme: 'family',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.game.create({
+						language: 'FR',
+						theme: 'family',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.quiz.create({
+						language: 'NL',
+						theme: 'family',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.quiz.create({
+						language: 'ES',
+						theme: 'family',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					db.quiz.create({
+						language: 'FR',
+						theme: 'family',
+						finished: false,
+						score: null,
+						userId: user.id
+					})
+					response.redirect('/?message=' + encodeURIComponent("Succesfully registered."))	
 				})
-				response.redirect('/?message=' + encodeURIComponent("Succesfully registered."))
 			} else {
 				response.redirect('/?message=' + encodeURIComponent("User name or email already in use."))
 			}

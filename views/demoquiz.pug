@@ -44,14 +44,46 @@ html
             img.image(src="images/duck.jpg")
             h3#Quiz Quiz
             div#topscore
-              h5 Theme: #{score.theme}
-              - if(score.language == "NL")
+              - if(path == '/quiz-food-nl')
+                h5 Theme: Food
                 h5 Language: Dutch
-              - else if(score.language == "ES")
+
+              - if(path == '/quiz-animal-nl')
+                h5 Theme: Animals
+                h5 Language: Dutch
+
+              - if(path == '/quiz-family-nl')
+                h5 Theme: Family
+                h5 Language: Dutch
+
+              - if(path == '/quiz-food-es')
+                h5 Theme: Food
                 h5 Language: Spanish
-              - else if(score.language == "FR")
+
+              - if(path == '/quiz-animal-es')
+                h5 Theme: Animals
+                h5 Language: Spanish
+
+              - if(path == '/quiz-family-es')
+                h5 Theme: Family
+                h5 Language: Spanish
+
+              - if(path == '/quiz-food-fr')
+                h5 Theme: Food
                 h5 Language: French
-              h5 Top Score: #{score.score}
+
+              - if(path == '/quiz-food-fr')
+                h5 Theme: Animals
+                h5 Language: French
+
+              - if(path == '/quiz-food-fr')
+                h5 Theme: Family
+                h5 Language: French
+
+              - if(score != null)  
+                h5 Top Score: #{score.score}
+              - else
+                h5 Top Score: 0
             p Try to answer as many of the questions. The more you answer correct, the more points you get! 
 
       div.col.s12.m12.l9
