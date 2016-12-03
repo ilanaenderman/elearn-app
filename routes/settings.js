@@ -16,6 +16,18 @@ router.post('/settings', (request, response) => {
 	let newUserName = request.body.newUserName
 	let newEmail 	= request.body.newEmail
 	let newFullName = request.body.newFullName
+	let fCharName	= newFullName.substr(0,1)
+	let fCharUser	= newUserName.substr(0,1)
+
+	if( !fCharName.match(/[a-zA-Z ]/)) {
+		response.redirect('/settings?message=' + encodeURIComponent("First letter of full name must be alphabetic."))
+		return
+	}
+
+	if( !fCharUser.match(/[a-zA-Z ]/)) {
+		response.redirect('/settings?message=' + encodeURIComponent("First letter of username must be alphabetic."))
+		return
+	}
 
 	if(  newUserName != "" && newEmail != "" && newFullName!= "") {
 		db.user.findOne({
@@ -31,6 +43,7 @@ router.post('/settings', (request, response) => {
 			})
 		})
 	}
+
 	else if( newEmail != "") {
 		db.user.findOne({
 			where: {id: user.id},
@@ -72,21 +85,26 @@ router.post('/settings', (request, response) => {
 		})
 	}
 	else if( newFullName != "" && newUserName != "") {
-		db.user.findOne({
-			where: {id: user.id},
-			attributes: ['id', 'fullName', 'userName']
-		}).then( newSetting => {
-			newSetting.update({
-				userName: newUserName,
-				fullName: newFullName
+		if( newUserName.length <= 2 || newUserName.length >= 13){
+		response.redirect('/settings?message=' + encodeURIComponent("Username must be between 2 and 13 characters long."))
+		}
+		else(
+			db.user.findOne({
+				where: {id: user.id},
+				attributes: ['id', 'fullName', 'userName']
 			}).then( newSetting => {
-				response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your username and full name. Next time you login the changes will be visible"))
+				newSetting.update({
+					userName: newUserName,
+					fullName: newFullName
+				}).then( newSetting => {
+					response.redirect('/settings?message=' + encodeURIComponent("Succesfully changed your username and full name. Next time you login the changes will be visible"))
+				})
 			})
-		})
+		)
 	}
 
 	else if( newUserName != "") {
-		if(  newUserName.length <= 2 || newUserName.length >= 13){
+		if( newUserName.length <= 2 || newUserName.length >= 13){
 		response.redirect('/settings?message=' + encodeURIComponent("Username must be between 2 and 13 characters long."))
 		}
 
