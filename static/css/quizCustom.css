@@ -33,6 +33,21 @@ h1, h2, h3, h4, h5 {
       color: #1EA4A4;
       font-size: 20px;
       border-radius: 30px; }
+  .nav-wrapper .side-nav #sideLogo {
+    font-size: 40px;
+    color: #1EA4A4;
+    padding: 20px;
+    text-align: center; }
+  .nav-wrapper .side-nav .sideNav {
+    font-size: 25px;
+    padding: 30px;
+    color: #FD4F21; }
+  .nav-wrapper .side-nav #sideCol {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    color: #1EA4A4; }
 
 @media only screen and (max-width: 600px) {
   #hamburger {

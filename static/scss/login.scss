@@ -57,6 +57,21 @@ main {
 			border-radius: 30px;
 		}
 	}
+	.side-nav {
+
+		#sideLogo {
+			font-size: 40px;
+			color: $mainColor;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.sideNav {
+			font-size: 25px;
+			padding: 30px;
+			color: $mainTextColor;
+		}
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -124,6 +139,10 @@ main {
 
 			#password2 {
 				font-size: $inputSize;
+			}
+
+			label {
+				font-size: 15px;
 			}
 		}
 	}

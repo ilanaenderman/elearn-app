@@ -48,6 +48,29 @@ h1, h2, h3, h4, h5 {
             border-radius: 30px;
         }
     }
+
+    .side-nav {
+
+        #sideLogo {
+            font-size: 40px;
+            color: $mainColor;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sideNav {
+            font-size: 25px;
+            padding: 30px;
+            color: $mainTextColor;
+        }
+        #sideCol {
+            font-size: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 60px;
+            color: $mainColor;
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {
