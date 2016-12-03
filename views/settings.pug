@@ -8,6 +8,11 @@ html
 		script(src='/js/materialize.min.js')
 		script(src='/js/custom.js')
 	body
+		ul#dropdown1.dropdown-content
+			li
+				a(href='/settings') Account
+			li
+				a(href='/password') Password
 		nav
 			div.nav-wrapper
 				a#logo.brand-logo(href="#") LangGa
@@ -17,31 +22,23 @@ html
 					li
 						a(href='/profile')= user.userName
 					li
-						a(href='/settings') Settings
-
+						a.dropdown-button(href='#' data-activates='dropdown1') Settings
 					li
 						a#logoutButton.waves-effect.waves-light.btn-large.z-depth-0(href='/logout') Logout
 				ul.side-nav#mobile-demo
 					li
 						a(href='/profile')= user.userName
-					li
-						a.dropdown-button(href='#' data-activates='dropdown1') Settings
-							i.material-icons.right arrow_drop_down
+					ul.collapsible(data-collapsible='accordion')
+						li 
+							div.collapsible-header 
+								a Settings
+							div.collapsible-body
+								a(href='/settings') Account
+								a(href='/password') Password
 					li
 						a(href='/logout') Logout
 		div.row
-			div.col.l3
-				div.card
-					div.card-content
-						img.image(src="images/duck.jpg")
-						h3=user.userName
-						br
-						a.Button.waves-effect.waves-light.btn-large.z-depth-0(href='/settings') Account
-						a.Button.waves-effect.waves-light.btn-large.z-depth-0(href='/password') Password
-
-
-
-			div.col.l8
+			div.col.l6.m8.offset-l3.offset-m2
 				div.col.l12
 					div.card
 						div#settings.card-content

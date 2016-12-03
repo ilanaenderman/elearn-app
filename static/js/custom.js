@@ -36,8 +36,8 @@ $(document).ready(function(){
 	$(".button-collapse").sideNav()
 })
 
-// Dropdown menu
+// Collapsible menu
 $(document).ready(function(){
-	$(".dropdown-button").dropdown()
-	$("#dropdown").dropdown()
-})
+    $('.collapsible').collapsible()
+    $(".dropdown-button").dropdown()
+  })

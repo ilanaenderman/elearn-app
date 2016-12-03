@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5 {
       .row .card #settings h3 {
         padding-bottom: 80px; }
       .row .card #settings form {
-        padding: 60px 300px 30px 200px;
+        padding-top: 30px;
         font-size: 25px; }
         .row .card #settings form #newUserName {
           font-size: 25px; }
@@ -72,15 +72,8 @@ h1, h2, h3, h4, h5 {
           font-size: 25px; }
         .row .card #settings form #newFullName {
           font-size: 25px; }
-        .row .card #settings form #location {
-          font-size: 25px; }
-        .row .card #settings form #bio {
-          font-size: 25px; }
-        .row .card #settings form #profileImage {
-          font-size: 25px; }
         .row .card #settings form label {
-          font-size: 20px;
-          color: #FD4F21; }
+          font-size: 15px; }
         .row .card #settings form .btn.btn-default.btn-large {
           background-color: #FD4F21;
           color: white;

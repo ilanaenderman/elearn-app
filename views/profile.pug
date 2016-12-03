@@ -8,6 +8,11 @@ html
 		script(src='/js/materialize.min.js')
 		script(src='/js/custom.js')
 	body
+		ul#dropdown1.dropdown-content
+			li
+				a(href='/settings') Account
+			li
+				a(href='/password') Password
 		nav
 			div.nav-wrapper
 				a#logo.brand-logo(href="#") LangGa
@@ -17,14 +22,19 @@ html
 					li
 						a(href='/profile')= user.userName
 					li
-						a(href='/settings') Settings
+						a.dropdown-button(href='#' data-activates='dropdown1') Settings
 					li
 						a#logoutButton.waves-effect.waves-light.btn-large.z-depth-0(href='/logout') Logout
 				ul.side-nav#mobile-demo
 					li
 						a(href='/profile')= user.userName
-					li 
-						a(href='/settings') Settings
+					ul.collapsible(data-collapsible='accordion')
+						li 
+							div.collapsible-header 
+								a Settings
+							div.collapsible-body
+								a(href='/settings') Account
+								a(href='/password') Password
 					li
 						a(href='/logout') Logout
 		div#profile.row
