@@ -13,7 +13,7 @@ router.get('/quiz-food-fr', (request, response) => {
 			theme: 'food',
 			userId: request.session.user.id
 		},
-		attributes: ['score', 'language', 'theme']
+		attributes: ['score']
 	}).then(score => {
 		response.render('demoquiz', {path: request.path, score: score, user: user})
 	})
@@ -46,24 +46,14 @@ router.post('/quiz-food-fr', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.quiz.create({
-				language: 'FR',
-				theme: 'food',
+		if(input > id.score) {
+			id.update({
 				finished: true,
-				score: input,
-				userId: request.session.user.id
+				score: input
 			})
 			response.send('Done')
 		} else {
-			if(input > id.score) {
-				id.update({
-					score: input
-				})
-				response.send('Done')
-			} else {
-				response.send('Done')
-			}
+			response.send('Done')
 		}
 	})
 })
@@ -77,7 +67,7 @@ router.get('/quiz-animal-fr', (request, response) => {
 			theme: 'animals',
 			userId: request.session.user.id
 		},
-		attributes: ['score', 'language', 'theme']
+		attributes: ['score']
 	}).then(score => {
 		response.render('demoquiz', {path: request.path, score: score, user: user})
 	})
@@ -110,24 +100,14 @@ router.post('/quiz-animal-fr', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.quiz.create({
-				language: 'FR',
-				theme: 'animals',
+		if(input > id.score) {
+			id.update({
 				finished: true,
-				score: input,
-				userId: request.session.user.id
+				score: input
 			})
 			response.send('Done')
 		} else {
-			if(input > id.score) {
-				id.update({
-					score: input
-				})
-				response.send('Done')
-			} else {
-				response.send('Done')
-			}
+			response.send('Done')
 		}
 	})
 })
@@ -141,7 +121,7 @@ router.get('/quiz-family-fr', (request, response) => {
 			theme: 'family',
 			userId: request.session.user.id
 		},
-		attributes: ['score', 'language', 'theme']
+		attributes: ['score']
 	}).then(score => {
 		response.render('demoquiz', {path: request.path, score: score, user: user})
 	})
@@ -174,24 +154,14 @@ router.post('/quiz-family-fr', (request, response) => {
 			userId: request.session.user.id
 		}
 	}).then(id => {
-		if(id == null) {
-			db.quiz.create({
-				language: 'FR',
-				theme: 'family',
+		if(input > id.score) {
+			id.update({
 				finished: true,
-				score: input,
-				userId: request.session.user.id
+				score: input
 			})
 			response.send('Done')
 		} else {
-			if(input > id.score) {
-				id.update({
-					score: input
-				})
-				response.send('Done')
-			} else {
-				response.send('Done')
-			}
+			response.send('Done')
 		}
 	})
 })

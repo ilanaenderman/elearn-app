@@ -53,79 +53,128 @@ db.conn.sync({force: true}).then( database => {
 		})
 		db.game.create({
 			language: 'NL',
-			theme: "food",
-			finished: true,
-			score: 40,
-			userId: 1
-		})
-		db.game.create({
-			language: 'NL',
-			theme: "animals",
-			finished: true,
-			score: 0,
-			userId: 1
-		})
-		db.game.create({
-			language: 'NL',
-			theme: "family",
-			finished: true,
-			score: 20,
+			theme: 'food',
+			finished: false,
+			score: null,
 			userId: 1
 		})
 		db.game.create({
 			language: 'ES',
-			theme: "food",
-			finished: true,
-			score: 0,
-			userId: 1
-		})
-		db.game.create({
-			language: 'ES',
-			theme: "animals",
-			finished: true,
-			score: 60,
-			userId: 1
-		})
-		db.game.create({
-			language: 'ES',
-			theme: "family",
-			finished: true,
-			score: 0,
+			theme: 'food',
+			finished: false,
+			score: null,
 			userId: 1
 		})
 		db.game.create({
 			language: 'FR',
-			theme: "food",
-			finished: true,
-			score: 0,
-			userId: 1
-		})
-		db.game.create({
-			language: 'FR',
-			theme: "animals",
-			finished: true,
-			score: 0,
-			userId: 1
-		})
-		db.game.create({
-			language: 'FR',
-			theme: "family",
-			finished: true,
-			score: 0,
-			userId: 1
-		})
-		db.quiz.create({
-			language: 'NL',
-			theme: 'animals',
-			finished: true,
-			score: 80,
+			theme: 'food',
+			finished: false,
+			score: null,
 			userId: 1
 		})
 		db.quiz.create({
 			language: 'NL',
 			theme: 'food',
-			finished: true,
-			score: 0,
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.quiz.create({
+			language: 'ES',
+			theme: 'food',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.quiz.create({
+			language: 'FR',
+			theme: 'food',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.game.create({
+			language: 'NL',
+			theme: 'animals',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.game.create({
+			language: 'ES',
+			theme: 'animals',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.game.create({
+			language: 'FR',
+			theme: 'animals',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.quiz.create({
+			language: 'NL',
+			theme: 'animals',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.quiz.create({
+			language: 'ES',
+			theme: 'animals',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.quiz.create({
+			language: 'FR',
+			theme: 'animals',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.game.create({
+			language: 'NL',
+			theme: 'family',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.game.create({
+			language: 'ES',
+			theme: 'family',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.game.create({
+			language: 'FR',
+			theme: 'family',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.quiz.create({
+			language: 'NL',
+			theme: 'family',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.quiz.create({
+			language: 'ES',
+			theme: 'family',
+			finished: false,
+			score: null,
+			userId: 1
+		})
+		db.quiz.create({
+			language: 'FR',
+			theme: 'family',
+			finished: false,
+			score: null,
 			userId: 1
 		})
 	})

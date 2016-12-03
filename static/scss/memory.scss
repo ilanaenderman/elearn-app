@@ -57,30 +57,33 @@ h1, h2, h3, h4, h5 {
     padding-right: 10px;
     padding-left: 10px;
 
-	.image {
-        max-width: 100%;
+    .card {
         border-radius: 30px;
-        display: block;
-        margin: auto;
+
+    	.image {
+            max-width: 100%;
+            border-radius: 30px;
+            display: block;
+            margin: auto;
+        }
+
+        #Memory {
+        	background-color: $mainTextColor;
+        	color: white;
+        	border-radius: 30px;
+        	text-align: center;
+
+        }
+
+        #topscore {
+        	border-radius: 30px;
+        	border-color: $mainTextColor;
+        }
+
+        p {
+            font-size: 24px;
+        }
     }
-
-    #Memory {
-    	background-color: $mainTextColor;
-    	color: white;
-    	border-radius: 30px;
-    	text-align: center;
-
-    }
-
-    #topscore {
-    	border-radius: 30px;
-    	border-color: $mainTextColor;
-    }
-
-    p {
-        font-size: 24px;
-    }
-
 
 	div#my-memorygame {
 

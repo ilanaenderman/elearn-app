@@ -34,21 +34,23 @@ h1, h2, h3, h4, h5 {
   padding-top: 30px;
   padding-right: 10px;
   padding-left: 10px; }
-  .row .image {
-    max-width: 100%;
-    border-radius: 30px;
-    display: block;
-    margin: auto; }
-  .row #Memory {
-    background-color: #FD4F21;
-    color: white;
-    border-radius: 30px;
-    text-align: center; }
-  .row #topscore {
-    border-radius: 30px;
-    border-color: #FD4F21; }
-  .row p {
-    font-size: 24px; }
+  .row .card {
+    border-radius: 30px; }
+    .row .card .image {
+      max-width: 100%;
+      border-radius: 30px;
+      display: block;
+      margin: auto; }
+    .row .card #Memory {
+      background-color: #FD4F21;
+      color: white;
+      border-radius: 30px;
+      text-align: center; }
+    .row .card #topscore {
+      border-radius: 30px;
+      border-color: #FD4F21; }
+    .row .card p {
+      font-size: 24px; }
   .row div#my-memorygame {
     margin-left: 10px; }
     .row div#my-memorygame .text-style1 {
