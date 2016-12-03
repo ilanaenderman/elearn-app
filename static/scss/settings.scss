@@ -48,6 +48,29 @@ h1, h2, h3, h4, h5 {
             border-radius: 30px;
         }
     }
+
+    .side-nav {
+
+        #sideLogo {
+            font-size: 40px;
+            color: $mainColor;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sideNav {
+            font-size: 25px;
+            padding: 30px;
+            color: $mainTextColor;
+        }
+        #sideCol {
+            font-size: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 60px;
+            color: $mainColor;
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -91,10 +114,11 @@ h1, h2, h3, h4, h5 {
 
             h3 {
                 padding-bottom: 80px;
+                text-align: center;
             }
 
             form {
-                padding: 60px 300px 30px 200px;
+                padding-top: 30px;
                 font-size: $inputSize;
 
 
@@ -103,7 +127,7 @@ h1, h2, h3, h4, h5 {
                 }
 
                 #newEmail {
-                font-size: $inputSize;
+                    font-size: $inputSize;
                 }
 
                 #newPW {
@@ -121,18 +145,8 @@ h1, h2, h3, h4, h5 {
                 #newFullName {
                     font-size: $inputSize;
                 }
-
-                #bio {
-                    font-size: $inputSize;
-                }
-
-                #profileImage {
-                    font-size: $inputSize;
-                }
-
                 label {
-                    font-size: 20px;
-                    color: $mainTextColor;
+                    font-size: 15px;
                 }
 
                 .btn.btn-default.btn-large {

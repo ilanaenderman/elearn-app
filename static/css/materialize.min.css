@@ -2364,11 +2364,11 @@ html {
     box-sizing: border-box
 }
 
-*,
-*:before,
-*:after {
+/**,*/
+/**:before,*/
+/**:after {
     box-sizing: inherit
-}
+}*/
 
 ul:not(.browser-default) {
     padding-left: 0;
